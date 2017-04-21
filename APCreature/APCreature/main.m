@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APCreatureMain.h"
 #import "APCreatureTests.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        
+        [APCreatureTests performAPCreatureTests];
     }
     return 0;
 }
