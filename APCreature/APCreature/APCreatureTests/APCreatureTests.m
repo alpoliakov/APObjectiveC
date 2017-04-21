@@ -7,7 +7,12 @@
 //
 
 #import "APCreatureTests.h"
+#import "APCreatureMain.h"
 
 @implementation APCreatureTests
+
++ (void)performAPCreatureTests {
+    
+}
 
 @end

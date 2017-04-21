@@ -10,4 +10,8 @@
 
 @implementation APCreatureMain
 
+@class APMan;
+@class APWoman;
+@dynamic children;
+
 @end
