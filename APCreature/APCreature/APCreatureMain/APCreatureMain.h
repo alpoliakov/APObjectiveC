@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM (NSUInteger, APGender) {
-    kAPGenderMale,
-    kAPGenderFemale,
-    kAPGenderIt
+    kAPSexMale,
+    kAPSexFemale,
+    kAPSexIt
 };
 
 @interface APCreatureMain : NSObject

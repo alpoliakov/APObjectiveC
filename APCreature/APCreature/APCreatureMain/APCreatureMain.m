@@ -9,9 +9,16 @@
 #import "APCreatureMain.h"
 
 @implementation APCreatureMain
-
 @class APMan;
 @class APWoman;
 @dynamic children;
+
+#pragma mark-
+#pragma mark Class Methods
+
+
+
+#pragma mark -
+#pragma mark Initializations and Deallocations
 
 @end
