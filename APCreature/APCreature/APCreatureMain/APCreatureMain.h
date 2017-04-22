@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM (NSUInteger, APGender) {
-    kAPSexMale,
-    kAPSexFemale,
-    kAPSexIt
+    kAPGenderMale,
+    kAPGenderFemale,
+    kAPGenderIt
 };
 
 @interface APCreatureMain : NSObject
-@property (nonatomic, assign)           APGender       sex;
+@property (nonatomic, assign)           APGender       gender;
 @property (nonatomic, copy)             NSString       *name;
 @property (nonatomic, retain, readonly) NSSet          *children;
 @property (nonatomic, assign)           NSUInteger     *weight;
