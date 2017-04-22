@@ -6,15 +6,15 @@
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
-#import "APCreatureMain.h"
+#import "APCreature.h"
 
-@interface APCreatureMain ()
+@interface APCreature ()
 
 @property (nonatomic, retain) NSMutableSet *mutableChildren;
 
 @end
 
-@implementation APCreatureMain
+@implementation APCreature
 @dynamic children;
 
 
@@ -52,9 +52,9 @@
 #pragma mark-
 #pragma mark Public Methods
 
-- (APCreatureMain *)giveBirth {
+- (APCreature *)giveBirth {
     NSLog(@"I can give birth children.");
-    return [[[APCreatureMain alloc] init] autorelease];
+    return [[[APCreature alloc] init] autorelease];
 }
 
 - (void)toFight {
@@ -63,18 +63,18 @@
 
 - (void)sayHello {
     NSLog(@"Hello, I'm %@", self.name);
-    for (APCreatureMain *child in self.mutableChildren) {
+    for (APCreature *child in self.mutableChildren) {
         [child sayHello];
     }
 }
 
-- (void)addChild:(APCreatureMain *)child {
-    if ([child isKindOfClass:[APCreatureMain class]]) {
+- (void)addChild:(APCreature *)child {
+    if ([child isKindOfClass:[APCreature class]]) {
         [self.mutableChildren addObject:child];
     }
 }
 
-- (void)removeChild:(APCreatureMain *)child {
+- (void)removeChild:(APCreature *)child {
     [self.mutableChildren removeObject:child];
 }
 

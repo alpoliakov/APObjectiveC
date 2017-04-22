@@ -14,7 +14,7 @@ typedef NS_ENUM (NSUInteger, APGender) {
     kAPGenderIt
 };
 
-@interface APCreatureMain : NSObject
+@interface APCreature : NSObject
 @property (nonatomic, assign)           APGender       gender;
 @property (nonatomic, copy)             NSString       *name;
 @property (nonatomic, retain, readonly) NSSet          *children;
@@ -22,10 +22,10 @@ typedef NS_ENUM (NSUInteger, APGender) {
 @property (nonatomic, assign)           NSUInteger     *age;
 
 
-- (APCreatureMain *)giveBirth;
+- (APCreature *)giveBirth;
 - (void)toFight;
 - (void)sayHello;
-- (void)addChild:(APCreatureMain *)child;
-- (void)removeChild:(APCreatureMain *)child;
+- (void)addChild:(APCreature *)child;
+- (void)removeChild:(APCreature *)child;
 
 @end

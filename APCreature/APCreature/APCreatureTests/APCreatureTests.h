@@ -10,6 +10,6 @@
 
 @interface APCreatureTests : NSObject
 
-+(void)performAPCreatureTests;
++(void)performCreatureTests;
 
 @end

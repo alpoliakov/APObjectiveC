@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0644E03F1EAA471000C5F33C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E03E1EAA471000C5F33C /* main.m */; };
-		0644E0491EAA485000C5F33C /* APCreatureMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E0481EAA485000C5F33C /* APCreatureMain.m */; };
 		0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E04B1EAA487200C5F33C /* APCreatureTests.m */; };
+		06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF884A1EABB44D004EDE29 /* APCreature.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,10 +27,10 @@
 /* Begin PBXFileReference section */
 		0644E03B1EAA471000C5F33C /* APCreature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APCreature; sourceTree = BUILT_PRODUCTS_DIR; };
 		0644E03E1EAA471000C5F33C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0644E0471EAA485000C5F33C /* APCreatureMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureMain.h; sourceTree = "<group>"; };
-		0644E0481EAA485000C5F33C /* APCreatureMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureMain.m; sourceTree = "<group>"; };
 		0644E04A1EAA487200C5F33C /* APCreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureTests.h; sourceTree = "<group>"; };
 		0644E04B1EAA487200C5F33C /* APCreatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureTests.m; sourceTree = "<group>"; };
+		06AF88491EABB44D004EDE29 /* APCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreature.h; sourceTree = "<group>"; };
+		06AF884A1EABB44D004EDE29 /* APCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,21 +63,11 @@
 		0644E03D1EAA471000C5F33C /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
+				06AF88481EABB44D004EDE29 /* APCreature */,
 				0644E0461EAA47DC00C5F33C /* APCreatureTests */,
-				0644E0451EAA477300C5F33C /* APCreatureMain  */,
 				0644E03E1EAA471000C5F33C /* main.m */,
 			);
 			path = APCreature;
-			sourceTree = "<group>";
-		};
-		0644E0451EAA477300C5F33C /* APCreatureMain  */ = {
-			isa = PBXGroup;
-			children = (
-				0644E0471EAA485000C5F33C /* APCreatureMain.h */,
-				0644E0481EAA485000C5F33C /* APCreatureMain.m */,
-			);
-			name = "APCreatureMain ";
-			path = APCreatureMain;
 			sourceTree = "<group>";
 		};
 		0644E0461EAA47DC00C5F33C /* APCreatureTests */ = {
@@ -87,6 +77,15 @@
 				0644E04B1EAA487200C5F33C /* APCreatureTests.m */,
 			);
 			path = APCreatureTests;
+			sourceTree = "<group>";
+		};
+		06AF88481EABB44D004EDE29 /* APCreature */ = {
+			isa = PBXGroup;
+			children = (
+				06AF88491EABB44D004EDE29 /* APCreature.h */,
+				06AF884A1EABB44D004EDE29 /* APCreature.m */,
+			);
+			path = APCreature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0644E0491EAA485000C5F33C /* APCreatureMain.m in Sources */,
 				0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */,
 				0644E03F1EAA471000C5F33C /* main.m in Sources */,
+				06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
