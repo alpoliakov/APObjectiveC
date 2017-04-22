@@ -11,7 +11,7 @@
 
 @implementation APCreatureTests
 
-+ (void)performAPCreatureTests {
++ (void)performCreatureTests {
     
 }
 
