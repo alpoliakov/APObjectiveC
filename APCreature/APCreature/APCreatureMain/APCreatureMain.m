@@ -35,6 +35,11 @@
 #pragma mark-
 #pragma mark Public Methods
 
+- (APCreatureMain *)giveBirth {
+    NSLog(@"I can give birth children.");
+    return [[[APCreatureMain alloc] init] autorelease];
+}
+
 - (void)toFight {
     NSLog(@"To arms!!!");
 }

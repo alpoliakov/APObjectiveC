@@ -21,6 +21,8 @@ typedef NS_ENUM (NSUInteger, APGender) {
 @property (nonatomic, assign)           NSUInteger     *weight;
 @property (nonatomic, assign)           NSUInteger     *age;
 
+
+- (APCreatureMain *)giveBirth;
 - (void)toFight;
 - (void)sayHello;
 - (void)addChild:(APCreatureMain *)child;
