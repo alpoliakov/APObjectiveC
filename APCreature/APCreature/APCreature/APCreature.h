@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM (NSUInteger, APGender) {
+typedef NS_ENUM(NSUInteger, APGender) {
     kAPGenderMale,
     kAPGenderFemale,
     kAPGenderIt
@@ -17,7 +17,7 @@ typedef NS_ENUM (NSUInteger, APGender) {
 @interface APCreature : NSObject
 @property (nonatomic, assign)           APGender       gender;
 @property (nonatomic, copy)             NSString       *name;
-@property (nonatomic, retain, readonly) NSSet          *children;
+@property (nonatomic, readonly)         NSSet          *children;
 @property (nonatomic, assign)           NSUInteger     *weight;
 @property (nonatomic, assign)           NSUInteger     *age;
 

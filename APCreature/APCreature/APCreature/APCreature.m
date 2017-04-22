@@ -9,12 +9,12 @@
 #import "APCreature.h"
 
 @interface APCreature ()
-
 @property (nonatomic, retain) NSMutableSet *mutableChildren;
 
 @end
 
 @implementation APCreature
+
 @dynamic children;
 
 

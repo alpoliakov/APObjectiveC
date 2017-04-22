@@ -11,7 +11,8 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [APCreatureTests performAPCreatureTests];
+        [APCreatureTests performCreatureTests];
     }
+    
     return 0;
 }
