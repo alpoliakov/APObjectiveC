@@ -26,7 +26,21 @@
 #pragma mark -
 #pragma mark Initializations and Deallocations
 
+- (void)dealloc {
+    self.name = nil;
+    self.mutableChildren = nil;
+    
+    [super dealloc];
+}
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.mutableChildren = [NSMutableSet set];
+    }
+    
+    return self;
+}
 
 #pragma mark-
 #pragma mark Accessors
