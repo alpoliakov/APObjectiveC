@@ -7,7 +7,7 @@
 //
 
 #import "APCreatureTests.h"
-#import "APCreatureMain.h"
+#import "APCreature.h"
 
 @implementation APCreatureTests
 
