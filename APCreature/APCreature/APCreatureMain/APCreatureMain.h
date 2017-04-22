@@ -15,15 +15,15 @@ typedef NS_ENUM (NSUInteger, APGender) {
 };
 
 @interface APCreatureMain : NSObject
-
+@property (nonatomic, assign)           APGender       sex;
 @property (nonatomic, copy)             NSString       *name;
 @property (nonatomic, retain, readonly) NSSet          *children;
 @property (nonatomic, assign)           NSUInteger     *weight;
 @property (nonatomic, assign)           NSUInteger     *age;
 
-+ (instancetype)creatureWithGender:(APGender)gender;
-+ (Class)classForGender:(APGender)gender;
-
-- (instancetype)initWithGender:(APGender)gender;
+- (void)toFight;
+- (void)sayHello;
+- (void)addChild:(APCreatureMain *)child;
+- (void)removeChild:(APCreatureMain *)child;
 
 @end
