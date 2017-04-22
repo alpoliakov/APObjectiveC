@@ -45,6 +45,10 @@
 #pragma mark-
 #pragma mark Accessors
 
+- (NSSet *) children {
+    return [[self.mutableChildren copy] autorelease];
+}
+
 
 #pragma mark-
 #pragma mark Public Methods
