@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0644E03F1EAA471000C5F33C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E03E1EAA471000C5F33C /* main.m */; };
 		0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E04B1EAA487200C5F33C /* APCreatureTests.m */; };
+		066470D11EAC3B0C00C5C26E /* NSArray+APExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 066470D01EAC3B0C00C5C26E /* NSArray+APExtension.m */; };
+		066470D41EAC404900C5C26E /* NSObject+APExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 066470D31EAC404900C5C26E /* NSObject+APExtension.m */; };
 		06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF884A1EABB44D004EDE29 /* APCreature.m */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,10 @@
 		0644E03E1EAA471000C5F33C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0644E04A1EAA487200C5F33C /* APCreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureTests.h; sourceTree = "<group>"; };
 		0644E04B1EAA487200C5F33C /* APCreatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureTests.m; sourceTree = "<group>"; };
+		066470CF1EAC3B0C00C5C26E /* NSArray+APExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+APExtension.h"; sourceTree = "<group>"; };
+		066470D01EAC3B0C00C5C26E /* NSArray+APExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APExtension.m"; sourceTree = "<group>"; };
+		066470D21EAC404900C5C26E /* NSObject+APExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APExtension.h"; sourceTree = "<group>"; };
+		066470D31EAC404900C5C26E /* NSObject+APExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APExtension.m"; sourceTree = "<group>"; };
 		06AF88491EABB44D004EDE29 /* APCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreature.h; sourceTree = "<group>"; };
 		06AF884A1EABB44D004EDE29 /* APCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreature.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +69,7 @@
 		0644E03D1EAA471000C5F33C /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
+				066470C21EAC32F200C5C26E /* Categories */,
 				06AF88481EABB44D004EDE29 /* APCreature */,
 				0644E0461EAA47DC00C5F33C /* APCreatureTests */,
 				0644E03E1EAA471000C5F33C /* main.m */,
@@ -77,6 +84,17 @@
 				0644E04B1EAA487200C5F33C /* APCreatureTests.m */,
 			);
 			path = APCreatureTests;
+			sourceTree = "<group>";
+		};
+		066470C21EAC32F200C5C26E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				066470CF1EAC3B0C00C5C26E /* NSArray+APExtension.h */,
+				066470D01EAC3B0C00C5C26E /* NSArray+APExtension.m */,
+				066470D21EAC404900C5C26E /* NSObject+APExtension.h */,
+				066470D31EAC404900C5C26E /* NSObject+APExtension.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		06AF88481EABB44D004EDE29 /* APCreature */ = {
@@ -147,8 +165,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */,
+				066470D41EAC404900C5C26E /* NSObject+APExtension.m in Sources */,
 				0644E03F1EAA471000C5F33C /* main.m in Sources */,
 				06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */,
+				066470D11EAC3B0C00C5C26E /* NSArray+APExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
