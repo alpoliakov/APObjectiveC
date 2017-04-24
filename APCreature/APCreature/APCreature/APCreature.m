@@ -65,12 +65,15 @@
 #pragma mark Public Methods
 
 - (APCreature *)giveBirthChildWithGender:(APGender)gender {
-    NSLog(@"I can give birth!!!");
     return [APCreature creatureWithGender:gender];
 }
 
 - (void)toFight {
-    NSLog(@"To arms!!!");
+    NSLog(@"\nLet's go to the WAR!!!");
+}
+
+- (void)toGiveBirth {
+    NSLog(@"\nLet's go to give BIRTH!!!");
 }
 
 - (void)sayHello {
@@ -96,6 +99,10 @@
 
 - (void)removeChildren:(NSArray *)children {
     [self.mutableChildren removeObjectsInArray:children];
+}
+
+- (NSUInteger)childrenCount {
+    return self.mutableChildren.count;
 }
 
 @end

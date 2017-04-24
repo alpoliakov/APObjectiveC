@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, APGender) {
 
 - (APCreature *)giveBirthChildWithGender:(APGender)gender;
 - (void)toFight;
+- (void)toGiveBirth;
 - (void)sayHello;
 - (void)addChild:(APCreature *)child;
 - (void)removeChild:(APCreature *)child;
