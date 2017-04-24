@@ -47,8 +47,9 @@ static const NSString *chaildFemale = @"Rebekka";
         NSLog(@"\n---------------------------------");
         [creature sayHello];
         (kAPGenderMale == [creature gender]) ? [creature toFight] : [creature toGiveBirth];
+        
     }
-    NSLog(@"%lu", (unsigned long)[array count]);
+    NSLog(@"%@", [array objectAtIndex:4]);
     NSLog(@"OK\n");
 }
 
