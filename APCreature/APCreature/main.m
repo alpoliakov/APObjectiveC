@@ -7,8 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+APObject.h"
 #import "APCreature.h"
 #import "APCreatureTests.h"
+#import "NSObject+APExtension.h"
+#import "NSArray+APExtension.h"
 
 
 int main(int argc, const char * argv[]) {

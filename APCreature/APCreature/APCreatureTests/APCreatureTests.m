@@ -17,24 +17,26 @@
 }
 
 static const NSUInteger count = 10;
+static const NSString *nameMale = @"Abraham";
+static const NSString *nameFemale = @"Sandra";
+static const NSString *chaildMale = @"David";
+static const NSString *chaildFemale = @"Rebekka";
 
 +(void)performTestByTechAssignment {
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
-    
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
-        NSString *maleName = [NSString stringWithFormat:@"Illon%i", i];
-        NSString *femaleName = [NSString stringWithFormat:@"Angela%i", i];
+        NSString *maleName = [NSString stringWithFormat:@"%@%i", nameMale, i];
+        NSString *femaleName = [NSString stringWithFormat:@"%@%i", nameFemale, i];
         APGender gender = arc4random_uniform(2);
         NSString *name = gender == kAPGenderMale ? maleName : femaleName;
         APCreature *creature = [APCreature creatureWithGender:gender];
+        [array addObject:creature];
         [creature setName:name];
-        NSString *maleChaild = [NSString stringWithFormat:@"David%i", i];
-        NSString *femaleChaild = [NSString stringWithFormat:@"Sandra%i", i];
+        NSString *maleChaild = [NSString stringWithFormat:@"%@%i", chaildMale, i];
+        NSString *femaleChaild = [NSString stringWithFormat:@"%@%i", chaildFemale, i];
         NSString *nameChaild = gender == kAPGenderMale ? maleChaild : femaleChaild;
         APCreature *child = [creature giveBirthChildWithGender:gender];
-        [array addObject:creature];
-        [array addObject:child];
         [creature addChild:child];
         [child setName:nameChaild];
 }
