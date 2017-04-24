@@ -8,6 +8,29 @@
 
 #import "APCreatureMale.h"
 
+@interface APCreatureMale ()
+
+-(APCreature *)toGoWar;
+
+@end
+
 @implementation APCreatureMale
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)performGenderSpecificOperation {
+    [self toGoWar];
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (APCreature *)toGoWar {
+    NSLog(@"Let's go to WAR!!!");
+    
+    return nil;
+}
+
 
 @end

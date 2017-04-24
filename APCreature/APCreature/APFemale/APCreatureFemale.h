@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APCreature.h"
 
-@interface APCreatureFemale : NSObject
+@interface APCreatureFemale : APCreature
 
 @end

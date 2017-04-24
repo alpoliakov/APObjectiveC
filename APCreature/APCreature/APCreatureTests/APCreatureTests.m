@@ -8,12 +8,14 @@
 
 #import "APCreatureTests.h"
 #import "APCreature.h"
+#import "APCreatureMale.h"
+#import "APCreatureFemale.h"
 
 @implementation APCreatureTests
 
 + (void)performCreatureTests {
     [APCreatureTests performTestByTechAssignment];
-    [APCreatureTests generateRandomNumber];
+    //[APCreatureTests generateRandomNumber];
 }
 
 static const NSUInteger count = 10;
@@ -46,13 +48,15 @@ static const NSString *chaildFemale = @"Rebekka";
         [creature sayHello];
         (kAPGenderMale == [creature gender]) ? [creature toFight] : [creature toGiveBirth];
     }
+    NSLog(@"%lu", (unsigned long)[array count]);
     NSLog(@"OK\n");
 }
 
-+(void)generateRandomNumber {
-    int number;
-    number = (arc4random()%20)+1;
-    NSString *string = [NSString stringWithFormat:@"%i", number];
-}
+    
+//+(void)generateRandomNumber {
+//    int number;
+//    number = (arc4random()%20)+1;
+//    NSString *string = [NSString stringWithFormat:@"%i", number];
+//}
 
 @end

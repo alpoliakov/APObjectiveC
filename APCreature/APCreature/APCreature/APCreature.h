@@ -34,5 +34,6 @@ typedef NS_ENUM(NSUInteger, APGender) {
 - (void)removeChild:(APCreature *)child;
 - (void)addChildren:(NSArray *)children;
 - (void)removeChildren:(NSArray *)children;
+- (void)performGengerSpecificOperation;
 
 @end

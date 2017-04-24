@@ -14,7 +14,8 @@
 @end
 
 @implementation APCreature
-
+@class APCreatureMale;
+@class APCreatureFemale;
 @dynamic children;
 
 #pragma mark -
@@ -41,7 +42,7 @@
 - (instancetype)init {
     self = [super init];
     self.mutableChildren = [NSMutableArray array];
-    
+    self.name = [NSString stringWithFormat:@"Jhonny"];
     return self;
 }
 
@@ -51,7 +52,7 @@
         self.gender = gender;
     }
 
-    return self;
+   return self;
 }
 
 #pragma mark -
@@ -103,6 +104,10 @@
 
 - (NSUInteger)childrenCount {
     return self.mutableChildren.count;
+}
+
+- (void)performGengerSpecificOperation {
+
 }
 
 @end
