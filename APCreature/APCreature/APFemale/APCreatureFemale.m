@@ -27,7 +27,7 @@
 #pragma mark Private Methods
 
 - (APCreature *)toGiveBirth {
-        NSLog(@"go to birth");
+        NSLog(@"Went to give birth!");
         return [[[self class] new] autorelease];
 }
 

@@ -15,29 +15,34 @@
 
 + (void)performCreatureTests {
     [APCreatureTests performTestByTechAssignment];
-    //[APCreatureTests generateRandomNumber];
 }
 
 static const NSUInteger count = 10;
 static const NSString *nameMale = @"Abraham";
 static const NSString *nameFemale = @"Sandra";
-static const NSString *chaildMale = @"David";
-static const NSString *chaildFemale = @"Rebekka";
+
++ (NSString *)nameMaleWithRandomNumber {
+    int number;
+    number = (arc4random()%30)+1;
+    return  [NSString stringWithFormat:@"%@%i", nameMale, number];
+}
+
++ (NSString *)nameFemaleWithRandomNumber {
+    int number;
+    number = (arc4random()%30)+1;
+    return  [NSString stringWithFormat:@"%@%i", nameFemale, number];
+}
 
 +(void)performTestByTechAssignment {
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
-        NSString *maleName = [NSString stringWithFormat:@"%@%i", nameMale, i];
-        NSString *femaleName = [NSString stringWithFormat:@"%@%i", nameFemale, i];
         APGender gender = arc4random_uniform(2);
-        NSString *name = gender == kAPGenderMale ? maleName : femaleName;
+        NSString *name = gender == kAPGenderMale ? [APCreatureTests nameMaleWithRandomNumber] :         [APCreatureTests nameFemaleWithRandomNumber];
         APCreature *creature = [APCreature creatureWithGender:gender];
         [array addObject:creature];
         [creature setName:name];
-        NSString *maleChaild = [NSString stringWithFormat:@"%@%i", chaildMale, i];
-        NSString *femaleChaild = [NSString stringWithFormat:@"%@%i", chaildFemale, i];
-        NSString *nameChaild = gender == kAPGenderMale ? maleChaild : femaleChaild;
+        NSString *nameChaild = gender == kAPGenderMale ? [APCreatureTests nameMaleWithRandomNumber] : [APCreatureTests nameFemaleWithRandomNumber];
         APCreature *child = [creature giveBirthChildWithGender:gender];
         [creature addChild:child];
         [child setName:nameChaild];
@@ -52,12 +57,5 @@ static const NSString *chaildFemale = @"Rebekka";
     NSLog(@"%@", [array objectAtIndex:4]);
     NSLog(@"OK\n");
 }
-
-    
-//+(void)generateRandomNumber {
-//    int number;
-//    number = (arc4random()%20)+1;
-//    NSString *string = [NSString stringWithFormat:@"%i", number];
-//}
 
 @end
