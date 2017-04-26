@@ -7,6 +7,9 @@
 //
 
 #import "APCreature.h"
+#import "APCreatureMale.h"
+#import "APCreatureFemale.h"
+#import "NSObject+APObject.h"
 
 @interface APCreature ()
 @property (nonatomic, retain) NSMutableArray *mutableChildren;
@@ -14,19 +17,26 @@
 @end
 
 @implementation APCreature
-@class APCreatureMale;
-@class APCreatureFemale;
+
 @dynamic children;
 
 #pragma mark -
 #pragma mark Class Methods
 
-+ (APCreature *)creature {
-   return [[[self alloc] init] autorelease] ;
++ (instancetype)creatureWithGender:(APGender)gender {
+    Class classForCreation = [APCreature classForGender:gender];
+    return [[[classForCreation alloc] initWithGender:gender] autorelease];
 }
 
-+ (APCreature *)creatureWithGender:(APGender)gender {
-    return [[[self alloc] initWithGender:gender] autorelease];
++ (Class)classForGender:(APGender)gender {
+    Class result = Nil;
+    if (kAPGenderMale == gender) {
+        result = [APCreatureMale class];
+    } else if (kAPGenderFemale == gender) {
+        result = [APCreatureFemale class];
+    }
+    
+    return result;
 }
 
 #pragma mark -
@@ -48,10 +58,7 @@
 
 - (instancetype)initWithGender:(APGender)gender {
     self = [self init];
-    if (self) {
-        self.gender = gender;
-    }
-
+    
    return self;
 }
 
@@ -65,18 +72,6 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (APCreature *)giveBirthChildWithGender:(APGender)gender {
-    return [APCreature creatureWithGender:gender];
-}
-
-- (void)toFight {
-    NSLog(@"\nLet's go to the WAR!!!");
-}
-
-- (void)toGiveBirth {
-    NSLog(@"\nLet's go to give BIRTH!!!");
-}
-
 - (void)sayHello {
     NSLog(@"Hello, I'm %@", self.name);
     for (APCreature *child in self.mutableChildren) {
@@ -85,9 +80,7 @@
 }
 
 - (void)addChild:(APCreature *)child {
-    if (child) {
         [self.mutableChildren addObject:child];
-    }
 }
 
 - (void)removeChild:(APCreature *)child {
@@ -106,7 +99,7 @@
     return self.mutableChildren.count;
 }
 
-- (void)performGengerSpecificOperation {
+- (void)performGenderSpecificOperation {
 
 }
 

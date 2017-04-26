@@ -42,19 +42,13 @@ static const NSString *nameFemale = @"Sandra";
         APCreature *creature = [APCreature creatureWithGender:gender];
         [array addObject:creature];
         [creature setName:name];
-        NSString *nameChaild = gender == kAPGenderMale ? [APCreatureTests nameMaleWithRandomNumber] : [APCreatureTests nameFemaleWithRandomNumber];
-        APCreature *child = [creature giveBirthChildWithGender:gender];
-        [creature addChild:child];
-        [child setName:nameChaild];
 }
     
     for (APCreature *creature in array) {
         NSLog(@"\n------------------------------------");
         [creature sayHello];
-        (kAPGenderMale == [creature gender]) ? [creature toFight] : [creature toGiveBirth];
-        
+        [creature performGenderSpecificOperation];
     }
-    NSLog(@"%@", [array objectAtIndex:4]);
     NSLog(@"OK\n");
 }
 
