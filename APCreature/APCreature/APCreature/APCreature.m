@@ -9,19 +9,25 @@
 #import "APCreature.h"
 
 @interface APCreature ()
-
-@property (nonatomic, retain) NSMutableSet *mutableChildren;
+@property (nonatomic, retain) NSMutableArray *mutableChildren;
 
 @end
 
 @implementation APCreature
+@class APCreatureMale;
+@class APCreatureFemale;
 @dynamic children;
 
-
-#pragma mark-
+#pragma mark -
 #pragma mark Class Methods
 
++ (APCreature *)creature {
+   return [[[self alloc] init] autorelease] ;
+}
 
++ (APCreature *)creatureWithGender:(APGender)gender {
+    return [[[self alloc] initWithGender:gender] autorelease];
+}
 
 #pragma mark -
 #pragma mark Initializations and Deallocations
@@ -35,30 +41,40 @@
 
 - (instancetype)init {
     self = [super init];
-    if (self) {
-        self.mutableChildren = [NSMutableSet set];
-    }
-    
+    self.mutableChildren = [NSMutableArray array];
+    self.name = [NSString stringWithFormat:@"Jhonny"];
     return self;
 }
 
-#pragma mark-
+- (instancetype)initWithGender:(APGender)gender {
+    self = [self init];
+    if (self) {
+        self.gender = gender;
+    }
+
+   return self;
+}
+
+#pragma mark -
 #pragma mark Accessors
 
-- (NSSet *) children {
+- (NSArray *)children {
     return [[self.mutableChildren copy] autorelease];
 }
 
-#pragma mark-
+#pragma mark -
 #pragma mark Public Methods
 
-- (APCreature *)giveBirth {
-    NSLog(@"I can give birth children.");
-    return [[[APCreature alloc] init] autorelease];
+- (APCreature *)giveBirthChildWithGender:(APGender)gender {
+    return [APCreature creatureWithGender:gender];
 }
 
 - (void)toFight {
-    NSLog(@"To arms!!!");
+    NSLog(@"\nLet's go to the WAR!!!");
+}
+
+- (void)toGiveBirth {
+    NSLog(@"\nLet's go to give BIRTH!!!");
 }
 
 - (void)sayHello {
@@ -69,13 +85,29 @@
 }
 
 - (void)addChild:(APCreature *)child {
-    if ([child isKindOfClass:[APCreature class]]) {
+    if (child) {
         [self.mutableChildren addObject:child];
     }
 }
 
 - (void)removeChild:(APCreature *)child {
     [self.mutableChildren removeObject:child];
+}
+
+- (void)addChildren:(NSArray *)children {
+    [self.mutableChildren addObjectsFromArray:children];
+}
+
+- (void)removeChildren:(NSArray *)children {
+    [self.mutableChildren removeObjectsInArray:children];
+}
+
+- (NSUInteger)childrenCount {
+    return self.mutableChildren.count;
+}
+
+- (void)performGengerSpecificOperation {
+
 }
 
 @end
