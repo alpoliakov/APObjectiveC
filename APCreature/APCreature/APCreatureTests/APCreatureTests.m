@@ -49,7 +49,7 @@ static const NSString *nameFemale = @"Sandra";
 }
     
     for (APCreature *creature in array) {
-        NSLog(@"\n---------------------------------");
+        NSLog(@"\n------------------------------------");
         [creature sayHello];
         (kAPGenderMale == [creature gender]) ? [creature toFight] : [creature toGiveBirth];
         
