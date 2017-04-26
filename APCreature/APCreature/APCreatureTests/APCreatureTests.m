@@ -47,6 +47,7 @@ static const NSString *nameFemale = @"Sandra";
     for (APCreature *creature in array) {
         NSLog(@"\n------------------------------------");
         [creature sayHello];
+        // полиморфизм, значит - охуенно
         [creature performGenderSpecificOperation];
     }
     NSLog(@"OK\n");

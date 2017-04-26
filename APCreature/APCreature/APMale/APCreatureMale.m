@@ -19,6 +19,8 @@
 #pragma mark -
 #pragma mark Public Methods
 
+// полиморфизм, значит - охуенно
+
 - (void)performGenderSpecificOperation {
     [self toGoWar];
 }
