@@ -17,8 +17,7 @@
 @end
 
 @implementation APCreature
-//@class APCreatureMale;
-//@class APCreatureFemale;
+
 @dynamic children;
 
 #pragma mark -
@@ -72,18 +71,6 @@
 
 #pragma mark -
 #pragma mark Public Methods
-
-//- (APCreature *)giveBirthChildWithGender:(APGender)gender {
-//    return [APCreature creatureWithGender:gender];
-//}
-
-//- (void)toFight {
-//    NSLog(@"\nLet's go to the WAR!!!");
-//}
-
-//- (void)toGiveBirth {
-//    NSLog(@"\nLet's go to give BIRTH!!!");
-//}
 
 - (void)sayHello {
     NSLog(@"Hello, I'm %@", self.name);
