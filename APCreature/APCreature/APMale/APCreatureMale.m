@@ -7,6 +7,7 @@
 //
 
 #import "APCreatureMale.h"
+#import "NSObject+APObject.h"
 
 @interface APCreatureMale ()
 
