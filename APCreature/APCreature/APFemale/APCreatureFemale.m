@@ -7,7 +7,7 @@
 //
 
 #import "APCreatureFemale.h"
-#import "NSObject+APObject.h"
+//#import "APCreatureTests.h"
 
 @interface APCreatureFemale ()
 
@@ -28,8 +28,12 @@
 #pragma mark Private Methods
 
 - (APCreature *)toGiveBirth {
-        NSLog(@"Went to give birth!");
-        return [[[self class] new] autorelease];
+    NSLog(@"I'm going to give birth!");
+    APGender genderChild = (arc4random_uniform(2)) ? kAPGenderMale : kAPGenderFemale;
+    APCreature *child = [APCreatureFemale creatureWithGender:genderChild];
+    [self addChild:child];
+    
+    return child;
 }
 
 @end
