@@ -42,7 +42,7 @@
 - (instancetype)init {
     self = [super init];
     self.mutableChildren = [NSMutableArray array];
-    self.name = [NSString stringWithFormat:@"Jhonny"];
+    
     return self;
 }
 
