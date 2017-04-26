@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0644E03F1EAA471000C5F33C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E03E1EAA471000C5F33C /* main.m */; };
-		0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0644E04B1EAA487200C5F33C /* APCreatureTests.m */; };
-		066B406A1EAE2B7B002D6FCD /* APCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B40691EAE2B7B002D6FCD /* APCreatureMale.m */; };
-		066B406D1EAE2B97002D6FCD /* APCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B406C1EAE2B97002D6FCD /* APCreatureFemale.m */; };
-		066B40781EAE3261002D6FCD /* NSObject+APObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 066B40771EAE3261002D6FCD /* NSObject+APObject.m */; };
-		06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF884A1EABB44D004EDE29 /* APCreature.m */; };
+		069C7B4C1EB140B400584B4B /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B3D1EB140B400584B4B /* APCreature.m */; };
+		069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B401EB140B400584B4B /* APCreatureTests.m */; };
+		069C7B4E1EB140B400584B4B /* APCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B431EB140B400584B4B /* APCreatureFemale.m */; };
+		069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B461EB140B400584B4B /* APCreatureMale.m */; };
+		069C7B501EB140B400584B4B /* NSObject+APObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B491EB140B400584B4B /* NSObject+APObject.m */; };
+		069C7B511EB140B400584B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B4B1EB140B400584B4B /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,17 +29,17 @@
 
 /* Begin PBXFileReference section */
 		0644E03B1EAA471000C5F33C /* APCreature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APCreature; sourceTree = BUILT_PRODUCTS_DIR; };
-		0644E03E1EAA471000C5F33C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0644E04A1EAA487200C5F33C /* APCreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureTests.h; sourceTree = "<group>"; };
-		0644E04B1EAA487200C5F33C /* APCreatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureTests.m; sourceTree = "<group>"; };
-		066B40681EAE2B7B002D6FCD /* APCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureMale.h; sourceTree = "<group>"; };
-		066B40691EAE2B7B002D6FCD /* APCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureMale.m; sourceTree = "<group>"; };
-		066B406B1EAE2B97002D6FCD /* APCreatureFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureFemale.h; sourceTree = "<group>"; };
-		066B406C1EAE2B97002D6FCD /* APCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureFemale.m; sourceTree = "<group>"; };
-		066B40761EAE3261002D6FCD /* NSObject+APObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APObject.h"; sourceTree = "<group>"; };
-		066B40771EAE3261002D6FCD /* NSObject+APObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APObject.m"; sourceTree = "<group>"; };
-		06AF88491EABB44D004EDE29 /* APCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreature.h; sourceTree = "<group>"; };
-		06AF884A1EABB44D004EDE29 /* APCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreature.m; sourceTree = "<group>"; };
+		069C7B3C1EB140B400584B4B /* APCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreature.h; sourceTree = "<group>"; };
+		069C7B3D1EB140B400584B4B /* APCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreature.m; sourceTree = "<group>"; };
+		069C7B3F1EB140B400584B4B /* APCreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureTests.h; sourceTree = "<group>"; };
+		069C7B401EB140B400584B4B /* APCreatureTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureTests.m; sourceTree = "<group>"; };
+		069C7B421EB140B400584B4B /* APCreatureFemale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureFemale.h; sourceTree = "<group>"; };
+		069C7B431EB140B400584B4B /* APCreatureFemale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureFemale.m; sourceTree = "<group>"; };
+		069C7B451EB140B400584B4B /* APCreatureMale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureMale.h; sourceTree = "<group>"; };
+		069C7B461EB140B400584B4B /* APCreatureMale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreatureMale.m; sourceTree = "<group>"; };
+		069C7B481EB140B400584B4B /* NSObject+APObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APObject.h"; sourceTree = "<group>"; };
+		069C7B491EB140B400584B4B /* NSObject+APObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APObject.m"; sourceTree = "<group>"; };
+		069C7B4B1EB140B400584B4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 		0644E0321EAA471000C5F33C = {
 			isa = PBXGroup;
 			children = (
-				0644E03D1EAA471000C5F33C /* APCreature */,
+				069C7B391EB140B400584B4B /* APCreature */,
 				0644E03C1EAA471000C5F33C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,75 +69,78 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0644E03D1EAA471000C5F33C /* APCreature */ = {
+		069C7B391EB140B400584B4B /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
-				069C7B381EB13ED500584B4B /* APCreatureProject */,
-				0644E03E1EAA471000C5F33C /* main.m */,
+				069C7B3A1EB140B400584B4B /* APCreatureProject */,
+				069C7B4B1EB140B400584B4B /* main.m */,
 			);
 			path = APCreature;
 			sourceTree = "<group>";
 		};
-		0644E0461EAA47DC00C5F33C /* APCreatureTests */ = {
+		069C7B3A1EB140B400584B4B /* APCreatureProject */ = {
 			isa = PBXGroup;
 			children = (
-				0644E04A1EAA487200C5F33C /* APCreatureTests.h */,
-				0644E04B1EAA487200C5F33C /* APCreatureTests.m */,
-			);
-			name = APCreatureTests;
-			path = ../APCreatureTests;
-			sourceTree = "<group>";
-		};
-		066B40631EAE29EF002D6FCD /* APMale */ = {
-			isa = PBXGroup;
-			children = (
-				066B40681EAE2B7B002D6FCD /* APCreatureMale.h */,
-				066B40691EAE2B7B002D6FCD /* APCreatureMale.m */,
-			);
-			name = APMale;
-			path = ../APMale;
-			sourceTree = "<group>";
-		};
-		066B40641EAE2A42002D6FCD /* APFemale */ = {
-			isa = PBXGroup;
-			children = (
-				066B406B1EAE2B97002D6FCD /* APCreatureFemale.h */,
-				066B406C1EAE2B97002D6FCD /* APCreatureFemale.m */,
-			);
-			name = APFemale;
-			path = ../APFemale;
-			sourceTree = "<group>";
-		};
-		066B40711EAE31CA002D6FCD /* NSObject+APObject */ = {
-			isa = PBXGroup;
-			children = (
-				066B40761EAE3261002D6FCD /* NSObject+APObject.h */,
-				066B40771EAE3261002D6FCD /* NSObject+APObject.m */,
-			);
-			name = "NSObject+APObject";
-			path = "../NSObject+APObject";
-			sourceTree = "<group>";
-		};
-		069C7B381EB13ED500584B4B /* APCreatureProject */ = {
-			isa = PBXGroup;
-			children = (
-				066B40711EAE31CA002D6FCD /* NSObject+APObject */,
-				066B40641EAE2A42002D6FCD /* APFemale */,
-				066B40631EAE29EF002D6FCD /* APMale */,
-				06AF88481EABB44D004EDE29 /* APCreature */,
-				0644E0461EAA47DC00C5F33C /* APCreatureTests */,
+				069C7B3B1EB140B400584B4B /* APCreature */,
+				069C7B3E1EB140B400584B4B /* APCreatureTests */,
+				069C7B411EB140B400584B4B /* APFemale */,
+				069C7B441EB140B400584B4B /* APMale */,
+				069C7B471EB140B400584B4B /* NSObject+APObject */,
+				069C7B4A1EB140B400584B4B /* Test */,
 			);
 			path = APCreatureProject;
 			sourceTree = "<group>";
 		};
-		06AF88481EABB44D004EDE29 /* APCreature */ = {
+		069C7B3B1EB140B400584B4B /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
-				06AF88491EABB44D004EDE29 /* APCreature.h */,
-				06AF884A1EABB44D004EDE29 /* APCreature.m */,
+				069C7B3C1EB140B400584B4B /* APCreature.h */,
+				069C7B3D1EB140B400584B4B /* APCreature.m */,
 			);
-			name = APCreature;
-			path = ../APCreature;
+			path = APCreature;
+			sourceTree = "<group>";
+		};
+		069C7B3E1EB140B400584B4B /* APCreatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B3F1EB140B400584B4B /* APCreatureTests.h */,
+				069C7B401EB140B400584B4B /* APCreatureTests.m */,
+			);
+			path = APCreatureTests;
+			sourceTree = "<group>";
+		};
+		069C7B411EB140B400584B4B /* APFemale */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B421EB140B400584B4B /* APCreatureFemale.h */,
+				069C7B431EB140B400584B4B /* APCreatureFemale.m */,
+			);
+			path = APFemale;
+			sourceTree = "<group>";
+		};
+		069C7B441EB140B400584B4B /* APMale */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B451EB140B400584B4B /* APCreatureMale.h */,
+				069C7B461EB140B400584B4B /* APCreatureMale.m */,
+			);
+			path = APMale;
+			sourceTree = "<group>";
+		};
+		069C7B471EB140B400584B4B /* NSObject+APObject */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B481EB140B400584B4B /* NSObject+APObject.h */,
+				069C7B491EB140B400584B4B /* NSObject+APObject.m */,
+			);
+			path = "NSObject+APObject";
+			sourceTree = "<group>";
+		};
+		069C7B4A1EB140B400584B4B /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,12 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0644E04C1EAA487200C5F33C /* APCreatureTests.m in Sources */,
-				066B40781EAE3261002D6FCD /* NSObject+APObject.m in Sources */,
-				0644E03F1EAA471000C5F33C /* main.m in Sources */,
-				06AF884B1EABB44D004EDE29 /* APCreature.m in Sources */,
-				066B406A1EAE2B7B002D6FCD /* APCreatureMale.m in Sources */,
-				066B406D1EAE2B97002D6FCD /* APCreatureFemale.m in Sources */,
+				069C7B4E1EB140B400584B4B /* APCreatureFemale.m in Sources */,
+				069C7B501EB140B400584B4B /* NSObject+APObject.m in Sources */,
+				069C7B4C1EB140B400584B4B /* APCreature.m in Sources */,
+				069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */,
+				069C7B511EB140B400584B4B /* main.m in Sources */,
+				069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
