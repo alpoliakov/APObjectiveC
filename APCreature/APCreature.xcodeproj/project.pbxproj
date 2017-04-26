@@ -72,11 +72,7 @@
 		0644E03D1EAA471000C5F33C /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
-				066B40711EAE31CA002D6FCD /* NSObject+APObject */,
-				066B40641EAE2A42002D6FCD /* APFemale */,
-				066B40631EAE29EF002D6FCD /* APMale */,
-				06AF88481EABB44D004EDE29 /* APCreature */,
-				0644E0461EAA47DC00C5F33C /* APCreatureTests */,
+				069C7B381EB13ED500584B4B /* APCreatureProject */,
 				0644E03E1EAA471000C5F33C /* main.m */,
 			);
 			path = APCreature;
@@ -88,7 +84,8 @@
 				0644E04A1EAA487200C5F33C /* APCreatureTests.h */,
 				0644E04B1EAA487200C5F33C /* APCreatureTests.m */,
 			);
-			path = APCreatureTests;
+			name = APCreatureTests;
+			path = ../APCreatureTests;
 			sourceTree = "<group>";
 		};
 		066B40631EAE29EF002D6FCD /* APMale */ = {
@@ -97,7 +94,8 @@
 				066B40681EAE2B7B002D6FCD /* APCreatureMale.h */,
 				066B40691EAE2B7B002D6FCD /* APCreatureMale.m */,
 			);
-			path = APMale;
+			name = APMale;
+			path = ../APMale;
 			sourceTree = "<group>";
 		};
 		066B40641EAE2A42002D6FCD /* APFemale */ = {
@@ -106,7 +104,8 @@
 				066B406B1EAE2B97002D6FCD /* APCreatureFemale.h */,
 				066B406C1EAE2B97002D6FCD /* APCreatureFemale.m */,
 			);
-			path = APFemale;
+			name = APFemale;
+			path = ../APFemale;
 			sourceTree = "<group>";
 		};
 		066B40711EAE31CA002D6FCD /* NSObject+APObject */ = {
@@ -115,7 +114,20 @@
 				066B40761EAE3261002D6FCD /* NSObject+APObject.h */,
 				066B40771EAE3261002D6FCD /* NSObject+APObject.m */,
 			);
-			path = "NSObject+APObject";
+			name = "NSObject+APObject";
+			path = "../NSObject+APObject";
+			sourceTree = "<group>";
+		};
+		069C7B381EB13ED500584B4B /* APCreatureProject */ = {
+			isa = PBXGroup;
+			children = (
+				066B40711EAE31CA002D6FCD /* NSObject+APObject */,
+				066B40641EAE2A42002D6FCD /* APFemale */,
+				066B40631EAE29EF002D6FCD /* APMale */,
+				06AF88481EABB44D004EDE29 /* APCreature */,
+				0644E0461EAA47DC00C5F33C /* APCreatureTests */,
+			);
+			path = APCreatureProject;
 			sourceTree = "<group>";
 		};
 		06AF88481EABB44D004EDE29 /* APCreature */ = {
@@ -124,7 +136,8 @@
 				06AF88491EABB44D004EDE29 /* APCreature.h */,
 				06AF884A1EABB44D004EDE29 /* APCreature.m */,
 			);
-			path = APCreature;
+			name = APCreature;
+			path = ../APCreature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
