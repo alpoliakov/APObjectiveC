@@ -72,6 +72,7 @@
 		069C7B391EB140B400584B4B /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
+				069C7B521EB1417700584B4B /* APCarWashProject */,
 				069C7B3A1EB140B400584B4B /* APCreatureProject */,
 				069C7B4B1EB140B400584B4B /* main.m */,
 			);
@@ -86,7 +87,6 @@
 				069C7B411EB140B400584B4B /* APFemale */,
 				069C7B441EB140B400584B4B /* APMale */,
 				069C7B471EB140B400584B4B /* NSObject+APObject */,
-				069C7B4A1EB140B400584B4B /* Test */,
 			);
 			path = APCreatureProject;
 			sourceTree = "<group>";
@@ -136,11 +136,19 @@
 			path = "NSObject+APObject";
 			sourceTree = "<group>";
 		};
-		069C7B4A1EB140B400584B4B /* Test */ = {
+		069C7B521EB1417700584B4B /* APCarWashProject */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B531EB1438A00584B4B /* APCarWashTest */,
+			);
+			path = APCarWashProject;
+			sourceTree = "<group>";
+		};
+		069C7B531EB1438A00584B4B /* APCarWashTest */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Test;
+			path = APCarWashTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
