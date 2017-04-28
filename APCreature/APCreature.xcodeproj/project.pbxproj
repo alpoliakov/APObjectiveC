@@ -13,6 +13,8 @@
 		069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B461EB140B400584B4B /* APCreatureMale.m */; };
 		069C7B501EB140B400584B4B /* NSObject+APObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B491EB140B400584B4B /* NSObject+APObject.m */; };
 		069C7B511EB140B400584B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B4B1EB140B400584B4B /* main.m */; };
+		069C7B6A1EB3DDA400584B4B /* APBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B691EB3DDA400584B4B /* APBuilding.m */; };
+		069C7B6D1EB3DDF600584B4B /* APCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B6C1EB3DDF600584B4B /* APCarWashTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,10 @@
 		069C7B481EB140B400584B4B /* NSObject+APObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APObject.h"; sourceTree = "<group>"; };
 		069C7B491EB140B400584B4B /* NSObject+APObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APObject.m"; sourceTree = "<group>"; };
 		069C7B4B1EB140B400584B4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		069C7B681EB3DDA400584B4B /* APBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APBuilding.h; path = APCreature/APCarWashProject/APCars/APBuilding.h; sourceTree = SOURCE_ROOT; };
+		069C7B691EB3DDA400584B4B /* APBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APBuilding.m; path = APCreature/APCarWashProject/APCars/APBuilding.m; sourceTree = SOURCE_ROOT; };
+		069C7B6B1EB3DDF600584B4B /* APCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashTest.h; sourceTree = "<group>"; };
+		069C7B6C1EB3DDF600584B4B /* APCarWashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCarWashTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +145,9 @@
 		069C7B521EB1417700584B4B /* APCarWashProject */ = {
 			isa = PBXGroup;
 			children = (
+				069C7B671EB3DB4C00584B4B /* APCars */,
+				069C7B661EB3DAC500584B4B /* APWorkers */,
+				069C7B651EB3D72200584B4B /* APBuilding */,
 				069C7B531EB1438A00584B4B /* APCarWashTest */,
 			);
 			path = APCarWashProject;
@@ -147,8 +156,34 @@
 		069C7B531EB1438A00584B4B /* APCarWashTest */ = {
 			isa = PBXGroup;
 			children = (
+				069C7B6B1EB3DDF600584B4B /* APCarWashTest.h */,
+				069C7B6C1EB3DDF600584B4B /* APCarWashTest.m */,
 			);
 			path = APCarWashTest;
+			sourceTree = "<group>";
+		};
+		069C7B651EB3D72200584B4B /* APBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				069C7B681EB3DDA400584B4B /* APBuilding.h */,
+				069C7B691EB3DDA400584B4B /* APBuilding.m */,
+			);
+			name = APBuilding;
+			path = Building;
+			sourceTree = "<group>";
+		};
+		069C7B661EB3DAC500584B4B /* APWorkers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APWorkers;
+			sourceTree = "<group>";
+		};
+		069C7B671EB3DB4C00584B4B /* APCars */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APCars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +248,8 @@
 				069C7B501EB140B400584B4B /* NSObject+APObject.m in Sources */,
 				069C7B4C1EB140B400584B4B /* APCreature.m in Sources */,
 				069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */,
+				069C7B6D1EB3DDF600584B4B /* APCarWashTest.m in Sources */,
+				069C7B6A1EB3DDA400584B4B /* APBuilding.m in Sources */,
 				069C7B511EB140B400584B4B /* main.m in Sources */,
 				069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */,
 			);
