@@ -15,7 +15,7 @@
 		069C7B511EB140B400584B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B4B1EB140B400584B4B /* main.m */; };
 		069C7B6A1EB3DDA400584B4B /* APBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B691EB3DDA400584B4B /* APBuilding.m */; };
 		069C7B6D1EB3DDF600584B4B /* APCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B6C1EB3DDF600584B4B /* APCarWashTest.m */; };
-		069C7B711EB40A7B00584B4B /* APRooms.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B701EB40A7B00584B4B /* APRooms.m */; };
+		069C7B741EB485D200584B4B /* APRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B731EB485D200584B4B /* APRoom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,8 +47,8 @@
 		069C7B691EB3DDA400584B4B /* APBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APBuilding.m; path = APCreature/APCarWashProject/APCars/APBuilding.m; sourceTree = SOURCE_ROOT; };
 		069C7B6B1EB3DDF600584B4B /* APCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashTest.h; sourceTree = "<group>"; };
 		069C7B6C1EB3DDF600584B4B /* APCarWashTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCarWashTest.m; sourceTree = "<group>"; };
-		069C7B6F1EB40A7B00584B4B /* APRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRooms.h; sourceTree = "<group>"; };
-		069C7B701EB40A7B00584B4B /* APRooms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRooms.m; sourceTree = "<group>"; };
+		069C7B721EB485D200584B4B /* APRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APRoom.h; path = APCreature/APCarWashProject/APRoom/APRoom.h; sourceTree = SOURCE_ROOT; };
+		069C7B731EB485D200584B4B /* APRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APRoom.m; path = APCreature/APCarWashProject/APRoom/APRoom.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +148,9 @@
 		069C7B521EB1417700584B4B /* APCarWashProject */ = {
 			isa = PBXGroup;
 			children = (
-				069C7B6E1EB40A3300584B4B /* APRooms */,
+				069C7B6E1EB40A3300584B4B /* APRoom */,
 				069C7B671EB3DB4C00584B4B /* APCars */,
-				069C7B661EB3DAC500584B4B /* APWorkers */,
+				069C7B661EB3DAC500584B4B /* APWorker */,
 				069C7B651EB3D72200584B4B /* APBuilding */,
 				069C7B531EB1438A00584B4B /* APCarWashTest */,
 			);
@@ -176,10 +176,11 @@
 			path = Building;
 			sourceTree = "<group>";
 		};
-		069C7B661EB3DAC500584B4B /* APWorkers */ = {
+		069C7B661EB3DAC500584B4B /* APWorker */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = APWorker;
 			path = APWorkers;
 			sourceTree = "<group>";
 		};
@@ -190,12 +191,13 @@
 			path = APCars;
 			sourceTree = "<group>";
 		};
-		069C7B6E1EB40A3300584B4B /* APRooms */ = {
+		069C7B6E1EB40A3300584B4B /* APRoom */ = {
 			isa = PBXGroup;
 			children = (
-				069C7B6F1EB40A7B00584B4B /* APRooms.h */,
-				069C7B701EB40A7B00584B4B /* APRooms.m */,
+				069C7B721EB485D200584B4B /* APRoom.h */,
+				069C7B731EB485D200584B4B /* APRoom.m */,
 			);
+			name = APRoom;
 			path = APRooms;
 			sourceTree = "<group>";
 		};
@@ -264,7 +266,7 @@
 				069C7B6D1EB3DDF600584B4B /* APCarWashTest.m in Sources */,
 				069C7B6A1EB3DDA400584B4B /* APBuilding.m in Sources */,
 				069C7B511EB140B400584B4B /* main.m in Sources */,
-				069C7B711EB40A7B00584B4B /* APRooms.m in Sources */,
+				069C7B741EB485D200584B4B /* APRoom.m in Sources */,
 				069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
