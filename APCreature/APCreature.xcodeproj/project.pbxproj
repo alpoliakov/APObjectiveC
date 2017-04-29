@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				069C7B6E1EB40A3300584B4B /* APRoom */,
-				069C7B671EB3DB4C00584B4B /* APCars */,
+				069C7B671EB3DB4C00584B4B /* APCar */,
 				069C7B661EB3DAC500584B4B /* APWorker */,
 				069C7B651EB3D72200584B4B /* APBuilding */,
 				069C7B531EB1438A00584B4B /* APCarWashTest */,
@@ -184,10 +184,11 @@
 			path = APWorkers;
 			sourceTree = "<group>";
 		};
-		069C7B671EB3DB4C00584B4B /* APCars */ = {
+		069C7B671EB3DB4C00584B4B /* APCar */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = APCar;
 			path = APCars;
 			sourceTree = "<group>";
 		};
