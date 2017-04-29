@@ -11,10 +11,11 @@
 #import "APCreature.h"
 #import "APCreatureTests.h"
 #import "APCarWashTest.h"
+#import "APBuilding.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [APCreatureTests performCreatureTests];
+        //[APCreatureTests performCreatureTests];
         [APCarWashTest performCarWashTests];
         
     return 0;

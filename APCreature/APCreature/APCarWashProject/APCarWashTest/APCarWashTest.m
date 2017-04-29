@@ -7,10 +7,21 @@
 //
 
 #import "APCarWashTest.h"
+#import "APBuilding.h"
 
 @implementation APCarWashTest
 
 + (void)performCarWashTests {
+    [APCarWashTest performTestByTechAssignment];
+}
+
+static const NSUInteger count = 2;
+static const NSString *adminBuilding = @"Office";
+static const NSString *carWashBuilding = @"Car Wash";
+
++(void)performTestByTechAssignment {
+    NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
+    NSLog(@"\n________________________");
     
 }
 
