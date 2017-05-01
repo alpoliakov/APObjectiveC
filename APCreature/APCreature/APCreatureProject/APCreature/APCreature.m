@@ -80,7 +80,9 @@
 }
 
 - (void)addChild:(APCreature *)child {
+    if (child) {
         [self.mutableChildren addObject:child];
+    }
 }
 
 - (void)removeChild:(APCreature *)child {

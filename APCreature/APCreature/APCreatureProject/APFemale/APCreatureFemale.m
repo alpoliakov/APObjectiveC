@@ -7,7 +7,7 @@
 //
 
 #import "APCreatureFemale.h"
-//#import "APCreatureTests.h"
+#import "APCreatureTests.h"
 
 @interface APCreatureFemale ()
 

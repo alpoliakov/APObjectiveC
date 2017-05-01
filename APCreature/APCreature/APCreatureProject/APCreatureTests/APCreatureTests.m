@@ -10,6 +10,12 @@
 #import "APCreature.h"
 #import "APCreatureMale.h"
 #import "APCreatureFemale.h"
+#import "NSObject+APRandomNumbers.h"
+
+static const NSUInteger count = 10;
+static const NSString *nameMale = @"Abraham";
+static const NSString *nameFemale = @"Sandra";
+
 
 @implementation APCreatureTests
 
@@ -17,27 +23,19 @@
     [APCreatureTests performTestByTechAssignment];
 }
 
-static const NSUInteger count = 10;
-static const NSString *nameMale = @"Abraham";
-static const NSString *nameFemale = @"Sandra";
-
 + (NSString *)nameMaleWithRandomNumber {
-    int number;
-    number = (arc4random()%30)+1;
-    return  [NSString stringWithFormat:@"%@%i", nameMale, number];
+    return  [NSString stringWithFormat:@"%@%li", nameMale, APRandomValueRange(APMakeRange(0, 40))];
 }
 
 + (NSString *)nameFemaleWithRandomNumber {
-    int number;
-    number = (arc4random()%30)+1;
-    return  [NSString stringWithFormat:@"%@%i", nameFemale, number];
+    return  [NSString stringWithFormat:@"%@%li", nameFemale, APRandomValueRange(APMakeRange(0, 40))];
 }
 
-+(void)performTestByTechAssignment {
++ (void)performTestByTechAssignment {
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
     NSMutableArray *array = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
-        APGender gender = arc4random_uniform(2);
+        APGender gender = returnYesOrNo();
         NSString *name = gender == kAPGenderMale ? [APCreatureTests nameMaleWithRandomNumber] :         [APCreatureTests nameFemaleWithRandomNumber];
         APCreature *creature = [APCreature creatureWithGender:gender];
         [array addObject:creature];
