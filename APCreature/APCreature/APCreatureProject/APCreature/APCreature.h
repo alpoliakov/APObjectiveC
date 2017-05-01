@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, APGender) {
 
 - (instancetype)initWithGender:(APGender)gender;
 
-- (void)sayHello;
+//- (void)sayHello;
 - (void)addChild:(APCreature *)child;
 - (void)removeChild:(APCreature *)child;
 - (void)addChildren:(NSArray *)children;

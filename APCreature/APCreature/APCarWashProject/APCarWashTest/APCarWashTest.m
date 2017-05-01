@@ -20,9 +20,9 @@ static const NSString *adminBuilding = @"Office";
 static const NSString *carWashBuilding = @"Car Wash";
 
 +(void)APPerformTestByCarWash {
-    NSLog(@"\n-------------------------");
+    NSLog(@"\n---------- Car Wash -----------");
     NSLog(@"\nPerforming %@ test\n", NSStringFromSelector(_cmd));
-    NSLog(@"\n-------------------------");
+    NSLog(@"\n-------------------------------");
     
 }
 

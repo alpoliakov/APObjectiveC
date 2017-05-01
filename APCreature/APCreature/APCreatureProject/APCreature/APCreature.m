@@ -52,7 +52,6 @@
 
 #pragma mark -
 #pragma mark Public Methods
-
 //- (void)sayHello {
 //    NSLog(@"Hello, I'm %@", self.name);
 //    for (APCreature *child in self.mutableChildren) {

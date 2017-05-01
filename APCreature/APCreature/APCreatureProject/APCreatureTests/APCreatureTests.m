@@ -14,30 +14,21 @@
 #import "NSObject+APObject.h"
 
 static const NSUInteger APCount = 10;
-//static const NSString *APMaleName = @"Abraham";
-//static const NSString *APFemaleName = @"Sandra";
-//static const NSRange kAPRandomNumberFrom = {0, 40};
-
 
 @implementation APCreatureTests
 
 + (void)APPerformCreatureTests {
-    [APCreatureTests APPerformTestByTechAssignment];
-}
-
-+ (void)APPerformTestByTechAssignment {
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
-    NSMutableArray *array = [NSMutableArray array];
+    NSMutableArray *creatures = [NSMutableArray array];
     for (int i = 0; i < APCount; i++) {
         APGender gender = APRandomBool();
-        Class APcreatureClass = gender ? [APCreatureFemale class] : [APCreatureMale class];
-        APCreature *creature = [APcreatureClass object];
-        [array addObject:creature];
+        Class APCreatureClass = gender ? [APCreatureFemale class] : [APCreatureMale class];
+        APCreature *creature = [APCreatureClass object];
+        [creatures addObject:creature];
     }
     
-    for (APCreature *creature in array) {
+    for (APCreature *creature in creatures) {
         NSLog(@"\n------------------------------------");
-        //[creature sayHello];
         // полиморфизм, значит - охуенно
         [creature performGenderSpecificOperation];
     }
