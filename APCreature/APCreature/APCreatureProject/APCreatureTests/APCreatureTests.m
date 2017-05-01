@@ -21,8 +21,7 @@ static const NSUInteger APCount = 10;
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
     NSMutableArray *creatures = [NSMutableArray array];
     for (int i = 0; i < APCount; i++) {
-        APGender gender = APRandomBool();
-        Class APCreatureClass = gender ? [APCreatureFemale class] : [APCreatureMale class];
+        Class APCreatureClass = APRandomBool() ? [APCreatureFemale class] : [APCreatureMale class];
         APCreature *creature = [APCreatureClass object];
         [creatures addObject:creature];
     }

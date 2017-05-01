@@ -31,7 +31,7 @@ static const NSRange kAPRandomNumberFrom = {0, 20};
 #pragma mark Private Methods
 
 - (APCreature *)toGoWar {
-    NSLog(@"You are %@. Go fight!", [self name]);
+    NSLog(@"You are %@.\nGo fight!", [self name]);
     
     return nil;
 }
