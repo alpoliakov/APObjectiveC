@@ -21,25 +21,6 @@
 @dynamic children;
 
 #pragma mark -
-#pragma mark Class Methods
-
-+ (instancetype)creatureWithGender:(APGender)gender {
-    Class classForCreation = [APCreature classForGender:gender];
-    return [[[classForCreation alloc] initWithGender:gender] autorelease];
-}
-
-+ (Class)classForGender:(APGender)gender {
-    Class result = Nil;
-    if (kAPGenderMale == gender) {
-        result = [APCreatureMale class];
-    } else if (kAPGenderFemale == gender) {
-        result = [APCreatureFemale class];
-    }
-    
-    return result;
-}
-
-#pragma mark -
 #pragma mark Initializations and Deallocations
 
 - (void)dealloc {
@@ -72,12 +53,12 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)sayHello {
-    NSLog(@"Hello, I'm %@", self.name);
-    for (APCreature *child in self.mutableChildren) {
-        [child sayHello];
-    }
-}
+//- (void)sayHello {
+//    NSLog(@"Hello, I'm %@", self.name);
+//    for (APCreature *child in self.mutableChildren) {
+//        [child sayHello];
+//    }
+//}
 
 - (void)addChild:(APCreature *)child {
     if (child) {

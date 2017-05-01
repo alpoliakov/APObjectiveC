@@ -11,40 +11,33 @@
 #import "APCreatureMale.h"
 #import "APCreatureFemale.h"
 #import "NSObject+APRandomNumbers.h"
+#import "NSObject+APObject.h"
 
-static const NSUInteger count = 10;
-static const NSString *nameMale = @"Abraham";
-static const NSString *nameFemale = @"Sandra";
+static const NSUInteger APCount = 10;
+//static const NSString *APMaleName = @"Abraham";
+//static const NSString *APFemaleName = @"Sandra";
+//static const NSRange kAPRandomNumberFrom = {0, 40};
 
 
 @implementation APCreatureTests
 
-+ (void)performCreatureTests {
-    [APCreatureTests performTestByTechAssignment];
++ (void)APPerformCreatureTests {
+    [APCreatureTests APPerformTestByTechAssignment];
 }
 
-+ (NSString *)nameMaleWithRandomNumber {
-    return  [NSString stringWithFormat:@"%@%li", nameMale, APRandomValueRange(APMakeRange(0, 40))];
-}
-
-+ (NSString *)nameFemaleWithRandomNumber {
-    return  [NSString stringWithFormat:@"%@%li", nameFemale, APRandomValueRange(APMakeRange(0, 40))];
-}
-
-+ (void)performTestByTechAssignment {
++ (void)APPerformTestByTechAssignment {
     NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
     NSMutableArray *array = [NSMutableArray array];
-    for (int i = 0; i < count; i++) {
-        APGender gender = returnYesOrNo();
-        NSString *name = gender == kAPGenderMale ? [APCreatureTests nameMaleWithRandomNumber] :         [APCreatureTests nameFemaleWithRandomNumber];
-        APCreature *creature = [APCreature creatureWithGender:gender];
+    for (int i = 0; i < APCount; i++) {
+        APGender gender = APRandomBool();
+        Class APcreatureClass = gender ? [APCreatureFemale class] : [APCreatureMale class];
+        APCreature *creature = [APcreatureClass object];
         [array addObject:creature];
-        [creature setName:name];
-}
+    }
     
     for (APCreature *creature in array) {
         NSLog(@"\n------------------------------------");
-        [creature sayHello];
+        //[creature sayHello];
         // полиморфизм, значит - охуенно
         [creature performGenderSpecificOperation];
     }

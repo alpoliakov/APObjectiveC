@@ -1,5 +1,5 @@
 //
-//  NSObject+APRandomNumbers.h
+//  NSObject+APArray.h
 //  APCreature
 //
 //  Created by Aleksandr Poliakov on 01.05.17.
@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-BOOL APRandomBool();
-NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber);
-NSUInteger APRandomValueRange(NSRange range);
+@interface NSObject (APArray)
+
++ (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
+
+@end

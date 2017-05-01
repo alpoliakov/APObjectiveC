@@ -12,16 +12,17 @@
 @implementation APCarWashTest
 
 + (void)performCarWashTests {
-    [APCarWashTest performTestByTechAssignment];
+    [APCarWashTest APPerformTestByCarWash];
 }
 
 static const NSUInteger count = 2;
 static const NSString *adminBuilding = @"Office";
 static const NSString *carWashBuilding = @"Car Wash";
 
-+(void)performTestByTechAssignment {
-    NSLog(@"Performing %@ test\n", NSStringFromSelector(_cmd));
-    NSLog(@"\n________________________");
++(void)APPerformTestByCarWash {
+    NSLog(@"\n-------------------------");
+    NSLog(@"\nPerforming %@ test\n", NSStringFromSelector(_cmd));
+    NSLog(@"\n-------------------------");
     
 }
 

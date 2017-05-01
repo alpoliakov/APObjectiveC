@@ -15,7 +15,7 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        [APCreatureTests performCreatureTests];
+        [APCreatureTests APPerformCreatureTests];
         [APCarWashTest performCarWashTests];
         
     return 0;

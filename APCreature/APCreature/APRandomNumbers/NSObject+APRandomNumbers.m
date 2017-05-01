@@ -10,7 +10,7 @@
 
 static const NSInteger range = 2;
 
-BOOL returnYesOrNo() {
+BOOL APRandomBool() {
     return arc4random_uniform(range);
 }
 
