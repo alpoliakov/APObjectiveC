@@ -11,4 +11,6 @@
 
 @interface APCreatureMale : APCreature
 
+- (APCreature *)toGoWar;
+
 @end

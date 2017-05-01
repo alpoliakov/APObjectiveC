@@ -11,4 +11,6 @@
 
 @interface APCreatureFemale : APCreature
 
+- (APCreature *)toGiveBirth;
+
 @end

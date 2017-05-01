@@ -10,6 +10,6 @@
 
 @interface NSObject (APObject)
 
-+(instancetype)object;
++ (instancetype)object;
 
 @end

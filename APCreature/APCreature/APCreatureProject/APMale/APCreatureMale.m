@@ -10,7 +10,7 @@
 
 @interface APCreatureMale ()
 
--(APCreature *)toGoWar;
+- (APCreature *)toGoWar;
 
 @end
 
