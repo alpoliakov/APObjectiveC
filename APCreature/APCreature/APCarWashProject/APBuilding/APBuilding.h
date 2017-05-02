@@ -8,15 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, APType) {
-    kAPTypeAdmin,
-    kAPTypeCarWash
-};
-
 @interface APBuilding : NSObject
 @property (nonatomic, retain, readonly) NSArray *rooms;
 
-- (instancetype)initWithRooms:(NSArray *)rooms andType:(APType *)type;
+- (instancetype)initWithRooms:(NSArray *)rooms;
 
 - (void)addRoom:(APBuilding *)room;
 - (void)removeRoom:(APBuilding *)room;

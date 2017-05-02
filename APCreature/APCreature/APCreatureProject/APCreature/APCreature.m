@@ -52,12 +52,12 @@
 
 #pragma mark -
 #pragma mark Public Methods
-//- (void)sayHello {
-//    NSLog(@"Hello, I'm %@", self.name);
-//    for (APCreature *child in self.mutableChildren) {
-//        [child sayHello];
-//    }
-//}
+- (void)sayHello {
+    NSLog(@"Hello, I'm %@", self.name);
+    for (APCreature *child in self.mutableChildren) {
+        [child sayHello];
+    }
+}
 
 - (void)addChild:(APCreature *)child {
     if (child) {

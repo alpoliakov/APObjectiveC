@@ -7,6 +7,7 @@
 //
 
 #import "APBuilding.h"
+#import "APRoom.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
@@ -26,7 +27,7 @@
     [super dealloc];
 }
 
-- (instancetype)initWithRooms:(NSArray *)rooms andType:(APType *)type {
+- (instancetype)initWithRooms:(NSArray *)rooms {
     self = [super init];
     self.mutableRooms = [NSMutableArray array];
     
@@ -43,11 +44,11 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)addRoom:(APBuilding *)room {
+- (void)addRoom:(APRoom *)room {
     [self.mutableRooms addObject:room];
 }
 
-- (void)removeRoom:(APBuilding *)room {
+- (void)removeRoom:(APRoom *)room {
     [self.mutableRooms removeObject:room];
 }
 

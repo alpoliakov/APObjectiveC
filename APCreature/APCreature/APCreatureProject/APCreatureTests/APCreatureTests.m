@@ -12,6 +12,7 @@
 #import "APCreatureFemale.h"
 #import "NSObject+APRandomNumbers.h"
 #import "NSObject+APObject.h"
+#import "NSArray+APArray.h"
 
 static const NSUInteger APCount = 10;
 
@@ -28,6 +29,7 @@ static const NSUInteger APCount = 10;
     
     for (APCreature *creature in creatures) {
         NSLog(@"\n------------------------------------");
+        [creature sayHello];
         // полиморфизм, значит - охуенно
         [creature performGenderSpecificOperation];
     }

@@ -10,6 +10,7 @@
 		068F61DE1EB77AC90086E080 /* NSObject+APRandomNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61DD1EB77AC90086E080 /* NSObject+APRandomNumbers.m */; };
 		068F61EC1EB7E7F40086E080 /* NSObject+APObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61EA1EB7E7F40086E080 /* NSObject+APObject.m */; };
 		068F61F01EB7E8D90086E080 /* NSArray+APArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61EF1EB7E8D90086E080 /* NSArray+APArray.m */; };
+		068F61F41EB8998C0086E080 /* APCarWashBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61F31EB8998C0086E080 /* APCarWashBuilding.m */; };
 		069C7B4C1EB140B400584B4B /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B3D1EB140B400584B4B /* APCreature.m */; };
 		069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B401EB140B400584B4B /* APCreatureTests.m */; };
 		069C7B4E1EB140B400584B4B /* APCreatureFemale.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B431EB140B400584B4B /* APCreatureFemale.m */; };
@@ -40,6 +41,8 @@
 		068F61EA1EB7E7F40086E080 /* NSObject+APObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APObject.m"; sourceTree = "<group>"; };
 		068F61EE1EB7E8D90086E080 /* NSArray+APArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+APArray.h"; sourceTree = "<group>"; };
 		068F61EF1EB7E8D90086E080 /* NSArray+APArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APArray.m"; sourceTree = "<group>"; };
+		068F61F21EB8998C0086E080 /* APCarWashBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APCarWashBuilding.h; path = APCarWashBuilding/APCarWashBuilding.h; sourceTree = SOURCE_ROOT; };
+		068F61F31EB8998C0086E080 /* APCarWashBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APCarWashBuilding.m; path = APCarWashBuilding/APCarWashBuilding.m; sourceTree = SOURCE_ROOT; };
 		069C7B3C1EB140B400584B4B /* APCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreature.h; sourceTree = "<group>"; };
 		069C7B3D1EB140B400584B4B /* APCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCreature.m; sourceTree = "<group>"; };
 		069C7B3F1EB140B400584B4B /* APCreatureTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCreatureTests.h; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 				068F61EF1EB7E8D90086E080 /* NSArray+APArray.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		068F61F11EB898E10086E080 /* APCarWashBuilding */ = {
+			isa = PBXGroup;
+			children = (
+				068F61F21EB8998C0086E080 /* APCarWashBuilding.h */,
+				068F61F31EB8998C0086E080 /* APCarWashBuilding.m */,
+			);
+			path = APCarWashBuilding;
 			sourceTree = "<group>";
 		};
 		069C7B391EB140B400584B4B /* APCreature */ = {
@@ -187,6 +199,7 @@
 		069C7B651EB3D72200584B4B /* APBuilding */ = {
 			isa = PBXGroup;
 			children = (
+				068F61F11EB898E10086E080 /* APCarWashBuilding */,
 				069C7B751EB4908700584B4B /* APBuilding.h */,
 				069C7B761EB4908700584B4B /* APBuilding.m */,
 			);
@@ -288,6 +301,7 @@
 				069C7B511EB140B400584B4B /* main.m in Sources */,
 				069C7B741EB485D200584B4B /* APRoom.m in Sources */,
 				068F61EC1EB7E7F40086E080 /* NSObject+APObject.m in Sources */,
+				068F61F41EB8998C0086E080 /* APCarWashBuilding.m in Sources */,
 				069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,6 @@
 
 + (instancetype)objectsWithCount:(NSUInteger)count;
 
-+ (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
++ (instancetype)arrayObjectsWithCount:(NSUInteger)count block:(id(^)())block;
 
 @end

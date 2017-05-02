@@ -12,11 +12,11 @@
 @implementation NSArray (APArray)
 
 + (instancetype)objectsWithCount:(NSUInteger)count {
-    return [self objectsWithCount:count block:^{return [self object];}];
+    return [self arrayObjectsWithCount:count block:^{return [self object];}];
 }
 
 
-+ (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block {
++ (instancetype)arrayObjectsWithCount:(NSUInteger)count block:(id(^)())block {
     if (!block || !count) {
         return nil;
     }
