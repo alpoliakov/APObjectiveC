@@ -7,13 +7,12 @@
 //
 
 #import "APCreatureFemale.h"
-//#import "APCreatureTests.h"
+#import "APCreatureMale.h"
+#import "NSObject+APRandomNumbers.h"
+#import "NSObject+APObject.h"
 
-@interface APCreatureFemale ()
-
--(APCreature *)toGiveBirth;
-
-@end
+static const NSString *APFemaleName = @"Sandra";
+static const NSRange kAPRandomNumberFrom = {0, 20};
 
 @implementation APCreatureFemale
 
@@ -26,13 +25,16 @@
     [self toGiveBirth];
 }
 
+- (NSString *)name {
+    return [NSString stringWithFormat:@"%@-%li", APFemaleName, APRandomValueRange(kAPRandomNumberFrom)];
+}
+
 #pragma mark -
 #pragma mark Private Methods
 
 - (APCreature *)toGiveBirth {
-    NSLog(@"I'm going to give birth!");
-    APGender genderChild = (arc4random_uniform(2)) ? kAPGenderMale : kAPGenderFemale;
-    APCreature *child = [APCreatureFemale creatureWithGender:genderChild];
+    NSLog(@"You are %@.\nGo give birth to children!", [self name]);
+    APCreature *child = APRandomBool() ? [APCreatureMale object] : [APCreatureFemale object];
     [self addChild:child];
     
     return child;

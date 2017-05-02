@@ -7,17 +7,19 @@
 //
 
 #import "APCreatureMale.h"
+#import "NSObject+APRandomNumbers.h"
 
-@interface APCreatureMale ()
-
--(APCreature *)toGoWar;
-
-@end
+static const NSString *APMaleName = @"Abraham";
+static const NSRange kAPRandomNumberFrom = {0, 20};
 
 @implementation APCreatureMale
 
 #pragma mark -
 #pragma mark Public Methods
+
+- (NSString *)name {
+    return [NSString stringWithFormat:@"%@-%li", APMaleName, APRandomValueRange(kAPRandomNumberFrom)];
+}
 
 // полиморфизм, значит - охуенно
 
@@ -29,7 +31,7 @@
 #pragma mark Private Methods
 
 - (APCreature *)toGoWar {
-    NSLog(@"Let's go to WAR!!!");
+    NSLog(@"You are %@.\nGo fight!", [self name]);
     
     return nil;
 }

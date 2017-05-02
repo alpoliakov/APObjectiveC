@@ -1,5 +1,5 @@
 //
-//  NSObject+APObject.h
+//  APCreatureFemale.h
 //  APCreature
 //
 //  Created by Aleksandr Poliakov on 24.04.17.
@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APCreature.h"
 
-@interface NSObject (APObject)
+@interface APCreatureFemale : APCreature
 
-+(instancetype)object;
+- (APCreature *)toGiveBirth;
+- (NSString *)name;
 
 @end
