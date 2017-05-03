@@ -7,10 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+@class APWorker;
 
 @interface APRoom : NSObject
 @property (nonatomic, retain, readonly) NSArray *workers;
 
 - (instancetype)initWithWorkers:(NSArray *)workers;
+
+- (void)addWorker:(APRoom *)worker;
+- (void)removeWorker:(APRoom *)worker;
 
 @end

@@ -25,11 +25,37 @@
     [super dealloc];
 }
 
+- (instancetype)init {
+    self = [super init];
+    
+    return  self;
+}
+
 - (instancetype)initWithWorkers:(NSArray *)workers {
     self = [super init];
     self.mutableWorkers = [NSMutableArray array];
     
     return self;
+}
+
+#pragma mark-
+#pragma mark Accessors
+
+- (NSArray *)workers {
+    return [[self.mutableWorkers copy] autorelease];
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)addWorker:(APWorker *)worker {
+    if (worker) {
+        [self.mutableWorkers addObject:worker];
+    }
+}
+
+- (void)removeWorker:(APWorker *)worker {
+    [self.mutableWorkers removeObject:worker];
 }
 
 @end
