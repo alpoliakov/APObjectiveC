@@ -7,6 +7,7 @@
 //
 
 #import "APCarWashBuilding.h"
+#import "APCarWashRoom.h"
 
 @implementation APCarWashBuilding
 

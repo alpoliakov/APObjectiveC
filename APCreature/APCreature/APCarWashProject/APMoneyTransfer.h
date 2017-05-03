@@ -1,15 +1,13 @@
 //
-//  APCarWashBuilding.h
+//  APMoneyTransfer.h
 //  APCreature
 //
 //  Created by Aleksandr Poliakov on 02.05.17.
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
-#import "APBuilding.h"
+#import <Foundation/Foundation.h>
 
-@class APCarWashRoom;
-
-@interface APCarWashBuilding : APBuilding
+@protocol APMoneyTransfer <NSObject>
 
 @end

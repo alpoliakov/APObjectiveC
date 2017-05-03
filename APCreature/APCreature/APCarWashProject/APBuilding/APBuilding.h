@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+@class APRoom;
 
 @interface APBuilding : NSObject
 @property (nonatomic, retain, readonly) NSArray *rooms;
