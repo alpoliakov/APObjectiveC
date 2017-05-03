@@ -45,7 +45,9 @@
 #pragma mark Public Methods
 
 - (void)addRoom:(APRoom *)room {
-    [self.mutableRooms addObject:room];
+    if (room) {
+        [self.mutableRooms addObject:room];
+    }
 }
 
 - (void)removeRoom:(APRoom *)room {

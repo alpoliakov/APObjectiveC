@@ -9,5 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface APRoom : NSObject
+@property (nonatomic, retain, readonly) NSArray *workers;
+
+- (instancetype)initWithWorkers:(NSArray *)workers;
 
 @end
