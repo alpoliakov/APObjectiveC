@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "APMoneyTransfer.h"
 
-@interface APWorker : NSObject
+@interface APWorker : NSObject <APMoneyTransfer>
+
+-(instancetype)init;
+
+- (void)processObject:(id<APMoneyTransfer>) object;
 
 @end

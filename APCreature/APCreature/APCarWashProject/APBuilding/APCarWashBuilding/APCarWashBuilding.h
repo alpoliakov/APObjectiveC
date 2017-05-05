@@ -7,9 +7,14 @@
 //
 
 #import "APBuilding.h"
+#import "APWasher.h"
 
 @class APCarWashRoom;
 
 @interface APCarWashBuilding : APBuilding
+@property (nonatomic, copy, readonly) NSArray *washers;
+
+- (void)addWasher:(APWasher *)washer;
+- (void)removeWasher:(APWasher *)washer;
 
 @end

@@ -10,4 +10,33 @@
 
 @implementation APWorker
 
+@synthesize cash = _cash;
+
+#pragma mark -
+#pragma mark Initializtions and Deallocations
+
+-(instancetype)init {
+    self = [super init];
+    
+    return self;
+};
+
+- (void)processObject:(id<APMoneyTransfer>) object {
+    [self receiveCash:object];
+}
+
+- (void)receiveCash:(id<APMoneyTransfer>)object {
+    self.cash += [object giveAllCash];
+}
+
+- (NSUInteger)giveAllCash {
+    return [self giveCash:self.cash];
+}
+
+- (NSUInteger)giveCash:(NSUInteger)cash {
+    NSUInteger cashbox = self.cash;
+    
+    return cashbox;
+}
+
 @end

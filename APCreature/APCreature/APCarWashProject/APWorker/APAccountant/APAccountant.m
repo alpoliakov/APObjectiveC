@@ -7,7 +7,29 @@
 //
 
 #import "APAccountant.h"
+#import "APWosher.h"
+
+@interface APAccountant ()
+
+- (void)calculateProfit;
+
+@end
 
 @implementation APAccountant
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)processObject:(APWosher *)washer {
+    [self calculateProfit];
+    [super receiveCash:washer];
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (void)calculateProfit {
+    NSLog(@"Cash is calculated");
+}
 
 @end

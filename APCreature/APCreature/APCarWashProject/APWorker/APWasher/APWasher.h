@@ -7,7 +7,8 @@
 //
 
 #import "APWorker.h"
+#import "APCar.h"
 
-@interface APWosher : APWorker
+@interface APWasher : APWorker
 
 @end
