@@ -24,7 +24,7 @@ static const NSUInteger APPaid = 20;
 #pragma mark -
 #pragma mark Initializtions and Deallocations
 
--(void)dealloc {
+- (void)dealloc {
     self.mutableCarsMark = nil;
     
     [super dealloc];

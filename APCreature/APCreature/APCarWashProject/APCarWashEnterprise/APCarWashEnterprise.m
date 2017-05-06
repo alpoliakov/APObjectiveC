@@ -69,16 +69,17 @@
 
 - (void)initCarWashStructure {
     NSMutableArray *rooms = [NSMutableArray array];
-    NSMutableArray *workers = [NSMutableArray array];
+    //NSMutableArray *workers = [NSMutableArray array];
     APBuilding *productionBuilding = [[[APBuilding alloc] initWithRooms:rooms] autorelease];
-    [rooms addObject:[[[APCarWashRoom alloc] initWithWorkers:workers] autorelease]];
-    [workers addObject:[APWasher object]];
+    [rooms addObject:[[[APCarWashRoom alloc] initWithWorkers:_washers] autorelease]];
+    [[self washers] addObject:[APWasher object]];
+    NSLog(@"%lu", (unsigned long)_washers.count);
     
     self.productionBuilding = productionBuilding;
     
     APBuilding *administrativeBuilding = [APBuilding object];
     [administrativeBuilding addRoom:[APRoom room]];
-    [workers addObject:[APAccountant object]];
+//    [workers addObject:[APAccountant object]];
     self.administrativeBuilding = administrativeBuilding;
 //    [self addAccountant:[APAccountant object]];
 //    [self addBoss:[APBoss object]];

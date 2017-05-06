@@ -15,7 +15,7 @@
     [APCarWashTest APPerformTestByCarWash];
 }
 
-+(void)APPerformTestByCarWash {
++ (void)APPerformTestByCarWash {
     NSLog(@"\n---------- Car Wash -----------");
     NSLog(@"\nPerforming %@ test\n", NSStringFromSelector(_cmd));
     NSLog(@"\n-------------------------------");
