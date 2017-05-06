@@ -49,6 +49,7 @@
 
 - (void)dealloc {
     self.productionBuilding = nil;
+    self.administrativeBuilding = nil;
     self.washers = nil;
     self.accountants = nil;
     self.directors = nil;
@@ -71,9 +72,9 @@
     NSMutableArray *rooms = [NSMutableArray array];
     //NSMutableArray *workers = [NSMutableArray array];
     APBuilding *productionBuilding = [[[APBuilding alloc] initWithRooms:rooms] autorelease];
-    [rooms addObject:[[[APCarWashRoom alloc] initWithWorkers:_washers] autorelease]];
+    [rooms addObject:[[[APCarWashRoom alloc] initWithWorkers:self.washers] autorelease]];
     [[self washers] addObject:[APWasher object]];
-    NSLog(@"%lu", (unsigned long)_washers.count);
+    NSLog(@"%lu", (unsigned long)self.washers.count);
     
     self.productionBuilding = productionBuilding;
     

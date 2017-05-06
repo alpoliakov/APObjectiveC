@@ -43,10 +43,6 @@ static const NSUInteger APPaid = 20;
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)receiveCash:(id<APMoneyTransfer>)object {
-    return;
-}
-
 - (NSUInteger)giveAllCash {
     return [self giveCash:self.payment];
 }
