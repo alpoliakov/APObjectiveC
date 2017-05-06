@@ -11,7 +11,6 @@
 
 @interface APCar : NSObject <APMoneyTransfer>
 @property (nonatomic, assign) BOOL isDirty;
-@property (nonatomic, assign) NSUInteger cash;
 
 - (instancetype)init;
 

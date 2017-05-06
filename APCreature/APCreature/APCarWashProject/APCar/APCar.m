@@ -19,7 +19,7 @@ static const NSUInteger APPaid = 20;
 @implementation APCar
 
 @synthesize cash = _cash;
-@synthesize paid = _paid;
+@synthesize payment = _payment;
 
 #pragma mark -
 #pragma mark Initializtions and Deallocations
@@ -33,7 +33,7 @@ static const NSUInteger APPaid = 20;
 - (instancetype)init {
     self = [super init];
     
-    self.paid = APPaid;
+    self.payment = APPaid;
     self.cash = APCash;
     self.isDirty = YES;
     
@@ -48,12 +48,12 @@ static const NSUInteger APPaid = 20;
 }
 
 - (NSUInteger)giveAllCash {
-    return [self giveCash:self.paid];
+    return [self giveCash:self.payment];
 }
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
     if (APCash > APPaid) {
-        NSUInteger chargeForCleaning = self.paid;
+        NSUInteger chargeForCleaning = self.payment;
         self.cash = APCash - chargeForCleaning;
         return chargeForCleaning;
     }

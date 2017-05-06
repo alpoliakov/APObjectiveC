@@ -12,7 +12,7 @@
 @property (nonatomic, assign) NSUInteger cash;
 
 @optional
-@property (nonatomic, assign) NSUInteger paid;
+@property (nonatomic, assign) NSUInteger payment;
 
 @optional
 - (void)receiveCash:(id<APMoneyTransfer>)object;
