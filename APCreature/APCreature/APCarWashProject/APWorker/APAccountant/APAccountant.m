@@ -7,7 +7,7 @@
 //
 
 #import "APAccountant.h"
-#import "APWosher.h"
+#import "APWasher.h"
 
 @interface APAccountant ()
 
@@ -20,7 +20,7 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processObject:(APWosher *)washer {
+- (void)processObject:(APWasher *)washer {
     [self calculateProfit];
     [super receiveCash:washer];
 }

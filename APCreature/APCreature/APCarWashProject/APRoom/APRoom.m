@@ -16,6 +16,13 @@
 @implementation APRoom
 @dynamic workers;
 
+#pragma mark -
+#pragma mark Class Methods
+
++ (id)room {
+    return [[[self alloc] init] autorelease];
+}
+
 #pragma mark-
 #pragma mark Initializatinos and Deallocations
 

@@ -7,7 +7,7 @@
 //
 
 #import "APCarWashTest.h"
-#import "APBuilding.h"
+#import "APCarWashEnterprise.h"
 
 @implementation APCarWashTest
 
@@ -15,15 +15,12 @@
     [APCarWashTest APPerformTestByCarWash];
 }
 
-static const NSUInteger count = 2;
-static const NSString *adminBuilding = @"Office";
-static const NSString *carWashBuilding = @"Car Wash";
-
 +(void)APPerformTestByCarWash {
     NSLog(@"\n---------- Car Wash -----------");
     NSLog(@"\nPerforming %@ test\n", NSStringFromSelector(_cmd));
     NSLog(@"\n-------------------------------");
     
+    [[APCarWashEnterprise new] autorelease];
 }
 
 @end

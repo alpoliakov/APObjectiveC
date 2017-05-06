@@ -21,7 +21,7 @@
     return self;
 };
 
-- (void)processObject:(id<APMoneyTransfer>) object {
+- (void)processObject:(id<APMoneyTransfer>)object {
     [self receiveCash:object];
 }
 
@@ -35,6 +35,7 @@
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
     NSUInteger cashbox = self.cash;
+    self.cash = 0;
     
     return cashbox;
 }

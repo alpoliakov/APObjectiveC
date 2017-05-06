@@ -14,7 +14,7 @@
 
 @end
 
-@implementation APWosher
+@implementation APWasher
 
 #pragma mark -
 #pragma mark Public Methods

@@ -29,7 +29,7 @@
 #pragma mark Private Methods
 
 - (void)makeProfit {
-    NSLog(@"Profit is made");
+    NSLog(@"Profit is make, %lu", (unsigned long)self.cash);
 }
 
 @end
