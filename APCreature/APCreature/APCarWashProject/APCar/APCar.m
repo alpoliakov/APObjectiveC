@@ -54,7 +54,7 @@ static const NSUInteger APPaid = 20;
 - (NSUInteger)giveCash:(NSUInteger)cash {
     if (APCash > APPaid) {
         NSUInteger paidForWash = self.paid;
-        self.cash = APCash - APPaid;
+        self.cash = APCash - paidForWash;
         return paidForWash;
     }
 }
