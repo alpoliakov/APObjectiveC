@@ -7,7 +7,14 @@
 //
 
 #import "APRoom.h"
+#import "APCar.h"
 
 @interface APCarWashRoom : APRoom
+@property (nonatomic, copy, readonly) NSArray *cars;
+
+- (id)init;
+
+- (void)addCar:(APCar *)car;
+- (void)removeCar:(APCar *)car;
 
 @end

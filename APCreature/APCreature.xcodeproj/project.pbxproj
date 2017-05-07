@@ -23,8 +23,9 @@
 		06E9F25B1EBA60BA00955745 /* APRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2491EBA60BA00955745 /* APRoom.m */; };
 		06E9F25C1EBA60BA00955745 /* APAccountant.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F24D1EBA60BA00955745 /* APAccountant.m */; };
 		06E9F25D1EBA60BA00955745 /* APBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2501EBA60BA00955745 /* APBoss.m */; };
-		06E9F25E1EBA60BA00955745 /* APWosher.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2531EBA60BA00955745 /* APWosher.m */; };
+		06E9F25E1EBA60BA00955745 /* APWasher.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2531EBA60BA00955745 /* APWasher.m */; };
 		06E9F25F1EBA60BA00955745 /* APWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2551EBA60BA00955745 /* APWorker.m */; };
+		06E9F2911EBCEAC900955745 /* APCarWashEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2901EBCEAC900955745 /* APCarWashEnterprise.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,10 +74,12 @@
 		06E9F24D1EBA60BA00955745 /* APAccountant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAccountant.m; sourceTree = "<group>"; };
 		06E9F24F1EBA60BA00955745 /* APBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBoss.h; sourceTree = "<group>"; };
 		06E9F2501EBA60BA00955745 /* APBoss.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBoss.m; sourceTree = "<group>"; };
-		06E9F2521EBA60BA00955745 /* APWosher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APWosher.h; sourceTree = "<group>"; };
-		06E9F2531EBA60BA00955745 /* APWosher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APWosher.m; sourceTree = "<group>"; };
+		06E9F2521EBA60BA00955745 /* APWasher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APWasher.h; sourceTree = "<group>"; };
+		06E9F2531EBA60BA00955745 /* APWasher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APWasher.m; sourceTree = "<group>"; };
 		06E9F2541EBA60BA00955745 /* APWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APWorker.h; sourceTree = "<group>"; };
 		06E9F2551EBA60BA00955745 /* APWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APWorker.m; sourceTree = "<group>"; };
+		06E9F28F1EBCEAC900955745 /* APCarWashEnterprise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashEnterprise.h; sourceTree = "<group>"; };
+		06E9F2901EBCEAC900955745 /* APCarWashEnterprise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCarWashEnterprise.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,7 @@
 		06E9F2361EBA60BA00955745 /* APCarWashProject */ = {
 			isa = PBXGroup;
 			children = (
+				06E9F28E1EBCEA4A00955745 /* APCarWashEnterprise */,
 				06E9F2371EBA60BA00955745 /* APBuilding */,
 				06E9F23D1EBA60BA00955745 /* APCar */,
 				06E9F2401EBA60BA00955745 /* APCarWashTest */,
@@ -287,10 +291,19 @@
 		06E9F2511EBA60BA00955745 /* APWasher */ = {
 			isa = PBXGroup;
 			children = (
-				06E9F2521EBA60BA00955745 /* APWosher.h */,
-				06E9F2531EBA60BA00955745 /* APWosher.m */,
+				06E9F2521EBA60BA00955745 /* APWasher.h */,
+				06E9F2531EBA60BA00955745 /* APWasher.m */,
 			);
 			path = APWasher;
+			sourceTree = "<group>";
+		};
+		06E9F28E1EBCEA4A00955745 /* APCarWashEnterprise */ = {
+			isa = PBXGroup;
+			children = (
+				06E9F28F1EBCEAC900955745 /* APCarWashEnterprise.h */,
+				06E9F2901EBCEAC900955745 /* APCarWashEnterprise.m */,
+			);
+			path = APCarWashEnterprise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,9 +368,10 @@
 				069C7B4E1EB140B400584B4B /* APCreatureFemale.m in Sources */,
 				06E9F2581EBA60BA00955745 /* APCar.m in Sources */,
 				068F61F01EB7E8D90086E080 /* NSArray+APArray.m in Sources */,
-				06E9F25E1EBA60BA00955745 /* APWosher.m in Sources */,
+				06E9F25E1EBA60BA00955745 /* APWasher.m in Sources */,
 				06E9F2591EBA60BA00955745 /* APCarWashTest.m in Sources */,
 				06E9F25A1EBA60BA00955745 /* APCarWashRoom.m in Sources */,
+				06E9F2911EBCEAC900955745 /* APCarWashEnterprise.m in Sources */,
 				069C7B4C1EB140B400584B4B /* APCreature.m in Sources */,
 				06E9F2571EBA60BA00955745 /* APCarWashBuilding.m in Sources */,
 				069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */,

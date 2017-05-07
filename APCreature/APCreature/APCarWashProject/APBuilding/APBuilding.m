@@ -21,7 +21,7 @@
 #pragma mark-
 #pragma mark Initializatinos and Deallocations
 
--(void)dealloc {
+- (void)dealloc {
     self.mutableRooms = nil;
     
     [super dealloc];

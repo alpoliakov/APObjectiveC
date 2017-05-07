@@ -10,6 +10,6 @@
 
 @interface APCarWashTest : NSObject
 
-+(void)performCarWashTests;
++ (void)performCarWashTests;
 
 @end
