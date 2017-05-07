@@ -37,12 +37,6 @@
     return self;
 }
 
-- (instancetype)initWithGender:(APGender)gender {
-    self = [self init];
-    
-   return self;
-}
-
 #pragma mark -
 #pragma mark Accessors
 

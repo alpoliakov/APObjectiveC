@@ -10,7 +10,7 @@
 #import "NSObject+APRandomNumbers.h"
 
 static const NSString *APMaleName = @"Abraham";
-static const NSRange kAPRandomNumberFrom = {0, 20};
+static const NSRange kAPCreatureRandomNumberRange = {0, 20};
 
 @implementation APCreatureMale
 
@@ -18,23 +18,21 @@ static const NSRange kAPRandomNumberFrom = {0, 20};
 #pragma mark Public Methods
 
 - (NSString *)name {
-    return [NSString stringWithFormat:@"%@-%li", APMaleName, APRandomValueRange(kAPRandomNumberFrom)];
+    return [NSString stringWithFormat:@"%@-%li", APMaleName,
+            APRandomValueWithRange(kAPCreatureRandomNumberRange)];
 }
 
 // полиморфизм, значит - охуенно
 
 - (void)performGenderSpecificOperation {
-    [self toGoWar];
+    [self goToWar];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (APCreature *)toGoWar {
+- (void)goToWar {
     NSLog(@"You are %@.\nGo fight!", [self name]);
-    
-    return nil;
 }
-
 
 @end

@@ -13,6 +13,10 @@
 #import "APCarWashTest.h"
 #import "APBuilding.h"
 
+#import "NSArray+APArray.h"
+#import "NSObject+APObject.h"
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         [APCreatureTests APPerformCreatureTests];

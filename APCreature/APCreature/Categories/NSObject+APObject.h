@@ -11,5 +11,6 @@
 @interface NSObject (APObject)
 
 + (instancetype)object;
++ (instancetype)objectsWithCount:(NSUInteger)count;
 
 @end

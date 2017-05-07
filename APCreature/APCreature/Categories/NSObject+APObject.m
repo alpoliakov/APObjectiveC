@@ -7,11 +7,19 @@
 //
 
 #import "NSObject+APObject.h"
+#import "NSArray+APArray.h"
 
 @implementation NSObject (APObject)
 
 + (instancetype)object {
     return [[[self alloc ] init] autorelease];
 }
+
++ (instancetype)objectsWithCount:(NSUInteger)count {
+    return [self objectsWithCount:count block:^{
+        return [self object];
+    }];
+}
+
 
 @end

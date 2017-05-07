@@ -11,7 +11,6 @@
 
 @interface APCreatureMale : APCreature
 
-- (APCreature *)toGoWar;
-- (NSString *)name;
+- (void)goToWar;
 
 @end

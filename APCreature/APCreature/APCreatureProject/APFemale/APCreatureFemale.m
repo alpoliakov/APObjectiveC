@@ -12,7 +12,7 @@
 #import "NSObject+APObject.h"
 
 static const NSString *APFemaleName = @"Sandra";
-static const NSRange kAPRandomNumberFrom = {0, 20};
+static const NSRange kAPCreatureRandomNumberRange = {0, 20};
 
 @implementation APCreatureFemale
 
@@ -22,17 +22,18 @@ static const NSRange kAPRandomNumberFrom = {0, 20};
 // полиморфизм, значит - охуенно
 
 - (void)performGenderSpecificOperation {
-    [self toGiveBirth];
+    [self giveBirth];
 }
 
 - (NSString *)name {
-    return [NSString stringWithFormat:@"%@-%li", APFemaleName, APRandomValueRange(kAPRandomNumberFrom)];
+    return [NSString stringWithFormat:@"%@-%li", APFemaleName,
+            APRandomValueWithRange(kAPCreatureRandomNumberRange)];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (APCreature *)toGiveBirth {
+- (APCreature *)giveBirth {
     NSLog(@"You are %@.\nGo give birth to children!", [self name]);
     APCreature *child = APRandomBool() ? [APCreatureMale object] : [APCreatureFemale object];
     [self addChild:child];

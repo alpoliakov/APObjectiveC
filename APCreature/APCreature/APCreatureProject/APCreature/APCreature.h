@@ -20,13 +20,16 @@ typedef NS_ENUM(NSUInteger, APGender) {
 @property (nonatomic, assign)           NSUInteger     *weight;
 @property (nonatomic, assign)           NSUInteger     *age;
 
-- (instancetype)initWithGender:(APGender)gender;
+//- (instancetype)initWithGender:(APGender)gender;
 
 - (void)sayHello;
+
 - (void)addChild:(APCreature *)child;
 - (void)removeChild:(APCreature *)child;
+
 - (void)addChildren:(NSArray *)children;
 - (void)removeChildren:(NSArray *)children;
+
 - (void)performGenderSpecificOperation;
 
 @end
