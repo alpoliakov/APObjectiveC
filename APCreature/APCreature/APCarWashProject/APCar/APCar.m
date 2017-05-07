@@ -35,7 +35,7 @@ static const NSUInteger APPaid = 20;
     
     self.payment = APPaid;
     self.cash = APCash;
-    self.isDirty = YES;
+    self.isDirty = kAPDirty;
     
     return self;
 }

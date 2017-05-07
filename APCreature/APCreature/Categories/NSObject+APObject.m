@@ -16,7 +16,7 @@
 }
 
 + (instancetype)objectsWithCount:(NSUInteger)count {
-    return [self objectsWithCount:count block:^{
+    return [NSArray objectsWithCount:count block:^{
         return [self object];
     }];
 }

@@ -28,7 +28,7 @@
 #pragma mark Private Methods
 
 - (void)cleanCar:(APCar *)car {
-    car.isDirty = NO;
+    car.isDirty = kAPClear;
     NSLog(@"Car is washed");
 }
 

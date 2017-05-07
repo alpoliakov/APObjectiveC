@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "APMoneyTransfer.h"
 
+typedef NS_ENUM(NSUInteger, APDirtyOrClear) {
+    kAPDirty,
+    kAPClear,
+};
+
 @interface APCar : NSObject <APMoneyTransfer>
 @property (nonatomic, assign) BOOL isDirty;
 
