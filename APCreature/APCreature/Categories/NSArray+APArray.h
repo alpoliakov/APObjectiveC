@@ -10,8 +10,6 @@
 
 @interface NSArray (APArray)
 
-+ (instancetype)objectsWithCount:(NSUInteger)count;
-
-+ (instancetype)arrayObjectsWithCount:(NSUInteger)count block:(id(^)())block;
++ (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
 
 @end

@@ -8,10 +8,10 @@
 
 #import "NSObject+APRandomNumbers.h"
 
-static const NSInteger range = 2;
+static const NSInteger APrange = 2;
 
 BOOL APRandomBool() {
-    return arc4random_uniform(range);
+    return arc4random_uniform(APrange);
 }
 
 NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber) {
@@ -21,6 +21,6 @@ NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber) {
     return NSMakeRange(minValue, maxValue - minValue + 1);
 }
 
-NSUInteger APRandomValueRange(NSRange range) {
+NSUInteger APRandomValueWithRange(NSRange range) {
     return arc4random_uniform((uint32_t)range.length) + range.location;
 }

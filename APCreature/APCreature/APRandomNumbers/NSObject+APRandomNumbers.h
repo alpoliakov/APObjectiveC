@@ -10,4 +10,4 @@
 
 BOOL APRandomBool();
 NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber);
-NSUInteger APRandomValueRange(NSRange range);
+NSUInteger APRandomValueWithRange(NSRange range);

@@ -11,7 +11,6 @@
 
 @interface APCreatureFemale : APCreature
 
-- (APCreature *)toGiveBirth;
-- (NSString *)name;
+- (APCreature *)giveBirth;
 
 @end

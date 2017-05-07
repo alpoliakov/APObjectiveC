@@ -7,16 +7,10 @@
 //
 
 #import "NSArray+APArray.h"
-#import "NSObject+APObject.h"
 
 @implementation NSArray (APArray)
 
-+ (instancetype)objectsWithCount:(NSUInteger)count {
-    return [self arrayObjectsWithCount:count block:^{return [self object];}];
-}
-
-
-+ (instancetype)arrayObjectsWithCount:(NSUInteger)count block:(id(^)())block {
++ (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block {
     if (!block || !count) {
         return nil;
     }
@@ -26,7 +20,7 @@
         [array addObject:block()];
     }
     
-    return [[array copy] autorelease];
+    return [self arrayWithArray:array];
 }
 
 @end
