@@ -8,6 +8,7 @@
 
 #import "APCarWashTest.h"
 #import "APBuilding.h"
+#import "APCarWashEnterprise.h"
 
 @implementation APCarWashTest
 

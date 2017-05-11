@@ -12,4 +12,6 @@
 
 + (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
 
+- (id)randomObject;
+
 @end

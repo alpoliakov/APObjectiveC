@@ -12,15 +12,10 @@
 @property (nonatomic, assign) NSUInteger cash;
 
 @optional
-@property (nonatomic, assign) NSUInteger payment;
-
-@optional
 - (void)receiveCash:(id<APMoneyTransfer>)object;
 
-@optional
 - (NSUInteger)giveAllCash;
 
-@optional
 - (NSUInteger)giveCash:(NSUInteger)cash;
 
 @end

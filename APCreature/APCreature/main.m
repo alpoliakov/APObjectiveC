@@ -12,6 +12,7 @@
 #import "APCreatureTests.h"
 #import "APCarWashTest.h"
 #import "APBuilding.h"
+#import "APCarWashEnterprise.h"
 
 #import "NSArray+APArray.h"
 #import "NSObject+APObject.h"

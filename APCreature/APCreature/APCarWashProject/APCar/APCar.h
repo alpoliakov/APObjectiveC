@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, APDirtyOrClear) {
 };
 
 @interface APCar : NSObject <APMoneyTransfer>
-@property (nonatomic, assign) BOOL isDirty;
+@property (nonatomic, assign) NSUInteger isDirty;
 
 - (instancetype)init;
 

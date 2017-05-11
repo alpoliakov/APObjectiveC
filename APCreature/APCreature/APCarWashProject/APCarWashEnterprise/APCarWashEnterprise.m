@@ -20,6 +20,7 @@
 
 #import "NSObject+APRandomNumbers.h"
 #import "NSObject+APObject.h"
+#import "NSArray+APArray.h"
 
 @interface APCarWashEnterprise ()
 
@@ -28,6 +29,7 @@
 @property (nonatomic, retain) NSMutableArray *washers;
 @property (nonatomic, retain) NSMutableArray *accountants;
 @property (nonatomic, retain) NSMutableArray *directors;
+
 
 - (void)initCarWashStructure;
 
@@ -39,6 +41,10 @@
 
 - (void)addBoss:(APBoss *)boss;
 - (void)removeBoss:(APBoss *)boss;
+
+- (void)addWorker:(APWorker *)worker toArray:(NSMutableArray *)array building:(APBuilding *)building;
+- (void)removeWorker:(APWorker *)worker;
+- (void)removeWorkersInArray:(NSMutableArray *)workers;
 
 @end
 
