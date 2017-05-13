@@ -12,8 +12,8 @@
 static const NSUInteger APRoomDefaultCapacity = 10;
 
 @interface APRoom ()
-@property (nonatomic, retain) NSMutableArray *mutableWorkers;
-@property (nonatomic, assign)   NSUInteger      capacity;
+@property (nonatomic, retain)   NSMutableArray      *mutableWorkers;
+@property (nonatomic, assign)   NSUInteger          capacity;
 
 @end
 

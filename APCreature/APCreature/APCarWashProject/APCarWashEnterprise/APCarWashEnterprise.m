@@ -95,7 +95,7 @@ static const NSUInteger APAdminRoomCapacity = 3;
 
 - (void)initCarWashStructure {
     APBuilding *productionBuilding = [APBuilding object];
-    [productionBuilding addRoom:[APRoom roomWithCapacity:APProdRoomCapacity]];
+    [productionBuilding addRoom:[APCarWashRoom roomWithCapacity:APProdRoomCapacity]];
     self.productionBuilding = productionBuilding;
     [self addWasher:[APWasher object]];
     

@@ -41,7 +41,6 @@
     return [self.objects count];
 }
 
-
 #pragma mark -
 #pragma mark Public Methods
 
