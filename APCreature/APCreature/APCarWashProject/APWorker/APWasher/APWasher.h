@@ -7,7 +7,6 @@
 //
 
 #import "APWorker.h"
-#import "APCar.h"
 
 @interface APWasher : APWorker
 

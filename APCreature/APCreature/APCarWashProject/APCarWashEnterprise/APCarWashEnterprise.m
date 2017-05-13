@@ -23,7 +23,7 @@
 #import "NSObject+APObject.h"
 #import "NSArray+APArray.h"
 
-static const NSUInteger APProdRoomCapacity = 1;
+static const NSUInteger APProdRoomCapacity = 2;
 static const NSUInteger APAdminRoomCapacity = 3;
 
 @interface APCarWashEnterprise ()
@@ -95,7 +95,7 @@ static const NSUInteger APAdminRoomCapacity = 3;
 
 - (void)initCarWashStructure {
     APBuilding *productionBuilding = [APCarWashBuilding object];
-    [productionBuilding addRoom:[APCarWashRoom roomWithCapacity:APProdRoomCapacity]];
+    [productionBuilding addRoom:[APRoom roomWithCapacity:APProdRoomCapacity]];
     self.productionBuilding = productionBuilding;
     [self addWasher:[APWasher object]];
     
@@ -147,7 +147,9 @@ static const NSUInteger APAdminRoomCapacity = 3;
 }
 
 - (void)addWasher:(APWasher *)washer {
-    [self addWorker:washer toArray:self.washers building:self.productionBuilding];
+    if (washer) {
+        [self addWorker:washer toArray:self.washers building:self.productionBuilding];
+    }
 }
 
 - (void)removeWasher:(APWasher *)washer {
@@ -155,6 +157,9 @@ static const NSUInteger APAdminRoomCapacity = 3;
 }
 
 - (void)addAccountant:(APAccountant *)accountant {
+    if ([self.accountants count]) {
+        return;
+    }
     [self addWorker:accountant toArray:self.accountants building:self.administrativeBuilding];
 }
 
@@ -183,16 +188,14 @@ static const NSUInteger APAdminRoomCapacity = 3;
 }
 
 - (void)removeWorker:(APWorker *)worker {
-    if (!worker) {
-        return;
+    if (worker) {
+        [self.productionBuilding removeWorker:worker];
+        [self.administrativeBuilding removeWorker:worker];
+        
+        [self.directors removeObject:worker];
+        [self.washers removeObject:worker];
+        [self.accountants removeObject:worker];
     }
-    
-    [self.productionBuilding removeWorker:worker];
-    [self.administrativeBuilding removeWorker:worker];
-    
-    [self.directors removeObject:worker];
-    [self.washers removeObject:worker];
-    [self.accountants removeObject:worker];
 }
 
 - (void)removeWorkersInArray:(NSMutableArray *)workers {

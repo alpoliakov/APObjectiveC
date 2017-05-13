@@ -13,7 +13,6 @@
 
 @interface APCarWashEnterprise : NSObject
 @property (nonatomic, readonly, getter=isEmptyQueue) BOOL emptyQueue;
-@property (nonatomic, readonly) NSUInteger count;
 
 - (void)processCar:(APCar *)car;
 

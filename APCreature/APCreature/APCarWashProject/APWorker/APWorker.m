@@ -15,8 +15,6 @@
 
 @implementation APWorker
 
-//@synthesize cash = _cash;
-
 #pragma mark -
 #pragma mark Initializtions and Deallocations
 
@@ -25,6 +23,9 @@
     
     return self;
 };
+
+#pragma mark -
+#pragma mark Public Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
     [self receiveCashFromCashOwner:object];

@@ -7,6 +7,7 @@
 //
 
 #import "APWasher.h"
+#import "APCar.h"
 
 @interface APWasher ()
 
