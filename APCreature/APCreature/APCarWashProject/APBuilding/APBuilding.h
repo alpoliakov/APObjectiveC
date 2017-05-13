@@ -15,7 +15,7 @@
 @interface APBuilding : NSObject
 @property (nonatomic, retain, readonly) NSArray *rooms;
 
-- (instancetype)initWithRooms:(NSArray *)rooms;
+- (instancetype)init;
 
 - (void)addRoom:(APBuilding *)room;
 - (void)removeRoom:(APBuilding *)room;

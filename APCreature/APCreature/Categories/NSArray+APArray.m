@@ -11,6 +11,9 @@
 
 @implementation NSArray (APArray)
 
+#pragma mark -
+#pragma mark Class Methods
+
 + (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block {
     if (!block || !count) {
         return nil;
@@ -22,6 +25,19 @@
     }
     
     return [self arrayWithArray:array];
+}
+
+#pragma mark -
+#pragma mark Public Methods
+
+- (void)performBlockWithEachObject:(void (^)(id object))block {
+    if (!block) {
+        return;
+    }
+    
+    [self enumerateObjectsUsingBlock:^(id object, NSUInteger idx, BOOL *stop) {
+        block(object);
+    }];
 }
 
 - (id)randomObject {

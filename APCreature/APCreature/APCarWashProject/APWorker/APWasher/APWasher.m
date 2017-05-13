@@ -8,6 +8,7 @@
 
 #import "APWasher.h"
 #import "APCar.h"
+#import "APAccountant.h"
 
 @interface APWasher ()
 
@@ -30,7 +31,7 @@
 
 - (void)cleanCar:(APCar *)car {
     car.isDirty = kAPClear;
-    NSLog(@"Car is washed");
+    NSLog(@"Car is washed.");
 }
 
 @end

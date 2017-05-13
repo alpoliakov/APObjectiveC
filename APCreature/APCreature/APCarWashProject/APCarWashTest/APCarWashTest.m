@@ -23,9 +23,9 @@ static const NSUInteger APCarwashTestCarsCount = 25;
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
     for (NSUInteger index = 0; index < APCarwashTestCarsCount; index++) {
-        NSLog(@"Car is being processed");
+        NSLog(@"Car is being processed.");
         [carwash processCar:[APCar object]];
-        NSLog(@"Car was processed");
+        NSLog(@"Car was processed.");
         NSLog(@"\n-------------------------------");
     }
     

@@ -29,7 +29,7 @@
 #pragma mark Private Methods
 
 - (void)calculateProfit {
-    NSLog(@"Cash is calculated");
+    NSLog(@"Cash is calculated.");
 }
 
 @end

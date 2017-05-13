@@ -9,6 +9,7 @@
 #import "APBuilding.h"
 #import "APRoom.h"
 #import "APWorker.h"
+#import "NSArray+APArray.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
@@ -30,18 +31,32 @@
     [super dealloc];
 }
 
-- (instancetype)initWithRooms:(NSArray *)rooms {
+- (id)init {
     self = [super init];
-    self.mutableRooms = [NSMutableArray array];
+    self.mutableRooms = [NSMutableArray new];
     
     return self;
 }
 
 #pragma mark-
-#pragma mark Accessors
+#pragma mark Accessors Methods
 
 - (NSArray *)rooms {
     return [[self.mutableRooms copy] autorelease];
+}
+
+- (void)setMutableRooms:(NSMutableArray *)mutableRooms {
+    if (_mutableRooms != mutableRooms) {
+        if (!mutableRooms) {
+            [_mutableRooms performBlockWithEachObject:^(APRoom *room) {
+                room.building = nil;
+            }];
+        }
+        
+        [_mutableRooms release];
+        
+        _mutableRooms = [mutableRooms retain];
+    }
 }
 
 #pragma mark -
