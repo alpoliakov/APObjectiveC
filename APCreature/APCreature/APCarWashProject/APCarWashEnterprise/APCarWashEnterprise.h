@@ -12,7 +12,9 @@
 #import "APBuilding.h"
 
 @interface APCarWashEnterprise : NSObject
+@property (nonatomic, readonly, getter=isEmptyQueue) BOOL emptyQueue;
+@property (nonatomic, readonly) NSUInteger count;
 
-- (id)init;
+- (void)processCar:(APCar *)car;
 
 @end

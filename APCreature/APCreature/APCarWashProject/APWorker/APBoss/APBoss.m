@@ -22,14 +22,14 @@
 
 - (void)processObject:(APAccountant *)accountant {
     [self makeProfit];
-    [super receiveCash:accountant];
+    [super receiveCashFromCashOwner:accountant];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (void)makeProfit {
-    NSLog(@"Profit is make, %lu", (unsigned long)self.cash);
+    NSLog(@"Profit is make, %lu", self.cash);
 }
 
 @end

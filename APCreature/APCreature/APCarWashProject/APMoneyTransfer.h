@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @protocol APMoneyTransfer <NSObject>
-@property (nonatomic, assign) NSUInteger cash;
+@property (nonatomic, readonly) NSUInteger cash;
 
 @optional
-- (void)receiveCash:(id<APMoneyTransfer>)object;
+- (void)receiveCashFromCashOwner:(id<APMoneyTransfer>)object;
+
+- (void)receiveCash:(NSUInteger)cash;
 
 - (NSUInteger)giveAllCash;
 

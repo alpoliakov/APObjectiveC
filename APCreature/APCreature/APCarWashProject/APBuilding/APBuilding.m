@@ -8,9 +8,12 @@
 
 #import "APBuilding.h"
 #import "APRoom.h"
+#import "APWorker.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
+
+- (APRoom *)freeRoom;
 
 @end
 
@@ -52,6 +55,34 @@
 
 - (void)removeRoom:(APRoom *)room {
     [self.mutableRooms removeObject:room];
+}
+
+- (BOOL)addWorker:(APWorker *)worker {
+    APRoom *room = [self freeRoom];
+    if (room) {
+        return [room addWorker:worker];
+    }
+    
+    return NO;
+}
+
+- (void)removeWorker:(APWorker *)worker {
+    for (APRoom *room in self.rooms) {
+        [room removeWorker:worker];
+    }
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (APRoom *)freeRoom {
+    for (APRoom *room in self.rooms) {
+        if (!room.isFull) {
+            return room;
+        }
+    }
+    
+    return nil;
 }
 
 @end

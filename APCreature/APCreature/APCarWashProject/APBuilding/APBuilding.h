@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-@class APRoom;
+
+#import "APAccountant.h"
+#import "APBoss.h"
+#import "APRoom.h"
 
 @interface APBuilding : NSObject
 @property (nonatomic, retain, readonly) NSArray *rooms;
@@ -16,5 +19,8 @@
 
 - (void)addRoom:(APBuilding *)room;
 - (void)removeRoom:(APBuilding *)room;
+
+- (BOOL)addWorker:(APWorker *)worker;
+- (void)removeWorker:(APWorker *)worker;
 
 @end

@@ -11,22 +11,14 @@
 static const NSUInteger APCash = 100;
 
 @interface APCar ()
-@property (nonatomic, retain) NSMutableArray *mutableCarsMark;
+@property (nonatomic, assign) NSUInteger cash;
 
 @end
 
 @implementation APCar
 
-@synthesize cash = _cash;
-
 #pragma mark -
 #pragma mark Initializtions and Deallocations
-
-- (void)dealloc {
-    self.mutableCarsMark = nil;
-    
-    [super dealloc];
-}
 
 - (instancetype)init {
     self = [super init];

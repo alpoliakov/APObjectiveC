@@ -7,6 +7,7 @@
 //
 
 #import "NSArray+APArray.h"
+#import "NSObject+APRandomNumbers.h"
 
 @implementation NSArray (APArray)
 
@@ -21,6 +22,15 @@
     }
     
     return [self arrayWithArray:array];
+}
+
+- (id)randomObject {
+    NSUInteger count = [self count];
+    if (count == 0) {
+        return nil;
+    }
+    
+    return [self objectAtIndex:APRandomUIntWithMaxValue(count - 1)];
 }
 
 @end

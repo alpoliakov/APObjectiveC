@@ -22,7 +22,7 @@
 
 - (void)processObject:(APWasher *)washer {
     [self calculateProfit];
-    [super receiveCash:washer];
+    [super receiveCashFromCashOwner:washer];
 }
 
 #pragma mark -
