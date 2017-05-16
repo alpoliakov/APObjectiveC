@@ -10,14 +10,14 @@
 
 @interface NSString (APExtention)
 
-+ (id)alphanumericAlphabet;
-+ (id)numericAlphabet;
-+ (id)lowercaseletterAlphabet;
-+ (id)capitalizedLetterAlphabet;
-+ (id)letterAlphabet;
-+ (id)alphabetWithUnicodeRange:(NSRange)range;
-+ (id)randomString;
-+ (id)randomStringWithLength:(NSUInteger)length;
-+ (id)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
++ (instancetype)alphanumericAlphabet;
++ (instancetype)numericAlphabet;
++ (instancetype)lowercaseletterAlphabet;
++ (instancetype)capitalizedLetterAlphabet;
++ (instancetype)letterAlphabet;
++ (instancetype)alphabetWithUnicodeRange:(NSRange)range;
++ (instancetype)randomString;
++ (instancetype)randomStringWithLength:(NSUInteger)length;
++ (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
 
 @end
