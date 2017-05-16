@@ -1,14 +1,14 @@
 //
-//  NSArray+APArray.h
+//  NSArray+APExtention.h
 //  APCreature
 //
-//  Created by Aleksandr Poliakov on 02.05.17.
+//  Created by Aleksandr Poliakov on 16.05.17.
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (APArray)
+@interface NSArray (APExtention)
 
 + (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
 

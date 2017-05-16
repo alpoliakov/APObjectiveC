@@ -37,11 +37,11 @@ static const NSUInteger APCash = 100;
 }
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
-        NSUInteger cashOwned = self.cash;
-        NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
-        self.cash = cashOwned - cashToGive;
+    NSUInteger cashOwned = self.cash;
+    NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
+    self.cash = cashOwned - cashToGive;
     
-        return cashToGive;
+    return cashToGive;
 }
 
 @end

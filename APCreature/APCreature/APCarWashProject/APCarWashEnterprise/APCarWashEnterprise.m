@@ -21,7 +21,7 @@
 
 #import "NSObject+APRandomNumbers.h"
 #import "NSObject+APObject.h"
-#import "NSArray+APArray.h"
+#import "NSArray+APExtention.h"
 
 static const NSUInteger APProdRoomCapacity = 2;
 static const NSUInteger APAdminRoomCapacity = 3;
