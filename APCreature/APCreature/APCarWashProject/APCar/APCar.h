@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "APMoneyTransfer.h"
 
-typedef NS_ENUM(NSUInteger, APDirtyOrClear) {
-    kAPDirty,
-    kAPClear,
+typedef NS_ENUM(NSUInteger, APCarState) {
+    APCarDirty,
+    APCarClear
 };
 
 @interface APCar : NSObject <APMoneyTransfer>
-@property (nonatomic, assign) APDirtyOrClear isDirty;
+@property (nonatomic, assign) APCarState state;
 
 - (instancetype)init;
 

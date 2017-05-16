@@ -11,21 +11,13 @@
 @interface NSString (APExtention)
 
 + (id)alphanumericAlphabet;
-
 + (id)numericAlphabet;
-
 + (id)lowercaseletterAlphabet;
-
 + (id)capitalizedLetterAlphabet;
-
 + (id)letterAlphabet;
-
 + (id)alphabetWithUnicodeRange:(NSRange)range;
-
 + (id)randomString;
-
 + (id)randomStringWithLength:(NSUInteger)length;
-
 + (id)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
 
 @end

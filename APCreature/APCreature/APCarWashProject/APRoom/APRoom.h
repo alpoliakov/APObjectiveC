@@ -19,7 +19,7 @@
 + (id)room;
 + (id)roomWithCapacity:(NSUInteger)capacity;
 
-- (id)initWithCapacity:(NSUInteger)capacity;
+- (id)initWithCapacity:(NSUInteger)capacity NS_DESIGNATED_INITIALIZER;
 
 - (BOOL)addWorker:(APRoom *)worker;
 - (void)removeWorker:(APRoom *)worker;

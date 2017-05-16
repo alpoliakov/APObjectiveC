@@ -24,7 +24,7 @@ static const NSUInteger APCash = 100;
     self = [super init];
     
     self.cash = APCash;
-    self.isDirty = kAPDirty;
+    self.state = APCarDirty;
     
     return self;
 }
