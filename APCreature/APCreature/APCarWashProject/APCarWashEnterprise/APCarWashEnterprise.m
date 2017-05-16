@@ -28,14 +28,15 @@ static const NSUInteger APAdminRoomCapacity = 3;
 
 @interface APCarWashEnterprise ()
 
-@property (nonatomic, retain) APBuilding *productionBuilding;
-@property (nonatomic, retain) APBuilding *administrativeBuilding;
-@property (nonatomic, retain) NSMutableArray *washers;
-@property (nonatomic, retain) NSMutableArray *accountants;
-@property (nonatomic, retain) NSMutableArray *directors;
-@property (nonatomic, retain) APQueue *carsQueue;
+@property (nonatomic, retain)                           APBuilding        *productionBuilding;
+@property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
+@property (nonatomic, retain)                           NSMutableArray    *washers;
+@property (nonatomic, retain)                           NSMutableArray    *accountants;
+@property (nonatomic, retain)                           NSMutableArray    *directors;
+@property (nonatomic, retain)                           APQueue           *carsQueue;
+@property (nonatomic, readonly, getter=isEmptyQueue)    BOOL               emptyQueue;
 
-- (void)initCarWashStructure;
+- (void)prepareCarWashStructure;
 
 - (APWasher *)freeWasher;
 - (APAccountant *)freeAccountant;
@@ -81,7 +82,7 @@ static const NSUInteger APAdminRoomCapacity = 3;
     self.washers = [NSMutableArray object];
     self.directors = [NSMutableArray object];
     
-    [self initCarWashStructure];
+    [self prepareCarWashStructure];
     
     return self;
 }
@@ -93,7 +94,7 @@ static const NSUInteger APAdminRoomCapacity = 3;
     return self.carsQueue.count == 0;
 }
 
-- (void)initCarWashStructure {
+- (void)prepareCarWashStructure {
     APBuilding *productionBuilding = [APCarWashBuilding object];
     [productionBuilding addRoom:[APCarWashRoom roomWithCapacity:APProdRoomCapacity]];
     self.productionBuilding = productionBuilding;

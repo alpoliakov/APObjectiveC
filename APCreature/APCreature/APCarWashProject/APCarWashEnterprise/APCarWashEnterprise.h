@@ -12,7 +12,6 @@
 #import "APBuilding.h"
 
 @interface APCarWashEnterprise : NSObject
-@property (nonatomic, readonly, getter=isEmptyQueue) BOOL emptyQueue;
 
 - (void)processCar:(APCar *)car;
 
