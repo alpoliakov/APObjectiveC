@@ -47,14 +47,7 @@
 
 - (void)setMutableRooms:(NSMutableArray *)mutableRooms {
     if (_mutableRooms != mutableRooms) {
-        if (!mutableRooms) {
-            [_mutableRooms performBlockWithEachObject:^(APRoom *room) {
-                room.building = nil;
-            }];
-        }
-        
         [_mutableRooms release];
-        
         _mutableRooms = [mutableRooms retain];
     }
 }
