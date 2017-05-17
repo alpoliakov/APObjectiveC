@@ -31,7 +31,7 @@
 
 - (void)cleanCar:(APCar *)car {
     car.state = APCarClear;
-    NSLog(@"Car is washed.");
+    NSLog(@"\nCar is washed.");
 }
 
 @end

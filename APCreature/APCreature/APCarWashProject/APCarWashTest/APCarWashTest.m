@@ -22,13 +22,15 @@ static const NSUInteger APCarwashTestCarsCount = 25;
     NSLog(@"\n-------------------------------");
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
-    for (NSUInteger index = 0; index < APCarwashTestCarsCount; index++) {
-        NSLog(@"Car is being processed.");
-        [carwash processCar:[APCar object]];
-        NSLog(@"Car was processed.");
+    for (NSUInteger index = 0; index <= APCarwashTestCarsCount; ++index) {
+        NSLog(@"\nCar is add to queue.");
+        [carwash processFormingQueueCars:[APCar object]];
+        NSLog(@"\nCar %lu.", (unsigned long)index);
         NSLog(@"\n-------------------------------");
     }
-    
+    [carwash processOfCarProcessing];
+    NSLog(@"\nProcesses completed.");
+    NSLog(@"\n-------------------------------");
 }
 
 @end

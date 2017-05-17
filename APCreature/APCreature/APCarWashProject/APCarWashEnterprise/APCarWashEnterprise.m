@@ -110,9 +110,11 @@ static const NSUInteger APAdminRoomCapacity = 3;
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processCar:(APCar *)car {
+- (void)processFormingQueueCars:(APCar *)car {
     [self.carsQueue enqueue:car];
-    
+}
+
+- (void)processOfCarProcessing {
     while (![self isEmptyQueue]) {
         APCar *currentCar = [self.carsQueue dequeue];
         
@@ -128,8 +130,10 @@ static const NSUInteger APAdminRoomCapacity = 3;
         
         APBoss *boss = [self freeBoss];
         [boss processObject:accountant];
+        
+        NSLog(@"\nCar was processed.");
+        NSLog(@"\n-------------------------------");
     }
-    
 }
 
 #pragma mark -
