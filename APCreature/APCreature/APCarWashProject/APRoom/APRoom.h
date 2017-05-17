@@ -11,13 +11,17 @@
 @class APBuilding;
 
 @interface APRoom : NSObject
-@property (nonatomic, retain, readonly) NSArray *workers;
+@property (nonatomic, retain, readonly)         NSArray         *workers;
+@property (nonatomic, readonly)                 NSUInteger      workersCount;
+@property (nonatomic, assign)                   APBuilding      *building;
+@property (nonatomic, readonly, getter=isFull)  BOOL            full;
 
 + (id)room;
++ (id)roomWithCapacity:(NSUInteger)capacity;
 
-- (instancetype)initWithWorkers:(NSArray *)workers;
+- (id)initWithCapacity:(NSUInteger)capacity NS_DESIGNATED_INITIALIZER;
 
-- (void)addWorker:(APRoom *)worker;
+- (BOOL)addWorker:(APRoom *)worker;
 - (void)removeWorker:(APRoom *)worker;
 
 @end

@@ -8,34 +8,23 @@
 
 #import "APCar.h"
 
-static const NSUInteger APCash = 1000;
-static const NSUInteger APPaid = 20;
+static const NSUInteger APCash = 100;
 
 @interface APCar ()
-@property (nonatomic, retain) NSMutableArray *mutableCarsMark;
+@property (nonatomic, assign) NSUInteger cash;
 
 @end
 
 @implementation APCar
 
-@synthesize cash = _cash;
-@synthesize payment = _payment;
-
 #pragma mark -
 #pragma mark Initializtions and Deallocations
-
-- (void)dealloc {
-    self.mutableCarsMark = nil;
-    
-    [super dealloc];
-}
 
 - (instancetype)init {
     self = [super init];
     
-    self.payment = APPaid;
     self.cash = APCash;
-    self.isDirty = YES;
+    self.state = APCarDirty;
     
     return self;
 }
@@ -44,15 +33,15 @@ static const NSUInteger APPaid = 20;
 #pragma mark Public Methods
 
 - (NSUInteger)giveAllCash {
-    return [self giveCash:self.payment];
+    return [self giveCash:self.cash];
 }
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
-    if (APCash > APPaid) {
-        NSUInteger chargeForCleaning = self.payment;
-        self.cash = APCash - chargeForCleaning;
-        return chargeForCleaning;
-    }
+    NSUInteger cashOwned = self.cash;
+    NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
+    self.cash = cashOwned - cashToGive;
+    
+    return cashToGive;
 }
 
 @end

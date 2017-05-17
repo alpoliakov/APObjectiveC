@@ -8,18 +8,30 @@
 
 #import "APCarWashTest.h"
 #import "APBuilding.h"
+#import "APCar.h"
+#import "APCarWashEnterprise.h"
+#import "NSObject+APObject.h"
+
+static const NSUInteger APCarwashTestCarsCount = 25;
+static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 @implementation APCarWashTest
 
 + (void)performCarWashTests {
-    [APCarWashTest APPerformTestByCarWash];
-}
-
-+(void)APPerformTestByCarWash {
     NSLog(@"\n---------- Car Wash -----------");
     NSLog(@"\nPerforming %@ test\n", NSStringFromSelector(_cmd));
-    NSLog(@"\n-------------------------------");
+    NSLog(APOutputDelimiter);
     
+    APCarWashEnterprise *carwash = [APCarWashEnterprise object];
+    for (NSUInteger index = 0; index <= APCarwashTestCarsCount; ++index) {
+        NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
+        [carwash processFormingQueueCars:[APCar object]];
+        //NSLog(@"\nCar %lu.", (unsigned long)index);
+        NSLog(APOutputDelimiter);
+    }
+    [carwash processOfCarProcessing];
+    NSLog(@"\nProcesses completed.");
+    NSLog(APOutputDelimiter);
 }
 
 @end

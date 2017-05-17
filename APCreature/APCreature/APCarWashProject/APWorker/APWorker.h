@@ -11,7 +11,6 @@
 
 @interface APWorker : NSObject <APMoneyTransfer>
 
-- (instancetype)init;
 
 - (void)processObject:(id<APMoneyTransfer>) object;
 

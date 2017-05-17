@@ -7,6 +7,8 @@
 //
 
 #import "APWasher.h"
+#import "APCar.h"
+#import "APAccountant.h"
 
 @interface APWasher ()
 
@@ -21,15 +23,15 @@
 
 - (void)processObject:(APCar *)car {
     [self cleanCar:car];
-    [self receiveCash:car];
+    [self receiveCashFromCashOwner:car];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (void)cleanCar:(APCar *)car {
-    car.isDirty = NO;
-    NSLog(@"Car is washed");
+    car.state = APCarClear;
+    NSLog(@"\nCar is washed.");
 }
 
 @end

@@ -11,3 +11,4 @@
 BOOL APRandomBool();
 NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber);
 NSUInteger APRandomValueWithRange(NSRange range);
+NSUInteger APRandomUIntWithMaxValue(NSUInteger value);

@@ -7,20 +7,30 @@
 //
 
 #import "APRoom.h"
+#import "APBuilding.h"
+
+static const NSUInteger APRoomDefaultCapacity = 10;
 
 @interface APRoom ()
-@property (nonatomic, retain) NSMutableArray *mutableWorkers;
+@property (nonatomic, retain)   NSMutableArray      *mutableWorkers;
+@property (nonatomic, assign)   NSUInteger          capacity;
 
 @end
 
 @implementation APRoom
 @dynamic workers;
+@dynamic workersCount;
+@dynamic full;
 
 #pragma mark -
 #pragma mark Class Methods
 
 + (id)room {
-    return [[[self alloc] init] autorelease];
+    return [self roomWithCapacity:APRoomDefaultCapacity];
+}
+
++ (id)roomWithCapacity:(NSUInteger)capacity {
+    return [[[self alloc] initWithCapacity:capacity] autorelease];
 }
 
 #pragma mark-
@@ -33,14 +43,14 @@
 }
 
 - (instancetype)init {
-    self = [super init];
-    
-    return  self;
+    return [self initWithCapacity:APRoomDefaultCapacity];
 }
 
-- (instancetype)initWithWorkers:(NSArray *)workers {
+- (instancetype)initWithCapacity:(NSUInteger)capacity {
     self = [super init];
-    self.mutableWorkers = [NSMutableArray array];
+    
+    self.mutableWorkers = [[NSMutableArray new] autorelease];
+    self.capacity = capacity;
     
     return self;
 }
@@ -52,13 +62,24 @@
     return [[self.mutableWorkers copy] autorelease];
 }
 
+- (NSUInteger)workersCount {
+    return [self.mutableWorkers count];
+}
+
+- (BOOL)isFull {
+    return self.capacity <= self.workersCount;
+}
+
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)addWorker:(APWorker *)worker {
-    if (worker) {
-        [self.mutableWorkers addObject:worker];
+- (BOOL)addWorker:(APWorker *)worker {
+    if (nil == worker || self.capacity <= self.workersCount) {
+        return NO;
     }
+    [self.mutableWorkers addObject:worker];
+    
+    return YES;
 }
 
 - (void)removeWorker:(APWorker *)worker {

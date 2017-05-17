@@ -24,3 +24,9 @@ NSRange APMakeRange(NSUInteger firstNumber, NSUInteger lastNumber) {
 NSUInteger APRandomValueWithRange(NSRange range) {
     return arc4random_uniform((uint32_t)range.length) + range.location;
 }
+
+
+NSUInteger APRandomUIntWithMaxValue(NSUInteger value) {
+    return APRandomValueWithRange(APMakeRange(0, value));
+}
+

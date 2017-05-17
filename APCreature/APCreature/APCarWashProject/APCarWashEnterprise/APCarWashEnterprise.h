@@ -13,6 +13,7 @@
 
 @interface APCarWashEnterprise : NSObject
 
-- (id)init;
+- (void)processFormingQueueCars:(APCar *)car;
+- (void)processOfCarProcessing;
 
 @end

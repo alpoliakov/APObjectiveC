@@ -22,14 +22,14 @@
 
 - (void)processObject:(APWasher *)washer {
     [self calculateProfit];
-    [super receiveCash:washer];
+    [super receiveCashFromCashOwner:washer];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (void)calculateProfit {
-    NSLog(@"Cash is calculated");
+    NSLog(@"Cash is calculated.");
 }
 
 @end

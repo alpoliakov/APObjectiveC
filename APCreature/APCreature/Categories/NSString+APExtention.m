@@ -1,0 +1,70 @@
+//
+//  NSString+APExtention.m
+//  APCreature
+//
+//  Created by Aleksandr Poliakov on 13.05.17.
+//  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
+//
+
+#import "NSString+APExtention.h"
+
+static const NSUInteger kNSStringDefaultRandomStringLength = 30;
+
+@implementation NSString (APExtention)
+
++ (instancetype)alphanumericAlphabet {
+    NSMutableString *result = [NSMutableString stringWithString:[self letterAlphabet]];
+    [result appendString:[self numericAlphabet]];
+    
+    return [self stringWithString:result];
+}
+
++ (instancetype)numericAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('0', '9' - '0' + 1)];
+}
+
++ (instancetype)lowercaseletterAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('a', 'z' - 'a' + 1)];
+}
+
++ (instancetype)capitalizedLetterAlphabet {
+    return [self alphabetWithUnicodeRange:NSMakeRange('A', 'Z' - 'A' + 1)];
+}
+
++ (instancetype)letterAlphabet {
+    NSMutableString *result = [NSMutableString stringWithString:[self lowercaseletterAlphabet]];
+    [result appendString:[self capitalizedLetterAlphabet]];
+    
+    return [self stringWithString:result];
+}
+
++ (instancetype)alphabetWithUnicodeRange:(NSRange)range {
+    NSMutableString *result = [NSMutableString string];
+    for (unichar character = range.location; character < NSMaxRange(range); character++) {
+        [result appendFormat:@"%c", character];
+    }
+    
+    return [self stringWithString:result];
+}
+
++ (instancetype)randomString {
+    return [self randomStringWithLength:arc4random_uniform(kNSStringDefaultRandomStringLength)];
+}
+
++ (instancetype)randomStringWithLength:(NSUInteger)length {
+    return [self randomStringWithLength:length alphabet:[self alphanumericAlphabet ]];
+}
+
++ (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet {
+    NSMutableString *result = [NSMutableString stringWithCapacity:length];
+    NSUInteger lengthAlphabet = [alphabet length];
+    
+    for (NSUInteger index = 0; index < length; index++) {
+        unichar resultChar = [alphabet characterAtIndex:arc4random_uniform((u_int32_t)lengthAlphabet)];
+        [result appendFormat:@"%c", resultChar];
+    }
+    
+    return [self stringWithString:result];
+}
+
+@end

@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+APObject.h"
-#import "NSArray+APArray.h"
+#import "NSArray+APExtention.h"
 
 @implementation NSObject (APObject)
 
@@ -16,7 +16,7 @@
 }
 
 + (instancetype)objectsWithCount:(NSUInteger)count {
-    return [self objectsWithCount:count block:^{
+    return [NSArray objectsWithCount:count block:^{
         return [self object];
     }];
 }

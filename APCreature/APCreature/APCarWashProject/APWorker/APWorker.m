@@ -8,9 +8,12 @@
 
 #import "APWorker.h"
 
-@implementation APWorker
+@interface APWorker ()
+@property (nonatomic, assign) NSUInteger cash;
 
-@synthesize cash = _cash;
+@end
+
+@implementation APWorker
 
 #pragma mark -
 #pragma mark Initializtions and Deallocations
@@ -21,12 +24,19 @@
     return self;
 };
 
+#pragma mark -
+#pragma mark Public Methods
+
 - (void)processObject:(id<APMoneyTransfer>)object {
-    [self receiveCash:object];
+    [self receiveCashFromCashOwner:object];
 }
 
-- (void)receiveCash:(id<APMoneyTransfer>)object {
-    self.cash += [object giveAllCash];
+- (void)receiveCashFromCashOwner:(id<APMoneyTransfer>)object {
+    [self receiveCash:[object giveAllCash]];
+}
+
+- (void)receiveCash:(NSUInteger)cash {
+    self.cash += cash;
 }
 
 - (NSUInteger)giveAllCash {
@@ -34,10 +44,11 @@
 }
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
-    NSUInteger cashbox = self.cash;
-    self.cash = 0;
+    NSUInteger cashOwned = self.cash;
+    NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
+    self.cash = cashOwned - cashToGive;
     
-    return cashbox;
+    return cashToGive;
 }
 
 @end
