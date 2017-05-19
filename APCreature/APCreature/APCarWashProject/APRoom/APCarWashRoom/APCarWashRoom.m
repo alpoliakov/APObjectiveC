@@ -9,8 +9,8 @@
 #import "APCarWashRoom.h"
 #import "NSObject+APObject.h"
 
-static const NSUInteger APRoomDefaultCapacity = 10;
-static const NSUInteger APCarDefaultCapacity = 1;
+//static const NSUInteger APRoomDefaultCapacity = 10;
+//static const NSUInteger APCarDefaultCapacity = 1;
 
 @interface APCarWashRoom ()
 @property (nonatomic, retain) NSMutableArray *mutableCars;
@@ -31,10 +31,6 @@ static const NSUInteger APCarDefaultCapacity = 1;
 }
 
 - (instancetype)initWithCapacity:(NSUInteger)capacity {
-    return [self initWithCapacity:APRoomDefaultCapacity car:APCarDefaultCapacity];
-}
-
-- (instancetype)initWithCapacity:(NSUInteger)capacity car:(NSUInteger)capacityCars{
     self = [super initWithCapacity:(NSUInteger)capacity];
     self.mutableCars = [NSMutableArray object];
     

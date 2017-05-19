@@ -54,7 +54,7 @@
     if(self.count == 0) {
         return nil;
     }
-    id object = [[self.objects[0] retain] autorelease];
+    id object = [[self.objects.firstObject retain] autorelease];
     [self.objects removeObjectAtIndex:0];
     
     return object;
