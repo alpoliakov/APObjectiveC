@@ -9,9 +9,6 @@
 #import "APCarWashRoom.h"
 #import "NSObject+APObject.h"
 
-//static const NSUInteger APRoomDefaultCapacity = 10;
-//static const NSUInteger APCarDefaultCapacity = 1;
-
 @interface APCarWashRoom ()
 @property (nonatomic, retain) NSMutableArray *mutableCars;
 

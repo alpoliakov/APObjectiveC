@@ -11,6 +11,8 @@
 @interface APWorker ()
 @property (nonatomic, assign) NSUInteger cash;
 
+- (void)performWorkWithObject:(id)object;
+
 @end
 
 @implementation APWorker
@@ -50,5 +52,7 @@
     
     return cashToGive;
 }
+
+- (void)performWorkWithObject:(id)object {}
 
 @end

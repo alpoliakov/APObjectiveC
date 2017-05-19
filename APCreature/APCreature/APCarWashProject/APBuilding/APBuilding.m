@@ -45,12 +45,12 @@
     return [[self.mutableRooms copy] autorelease];
 }
 
-- (void)setMutableRooms:(NSMutableArray *)mutableRooms {
-    if (_mutableRooms != mutableRooms) {
-        [_mutableRooms release];
-        _mutableRooms = [mutableRooms retain];
-    }
-}
+//- (void)setMutableRooms:(NSMutableArray *)mutableRooms {
+//    if (_mutableRooms != mutableRooms) {
+//        [_mutableRooms release];
+//        _mutableRooms = [mutableRooms retain];
+//    }
+//}
 
 #pragma mark -
 #pragma mark Public Methods
