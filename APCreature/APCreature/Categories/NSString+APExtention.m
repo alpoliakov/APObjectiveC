@@ -8,7 +8,15 @@
 
 #import "NSString+APExtention.h"
 
-static const NSUInteger kNSStringDefaultRandomStringLength = 30;
+static const NSUInteger kNSStringDefaultRandomStringLength  = 30;
+static const NSUInteger kAPNumberOne                        = 1;
+
+static const unichar    kAPFirstLowerCaseLetter    = 'a';
+static const unichar    kAPLastLowerCaseLetter     = 'z';
+static const unichar    kAPFirstCapitalLetter      = 'A';
+static const unichar    kAPLastCapitalLetter       = 'Z';
+static const unichar    kAPFirstNumberSign         = '0';
+static const unichar    kAPLastNumberSign          = '9';
 
 @implementation NSString (APExtention)
 
@@ -20,15 +28,21 @@ static const NSUInteger kNSStringDefaultRandomStringLength = 30;
 }
 
 + (instancetype)numericAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('0', '9' - '0' + 1)];
+    return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstNumberSign,
+                                                      kAPLastNumberSign -
+                                                      kAPFirstNumberSign + kAPNumberOne)];
 }
 
 + (instancetype)lowercaseletterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('a', 'z' - 'a' + 1)];
+    return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstLowerCaseLetter,
+                                                      kAPLastLowerCaseLetter -
+                                                      kAPFirstLowerCaseLetter + kAPNumberOne)];
 }
 
 + (instancetype)capitalizedLetterAlphabet {
-    return [self alphabetWithUnicodeRange:NSMakeRange('A', 'Z' - 'A' + 1)];
+    return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstCapitalLetter,
+                                                      kAPLastCapitalLetter -
+                                                      kAPFirstCapitalLetter + kAPNumberOne)];
 }
 
 + (instancetype)letterAlphabet {
@@ -65,6 +79,18 @@ static const NSUInteger kNSStringDefaultRandomStringLength = 30;
     }
     
     return [self stringWithString:result];
+}
+
+- (NSArray *)symbols  {
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self length]];
+    NSUInteger length = [self length];
+    
+    for (NSUInteger index = 0; index < length; index++) {
+        unichar resultChar = [self characterAtIndex:index];
+        [result addObject:[NSString stringWithFormat:@"%c", resultChar]];
+    }
+    
+    return [[result copy] autorelease];
 }
 
 @end

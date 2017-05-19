@@ -20,4 +20,6 @@
 + (instancetype)randomStringWithLength:(NSUInteger)length;
 + (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
 
+- (NSArray *)symbols;
+
 @end
