@@ -25,6 +25,7 @@
 
 static const NSUInteger APProdRoomCapacity = 2;
 static const NSUInteger APAdminRoomCapacity = 3;
+static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 @interface APCarWashEnterprise ()
 
@@ -65,6 +66,8 @@ static const NSUInteger APAdminRoomCapacity = 3;
 #pragma mark Initializtions and Deallocations
 
 - (void)dealloc {
+    [self.accountants removeAllObjects];
+    
     self.productionBuilding = nil;
     self.administrativeBuilding = nil;
     self.washers = nil;
@@ -132,7 +135,7 @@ static const NSUInteger APAdminRoomCapacity = 3;
         [boss processObject:accountant];
         
         NSLog(@"\nCar was processed.");
-        NSLog(@"\n-------------------------------");
+        NSLog(APOutputDelimiter);
     }
 }
 
@@ -176,7 +179,6 @@ static const NSUInteger APAdminRoomCapacity = 3;
     if ([self.directors count]) {
         return;
     }
-    
     [self addWorker:boss toArray:self.directors building:self.administrativeBuilding];
 }
 

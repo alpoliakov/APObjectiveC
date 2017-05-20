@@ -14,15 +14,15 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processObject:(APAccountant *)accountant {
-    [self performWorkWithObject:accountant];
-    [super receiveCashFromCashOwner:accountant];
+- (void)processObject:(APWasher *)washer {
+    [self performWorkWithObject:washer];
+    [super receiveCashFromCashOwner:washer];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (void)performWorkWithObject:(APAccountant *)accountant {
+- (void)performWorkWithObject:(APWasher *)washer {
     NSLog(@"Cash is calculated.");
 }
 

@@ -14,15 +14,15 @@
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processObject:(APBoss *)boss {
-    [self performWorkWithObject:boss];
-    [super receiveCashFromCashOwner:boss];
+- (void)processObject:(APAccountant *)accountant {
+    [self performWorkWithObject:accountant];
+    [super receiveCashFromCashOwner:accountant];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (void) performWorkWithObject:(APBoss *)boss {
+- (void) performWorkWithObject:(APAccountant *)accountant {
     NSLog(@"Profit is make, %lu", self.cash);
 }
 

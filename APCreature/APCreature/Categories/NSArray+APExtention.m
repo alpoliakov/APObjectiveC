@@ -49,4 +49,15 @@
     return [self objectAtIndex:APRandomUIntWithMaxValue(count - 1)];
 }
 
+- (NSArray *)objectsOfClass:(Class)class {
+    NSMutableArray *mutableResult = [NSMutableArray array];
+    for (id object in self) {
+        if ([object isMemberOfClass:class]) {
+            [mutableResult addObject:object];
+        }
+    }
+    
+    return [[mutableResult copy] autorelease];
+}
+
 @end
