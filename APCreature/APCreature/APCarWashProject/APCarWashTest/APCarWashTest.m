@@ -28,6 +28,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
         [carwash processFormingQueueCars:[APCar object]];
         NSLog(APOutputDelimiter);
     }
+    
     [carwash processOfCarProcessing];
     NSLog(@"\nProcesses completed.");
     NSLog(APOutputDelimiter);

@@ -16,6 +16,6 @@
 
 - (id)randomObject;
 
-- (NSArray *)objectsOfClass:(Class)class;
+- (id)objectsOfClass:(Class)cls;
 
 @end

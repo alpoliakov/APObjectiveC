@@ -49,7 +49,7 @@
     return [self objectAtIndex:APRandomUIntWithMaxValue(count - 1)];
 }
 
-- (NSArray *)objectsOfClass:(Class)class {
+- (id)objectsOfClass:(Class)class {
     NSMutableArray *mutableResult = [NSMutableArray array];
     for (id object in self) {
         if ([object isMemberOfClass:class]) {
