@@ -16,7 +16,7 @@
 
 - (void)processObject:(APAccountant *)accountant {
     [self performWorkWithObject:accountant];
-    [super receiveCashFromCashOwner:accountant];
+    [super takeCashFromObject:accountant];
 }
 
 #pragma mark -

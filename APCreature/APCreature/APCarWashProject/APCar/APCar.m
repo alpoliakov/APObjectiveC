@@ -22,9 +22,10 @@ static const NSUInteger APCash = 100;
 
 - (instancetype)init {
     self = [super init];
-    
-    self.cash = APCash;
-    self.state = APCarDirty;
+    if (self) {
+        self.cash = APCash;
+        self.state = APCarDirty;
+    }
     
     return self;
 }
@@ -32,16 +33,18 @@ static const NSUInteger APCash = 100;
 #pragma mark -
 #pragma mark Public Methods
 
+
+
 - (NSUInteger)giveAllCash {
-    return [self giveCash:self.cash];
+     return [self cash];
 }
 
-- (NSUInteger)giveCash:(NSUInteger)cash {
-    NSUInteger cashOwned = self.cash;
-    NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
-    self.cash = cashOwned - cashToGive;
-    
-    return cashToGive;
-}
+//- (NSUInteger)giveCash:(NSUInteger)cash {
+//    NSUInteger cashOwned = self.cash;
+//    NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
+//    self.cash = cashOwned - cashToGive;
+//    
+//    return [self giveCash:self.cash];
+//}
 
 @end

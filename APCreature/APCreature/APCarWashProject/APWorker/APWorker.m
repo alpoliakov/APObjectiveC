@@ -30,10 +30,10 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
-    [self receiveCashFromCashOwner:object];
+    [self takeCashFromObject:object];
 }
 
-- (void)receiveCashFromCashOwner:(id<APMoneyTransfer>)object {
+- (void)takeCashFromObject:(id<APMoneyTransfer>)object {
     [self receiveCash:[object giveAllCash]];
 }
 

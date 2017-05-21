@@ -35,7 +35,6 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 @property (nonatomic, retain)                           NSMutableArray    *accountants;
 @property (nonatomic, retain)                           NSMutableArray    *directors;
 @property (nonatomic, retain)                           APQueue           *carsQueue;
-@property (nonatomic, readonly, getter=isEmptyQueue)    BOOL               emptyQueue;
 
 - (void)prepareCarWashStructure;
 
@@ -60,14 +59,10 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 @implementation APCarWashEnterprise
 
-@dynamic emptyQueue;
-
 #pragma mark -
 #pragma mark Initializtions and Deallocations
 
 - (void)dealloc {
-    [self.accountants removeAllObjects];
-    
     self.productionBuilding = nil;
     self.administrativeBuilding = nil;
     self.washers = nil;
@@ -93,10 +88,6 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 #pragma mark -
 #pragma mark Accessors Methods
 
-- (BOOL)isEmptyQueue {
-    return self.carsQueue.count == 0;
-}
-
 - (void)prepareCarWashStructure {
     APBuilding *productionBuilding = [APCarWashBuilding object];
     [productionBuilding addRoom:[APCarWashRoom roomWithCapacity:APProdRoomCapacity]];
@@ -118,7 +109,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 }
 
 - (void)processOfCarProcessing {
-    while (![self isEmptyQueue]) {
+    while (self.carsQueue.empty) {
         APCar *currentCar = [self.carsQueue dequeue];
         
         if (!currentCar) {

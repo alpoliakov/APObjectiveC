@@ -16,7 +16,7 @@
 #pragma mark Public Methods
 
 - (void)processObject:(APCar *)car {
-    [self receiveCashFromCashOwner:car];
+    [self takeCashFromObject:car];
     [self performWorkWithObject:car];
 }
 

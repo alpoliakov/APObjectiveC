@@ -16,7 +16,7 @@
 
 - (void)processObject:(APWasher *)washer {
     [self performWorkWithObject:washer];
-    [super receiveCashFromCashOwner:washer];
+    [super takeCashFromObject:washer];
 }
 
 #pragma mark -

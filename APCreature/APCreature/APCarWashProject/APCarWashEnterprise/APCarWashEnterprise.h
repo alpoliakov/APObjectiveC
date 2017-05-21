@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 
 #import "APCar.h"
-#import "APBuilding.h"
 
 @interface APCarWashEnterprise : NSObject
 
 - (void)processFormingQueueCars:(APCar *)car;
 - (void)processOfCarProcessing;
+
+- (void)processCar:(APCar *)car;
 
 @end

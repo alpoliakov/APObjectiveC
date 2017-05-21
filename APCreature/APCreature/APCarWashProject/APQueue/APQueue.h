@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface APQueue : NSObject
-@property (nonatomic, readonly) NSUInteger count;
+@property (nonatomic, readonly) NSUInteger  count;
+@property (nonatomic, readonly) BOOL        empty;
 
 - (void)enqueue:(id)object;
 - (id)dequeue;
