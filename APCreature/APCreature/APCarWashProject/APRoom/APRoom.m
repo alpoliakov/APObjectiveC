@@ -8,11 +8,6 @@
 
 #import "APRoom.h"
 #import "APBuilding.h"
-#import "APWasher.h"
-#import "APAccountant.h"
-#import "APBoss.h"
-
-#import "NSArray+APExtensions.h"
 
 static const NSUInteger APRoomDefaultCapacity = 10;
 

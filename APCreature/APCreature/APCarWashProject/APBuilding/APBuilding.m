@@ -8,8 +8,6 @@
 
 #import "APBuilding.h"
 #import "APRoom.h"
-#import "APWorker.h"
-#import "NSArray+APExtensions.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;

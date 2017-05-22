@@ -33,8 +33,6 @@ static const NSUInteger APCash = 100;
 #pragma mark -
 #pragma mark Public Methods
 
-
-
 - (NSUInteger)giveAllCash {
      return [self cash];
 }

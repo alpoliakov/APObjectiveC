@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-#import "APCar.h"
-
 @interface APCarWashEnterprise : NSObject
 
-- (void)processWash:(APCar *)car cars:(NSUInteger)numberCars;
+- (void)processWash:(id)car numberOfCars:(NSUInteger)numberCars;
 
 @end

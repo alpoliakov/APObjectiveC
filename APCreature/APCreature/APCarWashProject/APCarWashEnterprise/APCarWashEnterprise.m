@@ -32,7 +32,6 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 @property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
 @property (nonatomic, retain)                           APQueue           *carsQueue;
 
-//- (APWorker *)freeEmployeeFromArray:(NSArray *)employes;
 - (void)prepareCarWashStructure;
 - (id)freeEmployeeWithClass:(Class)class;
 - (id)employeesWithClass:(Class)cls;
@@ -99,7 +98,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processWash:(APCar *)car cars:(NSUInteger)numberCars{
+- (void)processWash:(id)car numberOfCars:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
     for (NSUInteger index = 0; index <= numberCars; ++index) {
         NSLog(@"\nCar %lu adds to queue.", index);

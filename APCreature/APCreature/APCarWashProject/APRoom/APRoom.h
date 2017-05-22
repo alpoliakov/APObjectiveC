@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 @class APWorker;
-//@class APBuilding;
 
 @interface APRoom : NSObject
 @property (nonatomic, readonly)                 NSArray         *workers;
