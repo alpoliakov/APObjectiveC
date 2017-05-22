@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (APExtention)
+@interface NSString (APExtensions)
 
 + (instancetype)alphanumericAlphabet;
 + (instancetype)numericAlphabet;

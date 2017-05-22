@@ -6,7 +6,7 @@
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
-#import "NSString+APExtention.h"
+#import "NSString+APExtensions.h"
 
 static const NSUInteger kNSStringDefaultRandomStringLength  = 30;
 static const NSUInteger kAPNumberOne                        = 1;
@@ -18,7 +18,7 @@ static const unichar    kAPLastCapitalLetter       = 'Z';
 static const unichar    kAPFirstNumberSign         = '0';
 static const unichar    kAPLastNumberSign          = '9';
 
-@implementation NSString (APExtention)
+@implementation NSString (APExtensions)
 
 + (instancetype)alphanumericAlphabet {
     NSMutableString *result = [NSMutableString stringWithString:[self letterAlphabet]];

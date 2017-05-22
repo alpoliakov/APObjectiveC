@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+APObject.h"
-#import "NSArray+APExtention.h"
+#import "NSArray+APExtensions.h"
 
 @implementation NSObject (APObject)
 

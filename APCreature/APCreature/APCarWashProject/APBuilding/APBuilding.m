@@ -9,7 +9,7 @@
 #import "APBuilding.h"
 #import "APRoom.h"
 #import "APWorker.h"
-#import "NSArray+APExtention.h"
+#import "NSArray+APExtensions.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
@@ -33,7 +33,7 @@
 
 - (id)init {
     self = [super init];
-    self.mutableRooms = [NSMutableArray new];
+    self.mutableRooms = [NSMutableArray array];
     
     return self;
 }
@@ -58,14 +58,13 @@
     [self.mutableRooms removeObject:room];
 }
 
-- (BOOL)addWorker:(APWorker *)worker {
-    APRoom *room = [self freeRoom];
-    if (room) {
-        return [room addWorker:worker];
-    }
-    
-    return NO;
-}
+
+
+//- (BOOL)addWorker:(APWorker *)worker {
+//    APRoom *room = [self freeRoom];
+//    
+//    return [room addWorker:worker];
+//}
 
 - (void)removeWorker:(APWorker *)worker {
     for (APRoom *room in self.rooms) {

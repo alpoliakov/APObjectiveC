@@ -22,6 +22,10 @@
 
 - (instancetype)init {
     self = [super init];
+    if (self) {
+        self.cash = 0;
+        self.state = APWorkerIsFree;
+    }
     
     return self;
 };
@@ -30,7 +34,10 @@
 #pragma mark Public Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
+    self.state = APWorkerIsBusy;
+    [self performWorkWithObject:object];
     [self takeCashFromObject:object];
+    self.state = APWorkerIsFree;
 }
 
 - (void)takeCashFromObject:(id<APMoneyTransfer>)object {

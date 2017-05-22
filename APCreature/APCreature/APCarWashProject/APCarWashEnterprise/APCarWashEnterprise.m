@@ -21,7 +21,7 @@
 
 #import "NSObject+APRandomNumbers.h"
 #import "NSObject+APObject.h"
-#import "NSArray+APExtention.h"
+#import "NSArray+APExtensions.h"
 
 static const NSUInteger APProdRoomCapacity = 2;
 static const NSUInteger APAdminRoomCapacity = 3;
@@ -31,29 +31,12 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 @property (nonatomic, retain)                           APBuilding        *productionBuilding;
 @property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
-@property (nonatomic, retain)                           NSMutableArray    *washers;
-@property (nonatomic, retain)                           NSMutableArray    *accountants;
-@property (nonatomic, retain)                           NSMutableArray    *directors;
 @property (nonatomic, retain)                           APQueue           *carsQueue;
 
+- (APWorker *)freeEmployeeFromArray:(NSArray *)employes;
 - (void)prepareCarWashStructure;
-
-- (APWasher *)freeWasher;
-- (APAccountant *)freeAccountant;
-- (APBoss *)freeBoss;
-
-- (void)addWasher:(APWasher *)washer;
-- (void)removeWasher:(APWasher *)washer;
-
-- (void)addAccountant:(APAccountant *)accountant;
-- (void)removeAccountant:(APAccountant *)accountant;
-
-- (void)addBoss:(APBoss *)boss;
-- (void)removeBoss:(APBoss *)boss;
-
-- (BOOL)addWorker:(APWorker *)worker toArray:(NSMutableArray *)array building:(APBuilding *)building;
-- (void)removeWorker:(APWorker *)worker;
-- (void)removeWorkersInArray:(NSMutableArray *)workers;
+- (id)freeEmployeeWithClass:(Class)class;
+- (id)employeesWithClass:(Class)cls;
 
 @end
 
@@ -65,9 +48,6 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 - (void)dealloc {
     self.productionBuilding = nil;
     self.administrativeBuilding = nil;
-    self.washers = nil;
-    self.accountants = nil;
-    self.directors = nil;
     self.carsQueue = nil;
     
     [super dealloc];
@@ -76,10 +56,6 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 - (id)init {
     self = [super init];
     self.carsQueue = [APQueue object];
-    self.accountants = [NSMutableArray object];
-    self.washers = [NSMutableArray object];
-    self.directors = [NSMutableArray object];
-    
     [self prepareCarWashStructure];
     
     return self;
@@ -90,34 +66,52 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 - (void)prepareCarWashStructure {
     APBuilding *productionBuilding = [APCarWashBuilding object];
-    [productionBuilding addRoom:[APCarWashRoom roomWithCapacity:APProdRoomCapacity]];
     self.productionBuilding = productionBuilding;
-    [self addWasher:[APWasher object]];
+    APRoom *roomInProductionBuilding = [APCarWashRoom roomWithCapacity:APProdRoomCapacity];
+    [productionBuilding addRoom:roomInProductionBuilding];
+    [roomInProductionBuilding addWorker:[APWasher object]];
     
     APBuilding *administrativeBuilding = [APBuilding object];
-    [administrativeBuilding addRoom:[APRoom roomWithCapacity:APAdminRoomCapacity]];
     self.administrativeBuilding = administrativeBuilding;
-    [self addAccountant:[APAccountant object]];
-    [self addBoss:[APBoss object]];
+    APRoom *room = [APRoom roomWithCapacity:APAdminRoomCapacity];
+    [administrativeBuilding addRoom:room];
+    [room addWorker:[APBoss object]];
+    [room addWorker:[APAccountant object]];
+}
+
+#pragma mark -
+#pragma mark Private Methods
+
+- (id)freeEmployeeWithClass:(Class)class {
+    return [[[self employeesWithClass:class] filteredArrayWithBlock:^(APWorker *worker){
+        return worker.state == APWorkerIsFree;}] firstObject];
+}
+
+- (id)employeesWithClass:(Class)cls {
+    NSArray *buildings = @[self.productionBuilding, self.administrativeBuilding];
+    NSMutableArray *employees = [NSMutableArray array];
+    for (APBuilding *building in buildings) {
+        [employees addObjectsFromArray:[building employeesWithClass:class]];
+    }
+    
+    return [[employees copy] autorelease];
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processFormingQueueCars:(APCar *)car {
-    [self.carsQueue enqueue:car];
-}
-
-- (void)processOfCarProcessing {
-    while (self.carsQueue.empty) {
-        APCar *currentCar = [self.carsQueue dequeue];
-        
-        if (!currentCar) {
+- (void)processWash:(APCar *)car {
+    APQueue *queue = self.carsQueue;
+    [queue enqueue:car];
+    
+    while (queue.empty) {
+        APCar *car = [queue dequeue];
+        if (!car) {
             return;
         }
         
         APWasher *washer = [self freeWasher];
-        [washer processObject:currentCar];
+        [washer processObject:car];
         
         APAccountant *accountant = [self freeAccountant];
         [accountant processObject:washer];
@@ -128,78 +122,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
         NSLog(@"\nCar was processed.");
         NSLog(APOutputDelimiter);
     }
-}
 
-#pragma mark -
-#pragma mark Private Methods
-
-- (APWasher *)freeWasher {
-    return [self.washers randomObject];
-}
-
-- (APAccountant *)freeAccountant {
-    return [self.accountants randomObject];
-}
-
-- (APBoss *)freeBoss {
-    return [self.directors randomObject];
-}
-
-- (void)addWasher:(APWasher *)washer {
-    if (washer) {
-        [self addWorker:washer toArray:self.washers building:self.productionBuilding];
-    }
-}
-
-- (void)removeWasher:(APWasher *)washer {
-    [self removeWorker:washer];
-}
-
-- (void)addAccountant:(APAccountant *)accountant {
-    if ([self.accountants count]) {
-        return;
-    }
-    [self addWorker:accountant toArray:self.accountants building:self.administrativeBuilding];
-}
-
-- (void)removeAccountant:(APAccountant *)accountant {
-    [self removeWorker:accountant];
-}
-
-- (void)addBoss:(APBoss *)boss {
-    if ([self.directors count]) {
-        return;
-    }
-    [self addWorker:boss toArray:self.directors building:self.administrativeBuilding];
-}
-
-- (void)removeBoss:(APBoss *)boss {
-    [self removeWorker:boss];
-}
-
-- (BOOL)addWorker:(APWorker *)worker toArray:(NSMutableArray *)array building:(APBuilding *)building {
-    if ([building addWorker:worker]) {
-        [array addObject:worker];
-    }
-    
-    return NO;
-}
-
-- (void)removeWorker:(APWorker *)worker {
-    if (worker) {
-        [self.productionBuilding removeWorker:worker];
-        [self.administrativeBuilding removeWorker:worker];
-        
-        [self.directors removeObject:worker];
-        [self.washers removeObject:worker];
-        [self.accountants removeObject:worker];
-    }
-}
-
-- (void)removeWorkersInArray:(NSMutableArray *)workers {
-    for (APWorker *worker in workers) {
-        [self removeWorker:worker];
-    }
 }
 
 @end

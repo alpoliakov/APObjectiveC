@@ -10,15 +10,25 @@
 #import "APCar.h"
 #import "APAccountant.h"
 
+@interface APWasher ()
+
+//- (void)runProcessWithObject:(id<APMoneyTransfer>)object;
+
+@end
+
 @implementation APWasher
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processObject:(APCar *)car {
-    [self takeCashFromObject:car];
-    [self performWorkWithObject:car];
-}
+//- (void)runProcessWithObject:(APCar *)car{
+//    [self processObject:(APCar *)car];
+//}
+
+//- (void)processObject:(APCar *)car {
+//    [self takeCashFromObject:car];
+//    [self performWorkWithObject:car];
+//}
 
 #pragma mark -
 #pragma mark Private Methods

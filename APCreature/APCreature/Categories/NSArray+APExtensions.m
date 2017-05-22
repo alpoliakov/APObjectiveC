@@ -6,10 +6,10 @@
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
-#import "NSArray+APExtention.h"
+#import "NSArray+APExtensions.h"
 #import "NSObject+APRandomNumbers.h"
 
-@implementation NSArray (APExtention)
+@implementation NSArray (APExtensions)
 
 #pragma mark -
 #pragma mark Class Methods
@@ -58,6 +58,18 @@
     }
     
     return [[mutableResult copy] autorelease];
+}
+
+- (instancetype)filteredArrayWithBlock:(BOOL(^)(id object))block {
+    if (!block) {
+        return nil;
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id object, NSDictionary *bindings) {
+        return block(object);
+    }];
+    
+    return [self filteredArrayUsingPredicate:predicate];
 }
 
 @end

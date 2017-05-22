@@ -28,7 +28,7 @@
 }
 
 - (instancetype)initWithCapacity:(NSUInteger)capacity {
-    self = [super initWithCapacity:(NSUInteger)capacity];
+    self = [super initWithCapacity:capacity];
     self.mutableCars = [NSMutableArray object];
     
     return self;

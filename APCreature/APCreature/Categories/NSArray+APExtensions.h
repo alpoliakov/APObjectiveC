@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (APExtention)
+@interface NSArray (APExtensions)
 
 + (instancetype)objectsWithCount:(NSUInteger)count block:(id(^)())block;
 
@@ -17,5 +17,7 @@
 - (id)randomObject;
 
 - (id)objectsOfClass:(Class)cls;
+
+- (instancetype)filteredArrayWithBlock:(BOOL(^)(id object))block;
 
 @end

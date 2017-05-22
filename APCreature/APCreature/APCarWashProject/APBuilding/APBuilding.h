@@ -13,12 +13,12 @@
 #import "APRoom.h"
 
 @interface APBuilding : NSObject
-@property (nonatomic, retain, readonly) NSArray *rooms;
+@property (nonatomic, readonly) NSArray *rooms;
 
-- (instancetype)init;
+- (void)addRoom:(APRoom *)room;
+- (void)removeRoom:(APRoom *)room;
 
-- (void)addRoom:(APBuilding *)room;
-- (void)removeRoom:(APBuilding *)room;
+- (id)employeesWithClass:(Class)cls;
 
 - (BOOL)addWorker:(APWorker *)worker;
 - (void)removeWorker:(APWorker *)worker;

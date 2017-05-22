@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 @class APWorker;
-@class APBuilding;
+//@class APBuilding;
 
 @interface APRoom : NSObject
 @property (nonatomic, retain, readonly)         NSArray         *workers;
 @property (nonatomic, readonly)                 NSUInteger      workersCount;
-@property (nonatomic, assign)                   APBuilding      *building;
 @property (nonatomic, readonly, getter=isFull)  BOOL            full;
 
 + (id)room;
@@ -21,7 +20,7 @@
 
 - (id)initWithCapacity:(NSUInteger)capacity NS_DESIGNATED_INITIALIZER;
 
-- (BOOL)addWorker:(APRoom *)worker;
-- (void)removeWorker:(APRoom *)worker;
+- (void)addWorker:(APWorker *)worker;
+- (void)removeWorker:(APWorker *)worker;
 
 @end

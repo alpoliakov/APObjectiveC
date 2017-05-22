@@ -73,17 +73,19 @@ static const NSUInteger APRoomDefaultCapacity = 10;
 #pragma mark -
 #pragma mark Public Methods
 
-- (BOOL)addWorker:(APWorker *)worker {
-    if (nil == worker || self.isFull) {
-        return NO;
+- (void)addWorker:(APWorker *)worker {
+    if (self.capacity <= self.workersCount) {
+        return;
     }
-    [self.mutableWorkers addObject:worker];
     
-    return YES;
+    [self.mutableWorkers addObject:worker];
 }
 
 - (void)removeWorker:(APWorker *)worker {
     [self.mutableWorkers removeObject:worker];
 }
+
+#pragma mark -
+#pragma mark Private Methods
 
 @end
