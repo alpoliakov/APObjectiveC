@@ -69,6 +69,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     APRoom *roomInProductionBuilding = [APRoom roomWithCapacity:APProdRoomCapacity];
     [productionBuilding addRoom:roomInProductionBuilding];
     [roomInProductionBuilding addWorker:[APWasher object]];
+    [roomInProductionBuilding addWorker:[APWasher object]];
     
     APBuilding *administrativeBuilding = [APBuilding object];
     self.administrativeBuilding = administrativeBuilding;
@@ -90,7 +91,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSArray *buildings = @[self.productionBuilding, self.administrativeBuilding];
     NSMutableArray *employees = [NSMutableArray array];
     for (APBuilding *building in buildings) {
-        [employees addObjectsFromArray:[building employeesWithClass:[APBuilding class]]];
+        [employees addObjectsFromArray:[building employeesWithClass:cls]];
     }
     
     return [[employees copy] autorelease];
@@ -101,7 +102,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 
 - (void)processWash:(APCar *)car cars:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
-    for (NSUInteger index = 1; index <= numberCars; ++index) {
+    for (NSUInteger index = 0; index <= numberCars; ++index) {
         NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
         [queue enqueue:car];
         NSLog(APOutputDelimiter);
@@ -114,12 +115,11 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
         }
         
         APWasher *washer = [self freeEmployeeWithClass:[APWasher class]];
-        [washer processObject:car];
-        
         APAccountant *accountant = [self freeEmployeeWithClass:[APAccountant class]];
-        [accountant processObject:washer];
+        APBoss *boss = [self freeEmployeeWithClass:[APBoss class]];
         
-        APBoss *boss = [self freeEmployeeWithClass:[APBoss class]];;
+        [washer processObject:car];
+        [accountant processObject:washer];
         [boss processObject:accountant];
         
         NSLog(@"\nCar was processed.");

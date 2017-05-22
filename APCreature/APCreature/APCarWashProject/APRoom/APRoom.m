@@ -12,6 +12,8 @@
 #import "APAccountant.h"
 #import "APBoss.h"
 
+#import "NSArray+APExtensions.h"
+
 static const NSUInteger APRoomDefaultCapacity = 10;
 
 @interface APRoom ()
@@ -91,7 +93,9 @@ static const NSUInteger APRoomDefaultCapacity = 10;
 - (id)employeesWithClass:(Class)cls {
     NSMutableArray *workers = [NSMutableArray array];
     for (APWorker *worker in self.mutableWorkers) {
-        [workers addObject:(APWorker *)worker];
+        if ([worker isMemberOfClass:cls]) {
+            [workers addObject:worker];
+        }
     }
     
     return [[workers copy] autorelease];
