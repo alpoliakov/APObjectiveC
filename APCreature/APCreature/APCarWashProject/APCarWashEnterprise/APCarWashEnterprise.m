@@ -66,9 +66,8 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 - (void)prepareCarWashStructure {
     APBuilding *productionBuilding = [APBuilding object];
     self.productionBuilding = productionBuilding;
-    APRoom *roomInProductionBuilding = [APRoom roomWithCapacity:APProdRoomCapacity];
+    APRoom *roomInProductionBuilding = [APCarWashRoom roomWithCapacity:APProdRoomCapacity];
     [productionBuilding addRoom:roomInProductionBuilding];
-    [roomInProductionBuilding addWorker:[APWasher object]];
     [roomInProductionBuilding addWorker:[APWasher object]];
     
     APBuilding *administrativeBuilding = [APBuilding object];
@@ -103,12 +102,13 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 - (void)processWash:(APCar *)car cars:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
     for (NSUInteger index = 0; index <= numberCars; ++index) {
-        NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
+        NSLog(@"\nCar %lu adds to queue.", index);
         [queue enqueue:car];
         NSLog(APOutputDelimiter);
     }
     
     while (queue.empty) {
+        NSLog(@"\nStarting the process of car processing.");
         APCar *car = [queue dequeue];
         if (!car) {
             return;

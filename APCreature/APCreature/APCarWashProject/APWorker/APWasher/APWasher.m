@@ -19,20 +19,6 @@
 @implementation APWasher
 
 #pragma mark -
-#pragma mark Public Methods
-
-//- (void)runProcessWithObject:(APCar *)car{
-//    [self processObject:(APCar *)car];
-//}
-
-- (void)processObject:(APCar *)car {
-    self.state = APWorkerIsBusy;
-    [self takeCashFromObject:car];
-    [self performWorkWithObject:car];
-    self.state = APWorkerIsFree;
-}
-
-#pragma mark -
 #pragma mark Private Methods
 
 - (void)performWorkWithObject:(APCar *)car {

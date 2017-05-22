@@ -12,16 +12,6 @@
 @implementation APBoss
 
 #pragma mark -
-#pragma mark Public Methods
-
-- (void)processObject:(APAccountant *)accountant {
-    self.state = APWorkerIsBusy;
-    [self performWorkWithObject:accountant];
-    [super takeCashFromObject:accountant];
-    self.state = APWorkerIsFree;
-}
-
-#pragma mark -
 #pragma mark Private Methods
 
 - (void) performWorkWithObject:(APAccountant *)accountant {

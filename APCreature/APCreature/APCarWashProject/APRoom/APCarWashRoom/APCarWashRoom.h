@@ -12,7 +12,7 @@
 @interface APCarWashRoom : APRoom
 @property (nonatomic, copy, readonly) NSArray *cars;
 
-- (instancetype)initWithCapacity:(NSUInteger)capacity;
+- (instancetype)initWithCarCapacity:(NSUInteger)capacity;
 
 - (void)addCar:(APCar *)car;
 - (void)removeCar:(APCar *)car;

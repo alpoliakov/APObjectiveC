@@ -60,6 +60,8 @@
     return cashToGive;
 }
 
-- (void)performWorkWithObject:(id)object {}
+- (void)performWorkWithObject:(id)object {
+
+}
 
 @end

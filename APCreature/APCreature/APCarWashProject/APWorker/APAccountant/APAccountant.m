@@ -12,16 +12,6 @@
 @implementation APAccountant
 
 #pragma mark -
-#pragma mark Public Methods
-
-- (void)processObject:(APWasher *)washer {
-    self.state = APWorkerIsBusy;
-    [self performWorkWithObject:washer];
-    [super takeCashFromObject:washer];
-    self.state = APWorkerIsFree;
-}
-
-#pragma mark -
 #pragma mark Private Methods
 
 - (void)performWorkWithObject:(APWasher *)washer {

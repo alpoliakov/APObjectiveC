@@ -29,7 +29,7 @@ static const NSUInteger APCapacityOfCarsInTheCarWashRoom = 1;
     [super dealloc];
 }
 
-- (instancetype)initWithCapacity:(NSUInteger)capacity {
+- (instancetype)initWithCarCapacity:(NSUInteger)capacity {
     self = [super initWithCapacity:capacity];
     self.mutableCars = [NSMutableArray arrayWithCapacity:APCapacityOfCarsInTheCarWashRoom];
     
