@@ -11,9 +11,9 @@
 //@class APBuilding;
 
 @interface APRoom : NSObject
-@property (nonatomic, retain, readonly)         NSArray         *workers;
+@property (nonatomic, readonly)                 NSArray         *workers;
 @property (nonatomic, readonly)                 NSUInteger      workersCount;
-@property (nonatomic, readonly, getter=isFull)  BOOL            full;
+@property (nonatomic, readonly)                 BOOL            full;
 
 + (id)room;
 + (id)roomWithCapacity:(NSUInteger)capacity;
@@ -22,5 +22,6 @@
 
 - (void)addWorker:(APWorker *)worker;
 - (void)removeWorker:(APWorker *)worker;
+- (id)employeesWithClass:(Class)cls;
 
 @end

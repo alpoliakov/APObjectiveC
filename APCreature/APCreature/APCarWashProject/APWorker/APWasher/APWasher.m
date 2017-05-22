@@ -25,10 +25,12 @@
 //    [self processObject:(APCar *)car];
 //}
 
-//- (void)processObject:(APCar *)car {
-//    [self takeCashFromObject:car];
-//    [self performWorkWithObject:car];
-//}
+- (void)processObject:(APCar *)car {
+    self.state = APWorkerIsBusy;
+    [self takeCashFromObject:car];
+    [self performWorkWithObject:car];
+    self.state = APWorkerIsFree;
+}
 
 #pragma mark -
 #pragma mark Private Methods

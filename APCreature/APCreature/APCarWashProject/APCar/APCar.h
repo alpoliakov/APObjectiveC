@@ -17,6 +17,4 @@ typedef NS_ENUM(NSUInteger, APCarState) {
 @interface APCar : NSObject <APMoneyTransfer>
 @property (nonatomic, assign) APCarState state;
 
-- (instancetype)init;
-
 @end

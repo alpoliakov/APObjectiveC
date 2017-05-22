@@ -18,7 +18,6 @@
 		06C1D71B1EC64FFD00DBEEF0 /* APQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D71A1EC64FFD00DBEEF0 /* APQueue.m */; };
 		06C1D7221EC7126900DBEEF0 /* NSString+APExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D7211EC7126900DBEEF0 /* NSString+APExtensions.m */; };
 		06E9F2561EBA60BA00955745 /* APBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2391EBA60BA00955745 /* APBuilding.m */; };
-		06E9F2571EBA60BA00955745 /* APCarWashBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */; };
 		06E9F2581EBA60BA00955745 /* APCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F23F1EBA60BA00955745 /* APCar.m */; };
 		06E9F2591EBA60BA00955745 /* APCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2421EBA60BA00955745 /* APCarWashTest.m */; };
 		06E9F25A1EBA60BA00955745 /* APCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2471EBA60BA00955745 /* APCarWashRoom.m */; };
@@ -65,8 +64,6 @@
 		06C1D7211EC7126900DBEEF0 /* NSString+APExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APExtensions.m"; sourceTree = "<group>"; };
 		06E9F2381EBA60BA00955745 /* APBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBuilding.h; sourceTree = "<group>"; };
 		06E9F2391EBA60BA00955745 /* APBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBuilding.m; sourceTree = "<group>"; };
-		06E9F23B1EBA60BA00955745 /* APCarWashBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashBuilding.h; sourceTree = "<group>"; };
-		06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCarWashBuilding.m; sourceTree = "<group>"; };
 		06E9F23E1EBA60BA00955745 /* APCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCar.h; sourceTree = "<group>"; };
 		06E9F23F1EBA60BA00955745 /* APCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCar.m; sourceTree = "<group>"; };
 		06E9F2411EBA60BA00955745 /* APCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashTest.h; sourceTree = "<group>"; };
@@ -225,18 +222,8 @@
 			children = (
 				06E9F2381EBA60BA00955745 /* APBuilding.h */,
 				06E9F2391EBA60BA00955745 /* APBuilding.m */,
-				06E9F23A1EBA60BA00955745 /* APCarWashBuilding */,
 			);
 			path = APBuilding;
-			sourceTree = "<group>";
-		};
-		06E9F23A1EBA60BA00955745 /* APCarWashBuilding */ = {
-			isa = PBXGroup;
-			children = (
-				06E9F23B1EBA60BA00955745 /* APCarWashBuilding.h */,
-				06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */,
-			);
-			path = APCarWashBuilding;
 			sourceTree = "<group>";
 		};
 		06E9F23D1EBA60BA00955745 /* APCar */ = {
@@ -390,7 +377,6 @@
 				06E9F25A1EBA60BA00955745 /* APCarWashRoom.m in Sources */,
 				06E9F2911EBCEAC900955745 /* APCarWashEnterprise.m in Sources */,
 				069C7B4C1EB140B400584B4B /* APCreature.m in Sources */,
-				06E9F2571EBA60BA00955745 /* APCarWashBuilding.m in Sources */,
 				069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */,
 				063328DC1ED25DFE0070C820 /* NSArray+APExtensions.m in Sources */,
 				06C1D7221EC7126900DBEEF0 /* NSString+APExtensions.m in Sources */,

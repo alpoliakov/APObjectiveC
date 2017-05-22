@@ -14,8 +14,6 @@
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
 
-- (APRoom *)freeRoom;
-
 @end
 
 @implementation APBuilding
@@ -58,31 +56,13 @@
     [self.mutableRooms removeObject:room];
 }
 
-
-
-//- (BOOL)addWorker:(APWorker *)worker {
-//    APRoom *room = [self freeRoom];
-//    
-//    return [room addWorker:worker];
-//}
-
-- (void)removeWorker:(APWorker *)worker {
-    for (APRoom *room in self.rooms) {
-        [room removeWorker:worker];
-    }
-}
-
-#pragma mark -
-#pragma mark Private Methods
-
-- (APRoom *)freeRoom {
-    for (APRoom *room in self.rooms) {
-        if (!room.isFull) {
-            return room;
-        }
+- (id)employeesWithClass:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (APRoom *room in self.mutableRooms) {
+        [workers addObjectsFromArray:[room employeesWithClass:[APRoom class]]];
     }
     
-    return nil;
+    return [[workers copy] autorelease];
 }
 
 @end

@@ -15,8 +15,10 @@
 #pragma mark Public Methods
 
 - (void)processObject:(APWasher *)washer {
+    self.state = APWorkerIsBusy;
     [self performWorkWithObject:washer];
     [super takeCashFromObject:washer];
+    self.state = APWorkerIsFree;
 }
 
 #pragma mark -

@@ -10,7 +10,6 @@
 
 #import "APCar.h"
 #import "APBuilding.h"
-#import "APCarWashBuilding.h"
 #import "APRoom.h"
 #import "APCarWashRoom.h"
 #import "APWorker.h"
@@ -33,7 +32,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 @property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
 @property (nonatomic, retain)                           APQueue           *carsQueue;
 
-- (APWorker *)freeEmployeeFromArray:(NSArray *)employes;
+//- (APWorker *)freeEmployeeFromArray:(NSArray *)employes;
 - (void)prepareCarWashStructure;
 - (id)freeEmployeeWithClass:(Class)class;
 - (id)employeesWithClass:(Class)cls;
@@ -65,9 +64,9 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 #pragma mark Accessors Methods
 
 - (void)prepareCarWashStructure {
-    APBuilding *productionBuilding = [APCarWashBuilding object];
+    APBuilding *productionBuilding = [APBuilding object];
     self.productionBuilding = productionBuilding;
-    APRoom *roomInProductionBuilding = [APCarWashRoom roomWithCapacity:APProdRoomCapacity];
+    APRoom *roomInProductionBuilding = [APRoom roomWithCapacity:APProdRoomCapacity];
     [productionBuilding addRoom:roomInProductionBuilding];
     [roomInProductionBuilding addWorker:[APWasher object]];
     
@@ -75,15 +74,15 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     self.administrativeBuilding = administrativeBuilding;
     APRoom *room = [APRoom roomWithCapacity:APAdminRoomCapacity];
     [administrativeBuilding addRoom:room];
-    [room addWorker:[APBoss object]];
     [room addWorker:[APAccountant object]];
+    [room addWorker:[APBoss object]];
 }
 
 #pragma mark -
 #pragma mark Private Methods
 
 - (id)freeEmployeeWithClass:(Class)class {
-    return [[[self employeesWithClass:class] filteredArrayWithBlock:^(APWorker *worker){
+    return [[[self employeesWithClass:class] filteredArrayWithBlock:^BOOL(APWorker *worker){
         return worker.state == APWorkerIsFree;}] firstObject];
 }
 
@@ -91,7 +90,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSArray *buildings = @[self.productionBuilding, self.administrativeBuilding];
     NSMutableArray *employees = [NSMutableArray array];
     for (APBuilding *building in buildings) {
-        [employees addObjectsFromArray:[building employeesWithClass:class]];
+        [employees addObjectsFromArray:[building employeesWithClass:[APBuilding class]]];
     }
     
     return [[employees copy] autorelease];
@@ -100,9 +99,13 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processWash:(APCar *)car {
+- (void)processWash:(APCar *)car cars:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
-    [queue enqueue:car];
+    for (NSUInteger index = 1; index <= numberCars; ++index) {
+        NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
+        [queue enqueue:car];
+        NSLog(APOutputDelimiter);
+    }
     
     while (queue.empty) {
         APCar *car = [queue dequeue];
@@ -110,19 +113,18 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
             return;
         }
         
-        APWasher *washer = [self freeWasher];
+        APWasher *washer = [self freeEmployeeWithClass:[APWasher class]];
         [washer processObject:car];
         
-        APAccountant *accountant = [self freeAccountant];
+        APAccountant *accountant = [self freeEmployeeWithClass:[APAccountant class]];
         [accountant processObject:washer];
         
-        APBoss *boss = [self freeBoss];
+        APBoss *boss = [self freeEmployeeWithClass:[APBoss class]];;
         [boss processObject:accountant];
         
         NSLog(@"\nCar was processed.");
         NSLog(APOutputDelimiter);
     }
-
 }
 
 @end

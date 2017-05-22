@@ -23,13 +23,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSLog(APOutputDelimiter);
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
-    for (NSUInteger index = 0; index <= APCarwashTestCarsCount; ++index) {
-        NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
-        [carwash processWash:[APCar object]];
-        NSLog(APOutputDelimiter);
-    }
-    
-    [carwash processOfCarProcessing];
+    [carwash processWash:[APCar object] cars:APCarwashTestCarsCount];
     NSLog(@"\nProcesses completed.");
     NSLog(APOutputDelimiter);
 }

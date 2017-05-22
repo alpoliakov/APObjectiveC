@@ -12,6 +12,6 @@
 
 @interface APCarWashEnterprise : NSObject
 
-- (void)processWash:(APCar *)car;
+- (void)processWash:(APCar *)car cars:(NSUInteger)numberCars;
 
 @end

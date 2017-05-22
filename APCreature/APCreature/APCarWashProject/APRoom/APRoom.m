@@ -8,6 +8,9 @@
 
 #import "APRoom.h"
 #import "APBuilding.h"
+#import "APWasher.h"
+#import "APAccountant.h"
+#import "APBoss.h"
 
 static const NSUInteger APRoomDefaultCapacity = 10;
 
@@ -66,15 +69,15 @@ static const NSUInteger APRoomDefaultCapacity = 10;
     return [self.mutableWorkers count];
 }
 
-- (BOOL)isFull {
-    return self.capacity <= self.workersCount;
+- (BOOL)full {
+    return self.workersCount <= self.capacity;
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
 - (void)addWorker:(APWorker *)worker {
-    if (self.capacity <= self.workersCount) {
+    if (!self.full) {
         return;
     }
     
@@ -85,7 +88,13 @@ static const NSUInteger APRoomDefaultCapacity = 10;
     [self.mutableWorkers removeObject:worker];
 }
 
-#pragma mark -
-#pragma mark Private Methods
+- (id)employeesWithClass:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (APWorker *worker in self.mutableWorkers) {
+        [workers addObject:(APWorker *)worker];
+    }
+    
+    return [[workers copy] autorelease];
+}
 
 @end

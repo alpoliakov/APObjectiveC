@@ -15,8 +15,10 @@
 #pragma mark Public Methods
 
 - (void)processObject:(APAccountant *)accountant {
+    self.state = APWorkerIsBusy;
     [self performWorkWithObject:accountant];
     [super takeCashFromObject:accountant];
+    self.state = APWorkerIsFree;
 }
 
 #pragma mark -
