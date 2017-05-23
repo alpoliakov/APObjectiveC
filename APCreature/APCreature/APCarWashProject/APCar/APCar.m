@@ -33,8 +33,16 @@ static const NSUInteger APCash = 100;
 #pragma mark -
 #pragma mark Public Methods
 
+- (void)takeCashFromObject:(id<APMoneyTransfer>)object {
+    [self receiveCash:[object giveAllCash]];
+}
+
+- (void)receiveCash:(NSUInteger)cash {
+    self.cash += cash;
+}
+
 - (NSUInteger)giveAllCash {
-     return [self cash];
+    return self.cash;
 }
 
 - (NSUInteger)giveCash:(NSUInteger)cash {
@@ -42,7 +50,7 @@ static const NSUInteger APCash = 100;
     NSUInteger cashToGive = cashOwned > cash ? cash : cashOwned;
     self.cash = cashOwned - cashToGive;
     
-    return [self giveCash:self.cash];
+    return cashToGive;
 }
 
 @end

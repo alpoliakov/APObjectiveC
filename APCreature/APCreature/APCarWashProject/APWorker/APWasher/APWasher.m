@@ -8,13 +8,6 @@
 
 #import "APWasher.h"
 #import "APCar.h"
-#import "APAccountant.h"
-
-@interface APWasher ()
-
-//- (void)runProcessWithObject:(id<APMoneyTransfer>)object;
-
-@end
 
 @implementation APWasher
 
