@@ -17,6 +17,7 @@
 @implementation APQueue
 
 @dynamic count;
+@dynamic empty;
 
 #pragma mark -
 #pragma mark Initializtions and Deallocations
@@ -41,6 +42,10 @@
     return [self.objects count];
 }
 
+- (BOOL)empty {
+    return self.count != 0;
+}
+
 #pragma mark -
 #pragma mark Public Methods
 
@@ -51,12 +56,14 @@
 }
 
 - (id)dequeue {
-    if(self.count == 0) {
+    if (!self.empty) {
         return nil;
     }
-    id object = [[self.objects[0] retain] autorelease];
+    
+    id object = [[self.objects.firstObject retain] autorelease];
     [self.objects removeObjectAtIndex:0];
     
     return object;
 }
+
 @end

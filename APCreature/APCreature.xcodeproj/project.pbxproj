@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063328DC1ED25DFE0070C820 /* NSArray+APExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 063328DB1ED25DFE0070C820 /* NSArray+APExtensions.m */; };
+		063328E51ED5E5BC0070C820 /* APRandomStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 063328E41ED5E5BC0070C820 /* APRandomStringTest.m */; };
 		068F61DE1EB77AC90086E080 /* NSObject+APRandomNumbers.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61DD1EB77AC90086E080 /* NSObject+APRandomNumbers.m */; };
 		068F61EC1EB7E7F40086E080 /* NSObject+APObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 068F61EA1EB7E7F40086E080 /* NSObject+APObject.m */; };
 		069C7B4C1EB140B400584B4B /* APCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B3D1EB140B400584B4B /* APCreature.m */; };
@@ -15,10 +17,8 @@
 		069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B461EB140B400584B4B /* APCreatureMale.m */; };
 		069C7B511EB140B400584B4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 069C7B4B1EB140B400584B4B /* main.m */; };
 		06C1D71B1EC64FFD00DBEEF0 /* APQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D71A1EC64FFD00DBEEF0 /* APQueue.m */; };
-		06C1D7221EC7126900DBEEF0 /* NSString+APExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D7211EC7126900DBEEF0 /* NSString+APExtention.m */; };
-		06C1D7261ECB83F400DBEEF0 /* NSArray+APExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D7251ECB83F400DBEEF0 /* NSArray+APExtention.m */; };
+		06C1D7221EC7126900DBEEF0 /* NSString+APExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C1D7211EC7126900DBEEF0 /* NSString+APExtensions.m */; };
 		06E9F2561EBA60BA00955745 /* APBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2391EBA60BA00955745 /* APBuilding.m */; };
-		06E9F2571EBA60BA00955745 /* APCarWashBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */; };
 		06E9F2581EBA60BA00955745 /* APCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F23F1EBA60BA00955745 /* APCar.m */; };
 		06E9F2591EBA60BA00955745 /* APCarWashTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2421EBA60BA00955745 /* APCarWashTest.m */; };
 		06E9F25A1EBA60BA00955745 /* APCarWashRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E9F2471EBA60BA00955745 /* APCarWashRoom.m */; };
@@ -43,6 +43,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		063328DA1ED25DFE0070C820 /* NSArray+APExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+APExtensions.h"; sourceTree = "<group>"; };
+		063328DB1ED25DFE0070C820 /* NSArray+APExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APExtensions.m"; sourceTree = "<group>"; };
+		063328E31ED5E5BC0070C820 /* APRandomStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRandomStringTest.h; sourceTree = "<group>"; };
+		063328E41ED5E5BC0070C820 /* APRandomStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRandomStringTest.m; sourceTree = "<group>"; };
 		0644E03B1EAA471000C5F33C /* APCreature */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = APCreature; sourceTree = BUILT_PRODUCTS_DIR; };
 		068F61DC1EB77AC90086E080 /* NSObject+APRandomNumbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+APRandomNumbers.h"; sourceTree = "<group>"; };
 		068F61DD1EB77AC90086E080 /* NSObject+APRandomNumbers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+APRandomNumbers.m"; sourceTree = "<group>"; };
@@ -59,14 +63,10 @@
 		069C7B4B1EB140B400584B4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06C1D7191EC64FFD00DBEEF0 /* APQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APQueue.h; sourceTree = "<group>"; };
 		06C1D71A1EC64FFD00DBEEF0 /* APQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APQueue.m; sourceTree = "<group>"; };
-		06C1D7201EC7126900DBEEF0 /* NSString+APExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APExtention.h"; sourceTree = "<group>"; };
-		06C1D7211EC7126900DBEEF0 /* NSString+APExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APExtention.m"; sourceTree = "<group>"; };
-		06C1D7241ECB83F400DBEEF0 /* NSArray+APExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+APExtention.h"; sourceTree = "<group>"; };
-		06C1D7251ECB83F400DBEEF0 /* NSArray+APExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+APExtention.m"; sourceTree = "<group>"; };
+		06C1D7201EC7126900DBEEF0 /* NSString+APExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APExtensions.h"; sourceTree = "<group>"; };
+		06C1D7211EC7126900DBEEF0 /* NSString+APExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APExtensions.m"; sourceTree = "<group>"; };
 		06E9F2381EBA60BA00955745 /* APBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APBuilding.h; sourceTree = "<group>"; };
 		06E9F2391EBA60BA00955745 /* APBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APBuilding.m; sourceTree = "<group>"; };
-		06E9F23B1EBA60BA00955745 /* APCarWashBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashBuilding.h; sourceTree = "<group>"; };
-		06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCarWashBuilding.m; sourceTree = "<group>"; };
 		06E9F23E1EBA60BA00955745 /* APCar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCar.h; sourceTree = "<group>"; };
 		06E9F23F1EBA60BA00955745 /* APCar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APCar.m; sourceTree = "<group>"; };
 		06E9F2411EBA60BA00955745 /* APCarWashTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APCarWashTest.h; sourceTree = "<group>"; };
@@ -99,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063328E11ED5E4DF0070C820 /* APCommonTest */ = {
+			isa = PBXGroup;
+			children = (
+				063328E31ED5E5BC0070C820 /* APRandomStringTest.h */,
+				063328E41ED5E5BC0070C820 /* APRandomStringTest.m */,
+			);
+			path = APCommonTest;
+			sourceTree = "<group>";
+		};
 		0644E0321EAA471000C5F33C = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +136,12 @@
 		068F61E61EB7E7F40086E080 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				063328DA1ED25DFE0070C820 /* NSArray+APExtensions.h */,
+				063328DB1ED25DFE0070C820 /* NSArray+APExtensions.m */,
 				068F61E91EB7E7F40086E080 /* NSObject+APObject.h */,
 				068F61EA1EB7E7F40086E080 /* NSObject+APObject.m */,
-				06C1D7201EC7126900DBEEF0 /* NSString+APExtention.h */,
-				06C1D7211EC7126900DBEEF0 /* NSString+APExtention.m */,
-				06C1D7241ECB83F400DBEEF0 /* NSArray+APExtention.h */,
-				06C1D7251ECB83F400DBEEF0 /* NSArray+APExtention.m */,
+				06C1D7201EC7126900DBEEF0 /* NSString+APExtensions.h */,
+				06C1D7211EC7126900DBEEF0 /* NSString+APExtensions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 		069C7B391EB140B400584B4B /* APCreature */ = {
 			isa = PBXGroup;
 			children = (
+				063328E11ED5E4DF0070C820 /* APCommonTest */,
 				06E9F2361EBA60BA00955745 /* APCarWashProject */,
 				068F61E61EB7E7F40086E080 /* Categories */,
 				068F61DB1EB77AC90086E080 /* APRandomNumbers */,
@@ -225,18 +235,8 @@
 			children = (
 				06E9F2381EBA60BA00955745 /* APBuilding.h */,
 				06E9F2391EBA60BA00955745 /* APBuilding.m */,
-				06E9F23A1EBA60BA00955745 /* APCarWashBuilding */,
 			);
 			path = APBuilding;
-			sourceTree = "<group>";
-		};
-		06E9F23A1EBA60BA00955745 /* APCarWashBuilding */ = {
-			isa = PBXGroup;
-			children = (
-				06E9F23B1EBA60BA00955745 /* APCarWashBuilding.h */,
-				06E9F23C1EBA60BA00955745 /* APCarWashBuilding.m */,
-			);
-			path = APCarWashBuilding;
 			sourceTree = "<group>";
 		};
 		06E9F23D1EBA60BA00955745 /* APCar */ = {
@@ -389,10 +389,11 @@
 				06E9F2591EBA60BA00955745 /* APCarWashTest.m in Sources */,
 				06E9F25A1EBA60BA00955745 /* APCarWashRoom.m in Sources */,
 				06E9F2911EBCEAC900955745 /* APCarWashEnterprise.m in Sources */,
+				063328E51ED5E5BC0070C820 /* APRandomStringTest.m in Sources */,
 				069C7B4C1EB140B400584B4B /* APCreature.m in Sources */,
-				06E9F2571EBA60BA00955745 /* APCarWashBuilding.m in Sources */,
 				069C7B4F1EB140B400584B4B /* APCreatureMale.m in Sources */,
-				06C1D7221EC7126900DBEEF0 /* NSString+APExtention.m in Sources */,
+				063328DC1ED25DFE0070C820 /* NSArray+APExtensions.m in Sources */,
+				06C1D7221EC7126900DBEEF0 /* NSString+APExtensions.m in Sources */,
 				06E9F25B1EBA60BA00955745 /* APRoom.m in Sources */,
 				068F61DE1EB77AC90086E080 /* NSObject+APRandomNumbers.m in Sources */,
 				06E9F25F1EBA60BA00955745 /* APWorker.m in Sources */,
@@ -401,7 +402,6 @@
 				069C7B511EB140B400584B4B /* main.m in Sources */,
 				068F61EC1EB7E7F40086E080 /* NSObject+APObject.m in Sources */,
 				06E9F25C1EBA60BA00955745 /* APAccountant.m in Sources */,
-				06C1D7261ECB83F400DBEEF0 /* NSArray+APExtention.m in Sources */,
 				069C7B4D1EB140B400584B4B /* APCreatureTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

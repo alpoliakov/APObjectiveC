@@ -7,21 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSObject+APObject.h"
-#import "APCreature.h"
 #import "APCreatureTests.h"
 #import "APCarWashTest.h"
-#import "APBuilding.h"
-#import "APCarWashEnterprise.h"
-
-#import "NSArray+APExtention.h"
-#import "NSObject+APObject.h"
-
+#import "APRandomStringTest.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         [APCreatureTests APPerformCreatureTests];
         [APCarWashTest performCarWashTests];
+        [APRandomStringTest performRandomStringTests];
         
     return 0;
     }

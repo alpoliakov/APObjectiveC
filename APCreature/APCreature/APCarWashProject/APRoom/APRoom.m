@@ -66,24 +66,34 @@ static const NSUInteger APRoomDefaultCapacity = 10;
     return [self.mutableWorkers count];
 }
 
-- (BOOL)isFull {
-    return self.capacity <= self.workersCount;
+- (BOOL)full {
+    return self.workersCount <= self.capacity;
 }
 
 #pragma mark -
 #pragma mark Public Methods
 
-- (BOOL)addWorker:(APWorker *)worker {
-    if (nil == worker || self.capacity <= self.workersCount) {
-        return NO;
+- (void)addWorker:(APWorker *)worker {
+    if (!self.full) {
+        return;
     }
-    [self.mutableWorkers addObject:worker];
     
-    return YES;
+    [self.mutableWorkers addObject:worker];
 }
 
 - (void)removeWorker:(APWorker *)worker {
     [self.mutableWorkers removeObject:worker];
+}
+
+- (id)employeesWithClass:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (APWorker *worker in self.mutableWorkers) {
+        if ([worker isMemberOfClass:cls]) {
+            [workers addObject:worker];
+        }
+    }
+    
+    return [[workers copy] autorelease];
 }
 
 @end

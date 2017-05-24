@@ -12,9 +12,9 @@
 @property (nonatomic, readonly) NSUInteger cash;
 
 @optional
-- (void)receiveCashFromCashOwner:(id<APMoneyTransfer>)object;
+- (void)takeCashFromObject:(id<APMoneyTransfer>)object;
 
-- (void)receiveCash:(NSUInteger)cash;
+- (void)takeCash:(NSUInteger)cash;
 
 - (NSUInteger)giveAllCash;
 

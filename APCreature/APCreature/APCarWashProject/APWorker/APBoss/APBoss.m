@@ -9,26 +9,12 @@
 #import "APBoss.h"
 #import "APAccountant.h"
 
-@interface APBoss ()
-
-- (void)makeProfit;
-
-@end
-
 @implementation APBoss
-
-#pragma mark -
-#pragma mark Public Methods
-
-- (void)processObject:(APAccountant *)accountant {
-    [self makeProfit];
-    [super receiveCashFromCashOwner:accountant];
-}
 
 #pragma mark -
 #pragma mark Private Methods
 
-- (void)makeProfit {
+- (void) performWorkWithObject:(id)accountant {
     NSLog(@"Profit is make, %lu", self.cash);
 }
 

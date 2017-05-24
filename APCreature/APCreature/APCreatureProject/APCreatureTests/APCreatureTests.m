@@ -13,7 +13,7 @@
 
 #import "NSObject+APRandomNumbers.h"
 #import "NSObject+APObject.h"
-#import "NSArray+APExtention.h"
+#import "NSArray+APExtensions.h"
 
 static const NSUInteger APPeopleCount = 10;
 

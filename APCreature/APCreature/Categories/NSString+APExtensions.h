@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (APExtention)
+@interface NSString (APExtensions)
 
 + (instancetype)alphanumericAlphabet;
 + (instancetype)numericAlphabet;
@@ -19,5 +19,7 @@
 + (instancetype)randomString;
 + (instancetype)randomStringWithLength:(NSUInteger)length;
 + (instancetype)randomStringWithLength:(NSUInteger)length alphabet:(NSString *)alphabet;
+
+- (NSArray *)symbols;
 
 @end

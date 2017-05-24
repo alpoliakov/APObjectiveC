@@ -8,13 +8,9 @@
 
 #import "APBuilding.h"
 #import "APRoom.h"
-#import "APWorker.h"
-#import "NSArray+APExtention.h"
 
 @interface APBuilding ()
 @property (nonatomic, retain) NSMutableArray *mutableRooms;
-
-- (APRoom *)freeRoom;
 
 @end
 
@@ -33,7 +29,7 @@
 
 - (id)init {
     self = [super init];
-    self.mutableRooms = [NSMutableArray new];
+    self.mutableRooms = [NSMutableArray array];
     
     return self;
 }
@@ -43,13 +39,6 @@
 
 - (NSArray *)rooms {
     return [[self.mutableRooms copy] autorelease];
-}
-
-- (void)setMutableRooms:(NSMutableArray *)mutableRooms {
-    if (_mutableRooms != mutableRooms) {
-        [_mutableRooms release];
-        _mutableRooms = [mutableRooms retain];
-    }
 }
 
 #pragma mark -
@@ -65,32 +54,13 @@
     [self.mutableRooms removeObject:room];
 }
 
-- (BOOL)addWorker:(APWorker *)worker {
-    APRoom *room = [self freeRoom];
-    if (room) {
-        return [room addWorker:worker];
+- (id)employeesWithClass:(Class)cls {
+    NSMutableArray *workers = [NSMutableArray array];
+    for (APRoom *room in self.mutableRooms) {
+        [workers addObjectsFromArray:[room employeesWithClass:cls]];
     }
     
-    return NO;
-}
-
-- (void)removeWorker:(APWorker *)worker {
-    for (APRoom *room in self.rooms) {
-        [room removeWorker:worker];
-    }
-}
-
-#pragma mark -
-#pragma mark Private Methods
-
-- (APRoom *)freeRoom {
-    for (APRoom *room in self.rooms) {
-        if (!room.isFull) {
-            return room;
-        }
-    }
-    
-    return nil;
+    return [[workers copy] autorelease];
 }
 
 @end

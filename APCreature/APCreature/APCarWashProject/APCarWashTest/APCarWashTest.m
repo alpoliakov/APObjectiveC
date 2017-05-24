@@ -7,7 +7,6 @@
 //
 
 #import "APCarWashTest.h"
-#import "APBuilding.h"
 #import "APCar.h"
 #import "APCarWashEnterprise.h"
 #import "NSObject+APObject.h"
@@ -23,13 +22,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSLog(APOutputDelimiter);
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
-    for (NSUInteger index = 0; index <= APCarwashTestCarsCount; ++index) {
-        NSLog(@"\nCar %lu adds to queue.", (unsigned long)index);
-        [carwash processFormingQueueCars:[APCar object]];
-        //NSLog(@"\nCar %lu.", (unsigned long)index);
-        NSLog(APOutputDelimiter);
-    }
-    [carwash processOfCarProcessing];
+    [carwash processWash:[APCar object] numberOfCars:APCarwashTestCarsCount];
     NSLog(@"\nProcesses completed.");
     NSLog(APOutputDelimiter);
 }
