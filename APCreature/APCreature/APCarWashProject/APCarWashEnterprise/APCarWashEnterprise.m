@@ -24,7 +24,7 @@
 
 static const NSUInteger APProdRoomCapacity = 2;
 static const NSUInteger APAdminRoomCapacity = 3;
-static NSString *const APOutputDelimiter = @"\n-------------------------------";
+static NSString *const  APOutputDelimiter = @"\n-------------------------------";
 
 @interface APCarWashEnterprise ()
 

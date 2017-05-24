@@ -9,11 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "APCreatureTests.h"
 #import "APCarWashTest.h"
+#import "APRandomStringTest.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         [APCreatureTests APPerformCreatureTests];
         [APCarWashTest performCarWashTests];
+        [APRandomStringTest performRandomStringTests];
         
     return 0;
     }
