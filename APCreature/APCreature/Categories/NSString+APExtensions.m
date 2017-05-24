@@ -7,6 +7,7 @@
 //
 
 #import "NSString+APExtensions.h"
+#import "NSObject+APRandomNumbers.h"
 
 static const NSUInteger kNSStringDefaultRandomStringLength  = 30;
 static const NSUInteger kAPNumberOne                        = 1;
