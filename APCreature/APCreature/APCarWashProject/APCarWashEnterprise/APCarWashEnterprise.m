@@ -28,9 +28,9 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 
 @interface APCarWashEnterprise ()
 
-@property (nonatomic, retain)                           APBuilding        *productionBuilding;
-@property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
-@property (nonatomic, retain)                           APQueue           *carsQueue;
+@property (nonatomic, retain)   APBuilding  *productionBuilding;
+@property (nonatomic, retain)   APBuilding  *administrativeBuilding;
+@property (nonatomic, retain)   APQueue     *carsQueue;
 
 - (void)prepareCarWashStructure;
 - (id)freeEmployeeWithClass:(Class)class;
