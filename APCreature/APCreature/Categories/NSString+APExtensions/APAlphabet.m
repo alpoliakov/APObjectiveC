@@ -8,17 +8,55 @@
 
 #import "APAlphabet.h"
 
+#import "APRangeAlphabet.h"
+#import "APClasterAlphabet.h"
+#import "APStringsAlphabet.h"
+
 @implementation APAlphabet
 
+
+
 #pragma mark -
-#pragma mark NSarray Methods
+#pragma mark Class Methods
+
++ (instancetype)alphabetWithRange:(NSUInteger)range {
+    return nil;
+}
+
++ (instancetype)alphabetWithStrings:(NSArray *)strings {
+    return nil;
+}
+
++ (instancetype)alphabetWithAlphabetss:(NSArray *)alphabets {
+    return nil;
+}
+
++ (instancetype)alphabetWithSymbols:(NSString *)string {
+    return nil;
+}
+
+#pragma mark -
+#pragma mark Public Methods
 
 - (NSUInteger)count {
     return 0;
 }
 
-- (id)objectAtIndex:(NSUInteger)index {
+- (NSString *)stringAtIndex:(NSUInteger)index {
     return nil;
+}
+
+- (NSString *)objectAtIndexedSubscript:(NSUInteger)index {
+    return nil;
+}
+
+#pragma mark -
+#pragma mark NSFastEnumeration
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
+                                  objects:(id  _Nullable *)buffer
+                                    count:(NSUInteger)len {
+    return 0;
 }
 
 @end
