@@ -12,42 +12,72 @@
 #import "APClasterAlphabet.h"
 #import "APStringsAlphabet.h"
 
+#import "NSString+APExtensions.h"
+
 @implementation APAlphabet
-
-
 
 #pragma mark -
 #pragma mark Class Methods
 
-+ (instancetype)alphabetWithRange:(NSUInteger)range {
-    return nil;
++ (instancetype)alphabetWithRange:(NSRange)range {
+    return [[[APRangeAlphabet alloc] initWithRange:range] autorelease];
 }
 
 + (instancetype)alphabetWithStrings:(NSArray *)strings {
-    return nil;
+    return [[[APStringsAlphabet alloc] initWithStrings:strings] autorelease];
 }
 
 + (instancetype)alphabetWithAlphabetss:(NSArray *)alphabets {
-    return nil;
+    return [[[APClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
 + (instancetype)alphabetWithSymbols:(NSString *)string {
-    return nil;
+    return [self alphabetWithStrings:[string symbols]];
 }
+
+#pragma mark -
+#pragma mark Initializtions and Deallocations
+
+- (instancetype)initWithRange:(NSRange)range {
+    [self release];
+    
+    return [[APRangeAlphabet alloc] initWithRange:range];
+}
+
+- (instancetype)initWithAlphabets:(NSArray *)alphabets {
+    [self release];
+    
+    return [[APClasterAlphabet alloc] initWithAlphabets:alphabets];
+}
+
+- (instancetype)initWithStrings:(NSArray *)strings {
+    [self release];
+    
+    return [[APStringsAlphabet alloc] initWithStrings:strings];
+}
+
+- (instancetype)initWithSymbols:(NSString *)string {
+    return [self initWithStrings:[string symbols]];
+}
+
 
 #pragma mark -
 #pragma mark Public Methods
 
 - (NSUInteger)count {
+    [self doesNotRecognizeSelector:_cmd];
+    
     return 0;
 }
 
 - (NSString *)stringAtIndex:(NSUInteger)index {
+    [self doesNotRecognizeSelector:_cmd];
+    
     return nil;
 }
 
 - (NSString *)objectAtIndexedSubscript:(NSUInteger)index {
-    return nil;
+    return [self stringAtIndex:index];
 }
 
 #pragma mark -

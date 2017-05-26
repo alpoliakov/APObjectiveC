@@ -10,4 +10,6 @@
 
 @interface APClasterAlphabet : APAlphabet
 
+- (instancetype)initWithAlphabets:(NSArray *)alphabets;
+
 @end

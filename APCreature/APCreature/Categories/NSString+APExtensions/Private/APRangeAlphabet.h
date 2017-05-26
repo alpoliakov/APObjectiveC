@@ -10,4 +10,6 @@
 
 @interface APRangeAlphabet : APAlphabet
 
+- (instancetype)initWithRange:(NSRange)range;
+
 @end

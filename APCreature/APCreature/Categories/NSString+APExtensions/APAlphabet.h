@@ -10,10 +10,15 @@
 
 @interface APAlphabet : NSObject <NSFastEnumeration>
 
-+ (instancetype)alphabetWithRange:(NSUInteger)range;
++ (instancetype)alphabetWithRange:(NSRange)range;
 + (instancetype)alphabetWithStrings:(NSArray *)strings;
 + (instancetype)alphabetWithAlphabetss:(NSArray *)alphabets;
 + (instancetype)alphabetWithSymbols:(NSString *)string;
+
+- (instancetype)initWithRange:(NSRange)range;
+- (instancetype)initWithAlphabets:(NSArray *)alphabets;
+- (instancetype)initWithStrings:(NSArray *)strings;
+- (instancetype)initWithSymbols:(NSString *)string;
 
 - (NSUInteger)count;
 - (NSString *)stringAtIndex:(NSUInteger)index;
