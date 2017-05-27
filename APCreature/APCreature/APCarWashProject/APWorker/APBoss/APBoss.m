@@ -15,7 +15,7 @@
 #pragma mark Private Methods
 
 - (void) performWorkWithObject:(id)accountant {
-    NSLog(@"Profit is make, %lu", self.cash);
+    NSLog(@"\nProfit is make, %lu", self.cash);
 }
 
 @end

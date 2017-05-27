@@ -15,7 +15,7 @@
 #pragma mark Private Methods
 
 - (void)performWorkWithObject:(id)washer {
-    NSLog(@"Cash is calculated.");
+    NSLog(@"\nCash is calculated.");
 }
 
 @end

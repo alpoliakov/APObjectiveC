@@ -23,12 +23,12 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.cash = 0;
+        //self.cash = 0;
         self.state = APWorkerIsFree;
     }
     
     return self;
-};
+}
 
 #pragma mark -
 #pragma mark Protocol Methods
