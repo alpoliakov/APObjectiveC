@@ -31,7 +31,7 @@ static const NSUInteger APCash = 100;
 }
 
 #pragma mark -
-#pragma mark Public Methods
+#pragma mark Protocol Methods
 
 - (void)takeCashFromObject:(id<APMoneyTransfer>)object {
     [self receiveCash:[object giveAllCash]];

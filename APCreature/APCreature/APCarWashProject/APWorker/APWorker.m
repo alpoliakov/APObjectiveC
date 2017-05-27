@@ -31,7 +31,7 @@
 };
 
 #pragma mark -
-#pragma mark Public Methods
+#pragma mark Protocol Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
     self.state = APWorkerIsBusy;
@@ -59,6 +59,9 @@
     
     return cashToGive;
 }
+
+#pragma mark -
+#pragma mark Private Methods
 
 - (void)performWorkWithObject:(id)object {
 

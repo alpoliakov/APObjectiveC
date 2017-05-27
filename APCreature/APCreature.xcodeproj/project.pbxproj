@@ -764,6 +764,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 16AD5240D7BB8B6846C31AD4 /* Pods-ObjCTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VA3GS9K36G;
 				INFOPLIST_FILE = ObjCTests/Info.plist;
@@ -777,6 +778,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A4A788796A4D3C410E4D55D8 /* Pods-ObjCTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VA3GS9K36G;
 				INFOPLIST_FILE = ObjCTests/Info.plist;
