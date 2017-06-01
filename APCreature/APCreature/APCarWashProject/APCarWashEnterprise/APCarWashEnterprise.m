@@ -98,9 +98,10 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processWash:(id)car numberOfCars:(NSUInteger)numberCars{
+- (void)processWash:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
     for (NSUInteger index = 0; index <= numberCars; ++index) {
+        APCar *car = [APCar object];
         NSLog(@"\nCar %lu adds to queue.", index);
         [queue enqueue:car];
         NSLog(APOutputDelimiter);

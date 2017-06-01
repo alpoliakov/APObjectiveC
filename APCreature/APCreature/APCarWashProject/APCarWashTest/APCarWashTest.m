@@ -23,7 +23,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSLog(APOutputDelimiter);
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
-    [carwash processWash:[APCar object] numberOfCars:APCarwashTestCarsCount];
+    [carwash processWash:APCarwashTestCarsCount];
     NSLog(@"\nProcesses completed.");
     NSLog(APOutputDelimiter);
 }
