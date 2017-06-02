@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+extern
+NSRange APMakeAlphabetRange(unichar value1, unichar value2);
+
 @interface APAlphabet : NSObject <NSFastEnumeration>
 
 + (instancetype)alphabetWithRange:(NSRange)range;
@@ -24,5 +27,7 @@
 - (NSString *)stringAtIndex:(NSUInteger)index;
 
 - (NSString *)objectAtIndexedSubscript:(NSUInteger)index;
+
+- (NSString *)string;
 
 @end

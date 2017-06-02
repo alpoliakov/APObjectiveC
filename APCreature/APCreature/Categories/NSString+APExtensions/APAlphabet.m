@@ -8,11 +8,20 @@
 
 #import "APAlphabet.h"
 
+#import <math.h>
+
 #import "APRangeAlphabet.h"
 #import "APClasterAlphabet.h"
 #import "APStringsAlphabet.h"
 
 #import "NSString+APExtensions.h"
+
+NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
+    unichar minValue = MIN(value1, value2);
+    unichar maxValue = MAX(value1, value2);
+    
+    return NSMakeRange(minValue, maxValue - minValue + 1);
+}
 
 @implementation APAlphabet
 
@@ -80,13 +89,34 @@
     return [self stringAtIndex:index];
 }
 
+- (NSString *)string {
+    NSMutableString *string = [NSMutableString stringWithCapacity:[self count]];
+    for (NSString *symbol in self) {
+        [string appendString:symbol];
+    }
+    
+    return [[string copy] autorelease];
+}
+
 #pragma mark -
 #pragma mark NSFastEnumeration
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state
-                                  objects:(id  _Nullable *)buffer
-                                    count:(NSUInteger)len {
-    return 0;
+                                  objects:(id  [])stackbuf
+                                    count:(NSUInteger)resultLength {
+    
+    state->mutationsPtr = (unsigned long *)self;
+    
+    NSUInteger length =  MIN(state->state + resultLength, [self count]);
+    resultLength = length - state->state;
+    
+    for (NSUInteger index = state->state; index < length; index++) {
+        stackbuf[index] = self[index];
+    }
+    
+    state->state += resultLength;
+    
+    return resultLength;
 }
 
 @end
