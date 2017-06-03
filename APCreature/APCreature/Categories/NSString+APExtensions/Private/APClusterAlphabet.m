@@ -1,14 +1,14 @@
 //
-//  APClasterAlphabet.m
+//  APClusterAlphabet.m
 //  APCreature
 //
 //  Created by Aleksandr Poliakov on 26.05.17.
 //  Copyright © 2017 Aleksandr Poliakov. All rights reserved.
 //
 
-#import "APClasterAlphabet.h"
+#import "APClusterAlphabet.h"
 
-@interface APClasterAlphabet ()
+@interface APClusterAlphabet ()
 @property (nonatomic, retain)   NSArray     *alphabets;
 @property (nonatomic, assign)   NSUInteger  count;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation APClasterAlphabet
+@implementation APClusterAlphabet
 
 #pragma mark -
 #pragma mark Initializations and Deallocations

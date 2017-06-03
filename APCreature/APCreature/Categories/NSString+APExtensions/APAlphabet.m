@@ -11,7 +11,7 @@
 #import <math.h>
 
 #import "APRangeAlphabet.h"
-#import "APClasterAlphabet.h"
+#import "APClusterAlphabet.h"
 #import "APStringsAlphabet.h"
 
 #import "NSString+APExtensions.h"
@@ -56,7 +56,7 @@ NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
 - (instancetype)initWithAlphabets:(NSArray *)alphabets {
     [self release];
     
-    return [[APClasterAlphabet alloc] initWithAlphabets:alphabets];
+    return [[APClusterAlphabet alloc] initWithAlphabets:alphabets];
 }
 
 - (instancetype)initWithStrings:(NSArray *)strings {

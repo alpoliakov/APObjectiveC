@@ -1,5 +1,5 @@
 //
-//  APClasterAlphabet.h
+//  APClusterAlphabet.h
 //  APCreature
 //
 //  Created by Aleksandr Poliakov on 26.05.17.

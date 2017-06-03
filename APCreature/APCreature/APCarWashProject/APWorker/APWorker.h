@@ -11,7 +11,8 @@
 
 typedef NS_ENUM(NSUInteger, APWorkerState) {
     APWorkerIsFree,
-    APWorkerIsBusy
+    APWorkerIsBusy,
+    APWorkerReadyForProcessing
 };
 
 @interface APWorker : NSObject <APMoneyTransfer>

@@ -9,7 +9,7 @@
 #import "Kiwi.h"
 
 #import "APAlphabet.h"
-#import "APClasterAlphabet.h"
+#import "APClusterAlphabet.h"
 #import "APRangeAlphabet.h"
 #import "APStringsAlphabet.h"
 
@@ -216,7 +216,7 @@ describe(@"APAlphabet", ^{
         });
         
         it(@"should be of class APClasterAlphabet", ^{
-            [[alphabet should] beKindOfClass:[APClasterAlphabet class]];
+            [[alphabet should] beKindOfClass:[APClusterAlphabet class]];
         });
         
         it(@"should be of count 52", ^{
@@ -247,11 +247,11 @@ describe(@"APAlphabet", ^{
         APAlphabet *lowercaseAlphabet = [APAlphabet alphabetWithRange:APMakeAlphabetRange('a', 'z')];
 
         beforeAll(^{
-            alphabet = [[APClasterAlphabet alloc] initWithAlphabets:@[capitalizedAlphabet, lowercaseAlphabet]];
+            alphabet = [[APClusterAlphabet alloc] initWithAlphabets:@[capitalizedAlphabet, lowercaseAlphabet]];
         });
         
         it(@"should be of class APStringsAlphabet", ^{
-            [[alphabet should] beKindOfClass:[APClasterAlphabet class]];
+            [[alphabet should] beKindOfClass:[APClusterAlphabet class]];
         });
     });
     
@@ -263,7 +263,7 @@ describe(@"APAlphabet", ^{
         APAlphabet *lowercaseAlphabet = [APAlphabet alphabetWithRange:lowercaseRange];
         
         beforeAll(^{
-            alphabet = [[APClasterAlphabet alloc] initWithAlphabets:@[capitalizedAlphabet, lowercaseAlphabet]];
+            alphabet = [[APClusterAlphabet alloc] initWithAlphabets:@[capitalizedAlphabet, lowercaseAlphabet]];
         });
         
         it(@"should raise", ^{
