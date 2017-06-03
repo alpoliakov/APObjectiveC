@@ -8,7 +8,7 @@
 
 #import "APAlphabet.h"
 
-@interface APClasterAlphabet : APAlphabet
+@interface APClusterAlphabet : APAlphabet
 @property (nonatomic, readonly) NSArray *alphabets;
 
 - (instancetype)initWithAlphabets:(NSArray *)alphabets;

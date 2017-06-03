@@ -49,16 +49,16 @@
 		06F65EE51ED8E350003F0E8A /* APAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EB31ED8E350003F0E8A /* APAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06F65EE61ED8E350003F0E8A /* NSString+APExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EB51ED8E350003F0E8A /* NSString+APExtensions.m */; };
 		06F65EE71ED8E350003F0E8A /* NSString+APExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EB51ED8E350003F0E8A /* NSString+APExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		06F65EE81ED8E350003F0E8A /* APClusterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EB81ED8E350003F0E8A /* APClusterAlphabet.m */; };
-		06F65EE91ED8E350003F0E8A /* APClusterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EB81ED8E350003F0E8A /* APClusterAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		06F65EEA1ED8E350003F0E8A /* APRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EBA1ED8E350003F0E8A /* APRangeAlphabet.m */; };
-		06F65EEB1ED8E350003F0E8A /* APRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EBA1ED8E350003F0E8A /* APRangeAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		06F65EEC1ED8E350003F0E8A /* APStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EBC1ED8E350003F0E8A /* APStringsAlphabet.m */; };
-		06F65EED1ED8E350003F0E8A /* APStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EBC1ED8E350003F0E8A /* APStringsAlphabet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06F65EEE1ED8E350003F0E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EBD1ED8E350003F0E8A /* main.m */; };
 		06F65EF21ED8FFEB003F0E8A /* APAlphabetSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EF11ED8FFEB003F0E8A /* APAlphabetSpec.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		06F65EF71EE2E4CE003F0E8A /* APObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EF61EE2E4CE003F0E8A /* APObservableObject.m */; };
 		06F65EF81EE2E4CE003F0E8A /* APObservableObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EF61EE2E4CE003F0E8A /* APObservableObject.m */; };
+		06F65F001EE33021003F0E8A /* APClusterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFB1EE33021003F0E8A /* APClusterAlphabet.m */; };
+		06F65F011EE33021003F0E8A /* APClusterAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFB1EE33021003F0E8A /* APClusterAlphabet.m */; };
+		06F65F021EE33021003F0E8A /* APRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFD1EE33021003F0E8A /* APRangeAlphabet.m */; };
+		06F65F031EE33021003F0E8A /* APRangeAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFD1EE33021003F0E8A /* APRangeAlphabet.m */; };
+		06F65F041EE33021003F0E8A /* APStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFF1EE33021003F0E8A /* APStringsAlphabet.m */; };
+		06F65F051EE33021003F0E8A /* APStringsAlphabet.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F65EFF1EE33021003F0E8A /* APStringsAlphabet.m */; };
 		2520B80A5F936141E5A49E7F /* libPods-ObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97337F1738F91F03A57F4B1B /* libPods-ObjCTests.a */; };
 /* End PBXBuildFile section */
 
@@ -121,16 +121,16 @@
 		06F65EB31ED8E350003F0E8A /* APAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAlphabet.m; sourceTree = "<group>"; };
 		06F65EB41ED8E350003F0E8A /* NSString+APExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+APExtensions.h"; sourceTree = "<group>"; };
 		06F65EB51ED8E350003F0E8A /* NSString+APExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+APExtensions.m"; sourceTree = "<group>"; };
-		06F65EB71ED8E350003F0E8A /* APClusterAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APClusterAlphabet.h; sourceTree = "<group>"; };
-		06F65EB81ED8E350003F0E8A /* APClusterAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APClusterAlphabet.m; sourceTree = "<group>"; };
-		06F65EB91ED8E350003F0E8A /* APRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRangeAlphabet.h; sourceTree = "<group>"; };
-		06F65EBA1ED8E350003F0E8A /* APRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRangeAlphabet.m; sourceTree = "<group>"; };
-		06F65EBB1ED8E350003F0E8A /* APStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APStringsAlphabet.h; sourceTree = "<group>"; };
-		06F65EBC1ED8E350003F0E8A /* APStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APStringsAlphabet.m; sourceTree = "<group>"; };
 		06F65EBD1ED8E350003F0E8A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		06F65EF11ED8FFEB003F0E8A /* APAlphabetSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APAlphabetSpec.m; sourceTree = "<group>"; };
 		06F65EF51EE2E4CE003F0E8A /* APObservableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APObservableObject.h; sourceTree = "<group>"; };
 		06F65EF61EE2E4CE003F0E8A /* APObservableObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APObservableObject.m; sourceTree = "<group>"; };
+		06F65EFA1EE33021003F0E8A /* APClusterAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APClusterAlphabet.h; sourceTree = "<group>"; };
+		06F65EFB1EE33021003F0E8A /* APClusterAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APClusterAlphabet.m; sourceTree = "<group>"; };
+		06F65EFC1EE33021003F0E8A /* APRangeAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRangeAlphabet.h; sourceTree = "<group>"; };
+		06F65EFD1EE33021003F0E8A /* APRangeAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRangeAlphabet.m; sourceTree = "<group>"; };
+		06F65EFE1EE33021003F0E8A /* APStringsAlphabet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APStringsAlphabet.h; sourceTree = "<group>"; };
+		06F65EFF1EE33021003F0E8A /* APStringsAlphabet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APStringsAlphabet.m; sourceTree = "<group>"; };
 		16AD5240D7BB8B6846C31AD4 /* Pods-ObjCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCTests/Pods-ObjCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		97337F1738F91F03A57F4B1B /* libPods-ObjCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ObjCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4A788796A4D3C410E4D55D8 /* Pods-ObjCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjCTests/Pods-ObjCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -408,22 +408,9 @@
 				06F65EB31ED8E350003F0E8A /* APAlphabet.m */,
 				06F65EB41ED8E350003F0E8A /* NSString+APExtensions.h */,
 				06F65EB51ED8E350003F0E8A /* NSString+APExtensions.m */,
-				06F65EB61ED8E350003F0E8A /* Private */,
+				06F65EF91EE33021003F0E8A /* Private */,
 			);
 			path = "NSString+APExtensions";
-			sourceTree = "<group>";
-		};
-		06F65EB61ED8E350003F0E8A /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				06F65EB71ED8E350003F0E8A /* APClusterAlphabet.h */,
-				06F65EB81ED8E350003F0E8A /* APClusterAlphabet.m */,
-				06F65EB91ED8E350003F0E8A /* APRangeAlphabet.h */,
-				06F65EBA1ED8E350003F0E8A /* APRangeAlphabet.m */,
-				06F65EBB1ED8E350003F0E8A /* APStringsAlphabet.h */,
-				06F65EBC1ED8E350003F0E8A /* APStringsAlphabet.m */,
-			);
-			path = Private;
 			sourceTree = "<group>";
 		};
 		06F65EF01ED8EEBF003F0E8A /* Specs */ = {
@@ -441,6 +428,19 @@
 				06F65EF61EE2E4CE003F0E8A /* APObservableObject.m */,
 			);
 			path = APObservableObject;
+			sourceTree = "<group>";
+		};
+		06F65EF91EE33021003F0E8A /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				06F65EFA1EE33021003F0E8A /* APClusterAlphabet.h */,
+				06F65EFB1EE33021003F0E8A /* APClusterAlphabet.m */,
+				06F65EFC1EE33021003F0E8A /* APRangeAlphabet.h */,
+				06F65EFD1EE33021003F0E8A /* APRangeAlphabet.m */,
+				06F65EFE1EE33021003F0E8A /* APStringsAlphabet.h */,
+				06F65EFF1EE33021003F0E8A /* APStringsAlphabet.m */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		4FD49337614458719C2968A5 /* Pods */ = {
@@ -602,7 +602,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F65EEA1ED8E350003F0E8A /* APRangeAlphabet.m in Sources */,
 				06F65EC41ED8E350003F0E8A /* APCarWashTest.m in Sources */,
 				06F65EC81ED8E350003F0E8A /* APCarWashRoom.m in Sources */,
 				06F65EE61ED8E350003F0E8A /* NSString+APExtensions.m in Sources */,
@@ -612,17 +611,18 @@
 				06F65ECC1ED8E350003F0E8A /* APAccountant.m in Sources */,
 				06F65EE41ED8E350003F0E8A /* APAlphabet.m in Sources */,
 				06F65ED41ED8E350003F0E8A /* APRandomStringTest.m in Sources */,
-				06F65EE81ED8E350003F0E8A /* APClusterAlphabet.m in Sources */,
 				06F65ECA1ED8E350003F0E8A /* APRoom.m in Sources */,
+				06F65F021EE33021003F0E8A /* APRangeAlphabet.m in Sources */,
 				06F65EDC1ED8E350003F0E8A /* APCreatureMale.m in Sources */,
 				06F65EE01ED8E350003F0E8A /* NSArray+APExtensions.m in Sources */,
 				06F65ED21ED8E350003F0E8A /* APWorker.m in Sources */,
+				06F65F041EE33021003F0E8A /* APStringsAlphabet.m in Sources */,
 				06F65EDE1ED8E350003F0E8A /* NSObject+APRandomNumbers.m in Sources */,
 				06F65EEE1ED8E350003F0E8A /* main.m in Sources */,
 				06F65EC21ED8E350003F0E8A /* APCarWashEnterprise.m in Sources */,
 				06F65EBE1ED8E350003F0E8A /* APBuilding.m in Sources */,
 				06F65EC01ED8E350003F0E8A /* APCar.m in Sources */,
-				06F65EEC1ED8E350003F0E8A /* APStringsAlphabet.m in Sources */,
+				06F65F001EE33021003F0E8A /* APClusterAlphabet.m in Sources */,
 				06F65EC61ED8E350003F0E8A /* APQueue.m in Sources */,
 				06F65ED81ED8E350003F0E8A /* APCreatureTests.m in Sources */,
 				06F65EDA1ED8E350003F0E8A /* APCreatureFemale.m in Sources */,
@@ -635,7 +635,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06F65EEB1ED8E350003F0E8A /* APRangeAlphabet.m in Sources */,
 				06F65EC51ED8E350003F0E8A /* APCarWashTest.m in Sources */,
 				06F65EC91ED8E350003F0E8A /* APCarWashRoom.m in Sources */,
 				06F65EE71ED8E350003F0E8A /* NSString+APExtensions.m in Sources */,
@@ -645,17 +644,18 @@
 				06F65ECD1ED8E350003F0E8A /* APAccountant.m in Sources */,
 				06F65EE51ED8E350003F0E8A /* APAlphabet.m in Sources */,
 				06F65ED51ED8E350003F0E8A /* APRandomStringTest.m in Sources */,
-				06F65EE91ED8E350003F0E8A /* APClusterAlphabet.m in Sources */,
 				06F65ECB1ED8E350003F0E8A /* APRoom.m in Sources */,
+				06F65F031EE33021003F0E8A /* APRangeAlphabet.m in Sources */,
 				06F65EDD1ED8E350003F0E8A /* APCreatureMale.m in Sources */,
 				06F65EE11ED8E350003F0E8A /* NSArray+APExtensions.m in Sources */,
 				06F65ED31ED8E350003F0E8A /* APWorker.m in Sources */,
+				06F65F051EE33021003F0E8A /* APStringsAlphabet.m in Sources */,
 				06F65EDF1ED8E350003F0E8A /* NSObject+APRandomNumbers.m in Sources */,
 				06F65EC31ED8E350003F0E8A /* APCarWashEnterprise.m in Sources */,
 				06F65EBF1ED8E350003F0E8A /* APBuilding.m in Sources */,
 				06F65EC11ED8E350003F0E8A /* APCar.m in Sources */,
-				06F65EED1ED8E350003F0E8A /* APStringsAlphabet.m in Sources */,
 				06F65EC71ED8E350003F0E8A /* APQueue.m in Sources */,
+				06F65F011EE33021003F0E8A /* APClusterAlphabet.m in Sources */,
 				06F65ED91ED8E350003F0E8A /* APCreatureTests.m in Sources */,
 				06F65EDB1ED8E350003F0E8A /* APCreatureFemale.m in Sources */,
 				06F65ECF1ED8E350003F0E8A /* APBoss.m in Sources */,

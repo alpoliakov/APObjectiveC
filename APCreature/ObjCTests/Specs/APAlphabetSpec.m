@@ -215,7 +215,7 @@ describe(@"APAlphabet", ^{
             alphabet = [APAlphabet alphabetWithAlphabets:@[capitalizedAlphabet, lowercaseAlphabet]];
         });
         
-        it(@"should be of class APClasterAlphabet", ^{
+        it(@"should be of class APClusterAlphabet", ^{
             [[alphabet should] beKindOfClass:[APClusterAlphabet class]];
         });
         
