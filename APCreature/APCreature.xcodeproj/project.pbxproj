@@ -196,6 +196,7 @@
 		06F65E751ED8E350003F0E8A /* APCarWashProject */ = {
 			isa = PBXGroup;
 			children = (
+				06F65EF31EE2C7D8003F0E8A /* APObservableObject */,
 				06F65E761ED8E350003F0E8A /* APBuilding */,
 				06F65E791ED8E350003F0E8A /* APCar */,
 				06F65E7C1ED8E350003F0E8A /* APCarWashEnterprise */,
@@ -427,6 +428,13 @@
 				06F65EF11ED8FFEB003F0E8A /* APAlphabetSpec.m */,
 			);
 			path = Specs;
+			sourceTree = "<group>";
+		};
+		06F65EF31EE2C7D8003F0E8A /* APObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = APObservableObject;
 			sourceTree = "<group>";
 		};
 		4FD49337614458719C2968A5 /* Pods */ = {

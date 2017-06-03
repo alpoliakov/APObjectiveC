@@ -98,7 +98,7 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processWash:(NSUInteger)numberCars{
+- (void)washCarsWithCount:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
     for (NSUInteger index = 0; index <= numberCars; ++index) {
         APCar *car = [APCar object];

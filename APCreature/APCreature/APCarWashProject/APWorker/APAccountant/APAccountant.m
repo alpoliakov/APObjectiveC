@@ -12,13 +12,6 @@
 @implementation APAccountant
 
 #pragma mark -
-#pragma mark Public Method
-
-- (void)theWorkingProcess:(id)washer {
-    [self performWorkWithObject];
-}
-
-#pragma mark -
 #pragma mark Private Methods
 
 - (void)performWorkWithObject {

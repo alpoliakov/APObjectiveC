@@ -14,8 +14,8 @@
 #pragma mark -
 #pragma mark Public Method
 
-- (void)theWorkingProcess:(id)object {
-    self.state = APCarClear;
+- (void)workWithObject:(APCar *)car {
+    car.state = APCarClear;
     [self performWorkWithObject];
 }
 
