@@ -37,7 +37,7 @@ NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
 }
 
 + (instancetype)alphabetWithAlphabets:(NSArray *)alphabets {
-    return [[[APClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
+    return [[[APClusterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
 + (instancetype)alphabetWithSymbols:(NSString *)string {
