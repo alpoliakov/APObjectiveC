@@ -28,9 +28,9 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 
 @interface APCarWashEnterprise ()
 
-@property (nonatomic, retain)                           APBuilding        *productionBuilding;
-@property (nonatomic, retain)                           APBuilding        *administrativeBuilding;
-@property (nonatomic, retain)                           APQueue           *carsQueue;
+@property (nonatomic, retain)   APBuilding  *productionBuilding;
+@property (nonatomic, retain)   APBuilding  *administrativeBuilding;
+@property (nonatomic, retain)   APQueue     *carsQueue;
 
 - (void)prepareCarWashStructure;
 - (id)freeEmployeeWithClass:(Class)class;
@@ -82,7 +82,7 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 
 - (id)freeEmployeeWithClass:(Class)class {
     return [[[self employeesWithClass:class] filteredArrayWithBlock:^BOOL(APWorker *worker){
-        return worker.state == APWorkerIsFree;}] firstObject];
+        return worker.state == APWorkerFree;}] firstObject];
 }
 
 - (id)employeesWithClass:(Class)cls {
@@ -98,9 +98,10 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)processWash:(id)car numberOfCars:(NSUInteger)numberCars{
+- (void)washCarsWithCount:(NSUInteger)numberCars{
     APQueue *queue = self.carsQueue;
     for (NSUInteger index = 0; index <= numberCars; ++index) {
+        APCar *car = [APCar object];
         NSLog(@"\nCar %lu adds to queue.", index);
         [queue enqueue:car];
         NSLog(APOutputDelimiter);

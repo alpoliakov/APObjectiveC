@@ -15,9 +15,9 @@
 @interface APBuilding : NSObject
 @property (nonatomic, readonly) NSArray *rooms;
 
-- (id)employeesWithClass:(Class)cls;
-
 - (void)addRoom:(APRoom *)room;
 - (void)removeRoom:(APRoom *)room;
+
+- (id)employeesWithClass:(Class)cls;
 
 @end

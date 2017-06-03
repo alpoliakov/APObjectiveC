@@ -11,7 +11,8 @@
 @interface APWorker ()
 @property (nonatomic, assign) NSUInteger cash;
 
-- (void)performWorkWithObject:(id)object;
+- (void)workWithObject:(id)object;
+- (void)performWorkWithObject;
 
 @end
 
@@ -23,21 +24,22 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.cash = 0;
-        self.state = APWorkerIsFree;
+        self.state = APWorkerFree;
     }
     
     return self;
-};
+}
 
 #pragma mark -
-#pragma mark Public Methods
+#pragma mark Protocol Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
-    self.state = APWorkerIsBusy;
-    [self performWorkWithObject:object];
+    self.state = APWorkerBusy;
+    
+    [self workWithObject:(id)object];
     [self takeCashFromObject:object];
-    self.state = APWorkerIsFree;
+    
+    self.state = APWorkerFree;
 }
 
 - (void)takeCashFromObject:(id<APMoneyTransfer>)object {
@@ -60,7 +62,14 @@
     return cashToGive;
 }
 
-- (void)performWorkWithObject:(id)object {
+#pragma mark -
+#pragma mark Private Methods
+
+- (void)workWithObject:(id)object {
+    [self performWorkWithObject];
+}
+
+- (void)performWorkWithObject {
 
 }
 

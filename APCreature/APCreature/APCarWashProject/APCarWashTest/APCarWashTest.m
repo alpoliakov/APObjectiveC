@@ -9,6 +9,7 @@
 #import "APCarWashTest.h"
 #import "APCar.h"
 #import "APCarWashEnterprise.h"
+
 #import "NSObject+APObject.h"
 
 static const NSUInteger APCarwashTestCarsCount = 25;
@@ -22,7 +23,7 @@ static NSString *const APOutputDelimiter = @"\n-------------------------------";
     NSLog(APOutputDelimiter);
     
     APCarWashEnterprise *carwash = [APCarWashEnterprise object];
-    [carwash processWash:[APCar object] numberOfCars:APCarwashTestCarsCount];
+    [carwash washCarsWithCount:APCarwashTestCarsCount];
     NSLog(@"\nProcesses completed.");
     NSLog(APOutputDelimiter);
 }

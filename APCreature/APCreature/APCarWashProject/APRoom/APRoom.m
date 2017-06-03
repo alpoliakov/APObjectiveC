@@ -12,8 +12,8 @@
 static const NSUInteger APRoomDefaultCapacity = 10;
 
 @interface APRoom ()
-@property (nonatomic, retain)   NSMutableArray      *mutableWorkers;
-@property (nonatomic, assign)   NSUInteger          capacity;
+@property (nonatomic, retain)   NSMutableArray  *mutableWorkers;
+@property (nonatomic, assign)   NSUInteger      capacity;
 
 @end
 
@@ -66,7 +66,7 @@ static const NSUInteger APRoomDefaultCapacity = 10;
     return [self.mutableWorkers count];
 }
 
-- (BOOL)full {
+- (BOOL)isFull {
     return self.workersCount <= self.capacity;
 }
 
@@ -74,11 +74,9 @@ static const NSUInteger APRoomDefaultCapacity = 10;
 #pragma mark Public Methods
 
 - (void)addWorker:(APWorker *)worker {
-    if (!self.full) {
-        return;
+    if (self.isFull) {
+        [self.mutableWorkers addObject:worker];
     }
-    
-    [self.mutableWorkers addObject:worker];
 }
 
 - (void)removeWorker:(APWorker *)worker {

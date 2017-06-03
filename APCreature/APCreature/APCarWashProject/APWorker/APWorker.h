@@ -10,14 +10,14 @@
 #import "APMoneyTransfer.h"
 
 typedef NS_ENUM(NSUInteger, APWorkerState) {
-    APWorkerIsFree,
-    APWorkerIsBusy
+    APWorkerFree,
+    APWorkerBusy,
+    APWorkerReadyForProcessing
 };
 
 @interface APWorker : NSObject <APMoneyTransfer>
 @property (nonatomic, assign) APWorkerState state;
 
 - (void)processObject:(id<APMoneyTransfer>) object;
-
 
 @end

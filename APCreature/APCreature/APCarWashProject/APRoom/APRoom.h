@@ -10,9 +10,9 @@
 @class APWorker;
 
 @interface APRoom : NSObject
-@property (nonatomic, readonly)                 NSArray         *workers;
-@property (nonatomic, readonly)                 NSUInteger      workersCount;
-@property (nonatomic, readonly)                 BOOL            full;
+@property (nonatomic, readonly)     NSArray     *workers;
+@property (nonatomic, readonly)     NSUInteger  workersCount;
+@property (nonatomic, readonly)     BOOL        full;
 
 + (id)room;
 + (id)roomWithCapacity:(NSUInteger)capacity;

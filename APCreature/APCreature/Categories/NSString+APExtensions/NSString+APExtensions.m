@@ -7,9 +7,9 @@
 //
 
 #import "NSString+APExtensions.h"
+#import "NSObject+APRandomNumbers.h"
 
 static const NSUInteger kNSStringDefaultRandomStringLength  = 30;
-static const NSUInteger kAPNumberOne                        = 1;
 
 static const unichar    kAPFirstLowerCaseLetter    = 'a';
 static const unichar    kAPLastLowerCaseLetter     = 'z';
@@ -30,19 +30,19 @@ static const unichar    kAPLastNumberSign          = '9';
 + (instancetype)numericAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstNumberSign,
                                                       kAPLastNumberSign -
-                                                      kAPFirstNumberSign + kAPNumberOne)];
+                                                      kAPFirstNumberSign)];
 }
 
 + (instancetype)lowercaseletterAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstLowerCaseLetter,
                                                       kAPLastLowerCaseLetter -
-                                                      kAPFirstLowerCaseLetter + kAPNumberOne)];
+                                                      kAPFirstLowerCaseLetter)];
 }
 
 + (instancetype)capitalizedLetterAlphabet {
     return [self alphabetWithUnicodeRange:NSMakeRange(kAPFirstCapitalLetter,
                                                       kAPLastCapitalLetter -
-                                                      kAPFirstCapitalLetter + kAPNumberOne)];
+                                                      kAPFirstCapitalLetter)];
 }
 
 + (instancetype)letterAlphabet {
@@ -85,7 +85,7 @@ static const unichar    kAPLastNumberSign          = '9';
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:[self length]];
     NSUInteger length = [self length];
     
-    for (NSUInteger index = 0; index < length; index++) {
+    for (NSUInteger index = 0; index <= length; index++) {
         unichar resultChar = [self characterAtIndex:index];
         [result addObject:[NSString stringWithFormat:@"%c", resultChar]];
     }
