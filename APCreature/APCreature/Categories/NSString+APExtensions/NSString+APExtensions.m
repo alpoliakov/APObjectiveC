@@ -10,7 +10,7 @@
 #import "NSObject+APRandomNumbers.h"
 
 static const NSUInteger kNSStringDefaultRandomStringLength  = 30;
-static const NSUInteger kAPNumberOne                        = 1;
+//static const NSUInteger kAPNumberOne                        = 1;
 
 static const unichar    kAPFirstLowerCaseLetter    = 'a';
 static const unichar    kAPLastLowerCaseLetter     = 'z';

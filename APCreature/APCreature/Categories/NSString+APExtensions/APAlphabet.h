@@ -15,7 +15,7 @@ NSRange APMakeAlphabetRange(unichar value1, unichar value2);
 
 + (instancetype)alphabetWithRange:(NSRange)range;
 + (instancetype)alphabetWithStrings:(NSArray *)strings;
-+ (instancetype)alphabetWithAlphabetss:(NSArray *)alphabets;
++ (instancetype)alphabetWithAlphabets:(NSArray *)alphabets;
 + (instancetype)alphabetWithSymbols:(NSString *)string;
 
 - (instancetype)initWithRange:(NSRange)range;

@@ -36,7 +36,7 @@ NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
     return [[[APStringsAlphabet alloc] initWithStrings:strings] autorelease];
 }
 
-+ (instancetype)alphabetWithAlphabetss:(NSArray *)alphabets {
++ (instancetype)alphabetWithAlphabets:(NSArray *)alphabets {
     return [[[APClasterAlphabet alloc] initWithAlphabets:alphabets] autorelease];
 }
 
@@ -110,9 +110,13 @@ NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
     NSUInteger length =  MIN(state->state + resultLength, [self count]);
     resultLength = length - state->state;
     
-    for (NSUInteger index = state->state; index < length; index++) {
-        stackbuf[index] = self[index];
+    if (0 != resultLength) {
+        for (NSUInteger index = 0; index < resultLength; index++) {
+            stackbuf[index] = self[index + state->state];
+        }
     }
+    
+    state->itemsPtr = stackbuf;
     
     state->state += resultLength;
     
