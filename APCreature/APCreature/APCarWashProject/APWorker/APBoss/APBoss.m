@@ -12,9 +12,16 @@
 @implementation APBoss
 
 #pragma mark -
+#pragma mark Public Method
+
+- (void)theWorkingProcess:(id)accountant {
+    [self performWorkWithObject];
+}
+
+#pragma mark -
 #pragma mark Private Methods
 
-- (void) performWorkWithObject:(id)accountant {
+- (void) performWorkWithObject {
     NSLog(@"\nProfit is make, %lu", self.cash);
 }
 

@@ -12,10 +12,17 @@
 @implementation APWasher
 
 #pragma mark -
+#pragma mark Public Method
+
+- (void)theWorkingProcess:(id)object {
+    self.state = APCarClear;
+    [self performWorkWithObject];
+}
+
+#pragma mark -
 #pragma mark Private Methods
 
-- (void)performWorkWithObject:(APCar *)car {
-    car.state = APCarClear;
+- (void)performWorkWithObject {
     NSLog(@"\nCar is washed.");
 }
 

@@ -18,6 +18,6 @@ typedef NS_ENUM(NSUInteger, APWorkerState) {
 @property (nonatomic, assign) APWorkerState state;
 
 - (void)processObject:(id<APMoneyTransfer>) object;
-
+- (void)theWorkingProcess:(id)object;
 
 @end
