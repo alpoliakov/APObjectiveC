@@ -82,7 +82,7 @@ static NSString *const  APOutputDelimiter = @"\n-------------------------------"
 
 - (id)freeEmployeeWithClass:(Class)class {
     return [[[self employeesWithClass:class] filteredArrayWithBlock:^BOOL(APWorker *worker){
-        return worker.state == APWorkerIsFree;}] firstObject];
+        return worker.state == APWorkerFree;}] firstObject];
 }
 
 - (id)employeesWithClass:(Class)cls {

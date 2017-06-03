@@ -10,8 +10,8 @@
 #import "APMoneyTransfer.h"
 
 typedef NS_ENUM(NSUInteger, APWorkerState) {
-    APWorkerIsFree,
-    APWorkerIsBusy,
+    APWorkerFree,
+    APWorkerBusy,
     APWorkerReadyForProcessing
 };
 

@@ -24,7 +24,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.state = APWorkerIsFree;
+        self.state = APWorkerFree;
     }
     
     return self;
@@ -34,12 +34,12 @@
 #pragma mark Protocol Methods
 
 - (void)processObject:(id<APMoneyTransfer>)object {
-    self.state = APWorkerIsBusy;
+    self.state = APWorkerBusy;
     
     [self workWithObject:(id)object];
     [self takeCashFromObject:object];
     
-    self.state = APWorkerIsFree;
+    self.state = APWorkerFree;
 }
 
 - (void)takeCashFromObject:(id<APMoneyTransfer>)object {
