@@ -15,6 +15,7 @@
 #import "APStringsAlphabet.h"
 
 #import "NSString+APExtensions.h"
+#import "NSObject+APRandomNumbers.h"
 
 NSRange APMakeAlphabetRange(unichar value1, unichar value2) {
     unichar minValue = MIN(value1, value2);
